@@ -4,6 +4,9 @@ import com.gr4.dto.ActividadDTO;
 import com.gr4.model.Actividad;
 import com.gr4.repository.ActividadRepository;
 import com.gr4.repository.ActividadRepositoryImpl;
+import com.gr4.model.Tarea;
+import com.gr4.repository.TareaRepository;
+import com.gr4.repository.TareaRepositoryImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -75,6 +78,35 @@ public class GestorPlanificacionServlet extends HttpServlet {
             Actividad actividadGuardada = actividadRepository.save(actividad);
 
             System.out.println("✓ Actividad guardada: " + actividadGuardada);
+
+            // NUEVO: Asegurar que la Actividad quede en estado Pendiente
+            try {
+                if (actividadGuardada.getEstado() == null || !"Pendiente".equals(actividadGuardada.getEstado())) {
+                    actividadGuardada.setEstado("Pendiente");
+                    actividadRepository.save(actividadGuardada);
+                }
+            } catch (Exception ex) {
+                System.err.println("✗ Error al asegurar estado de actividad: " + ex.getMessage());
+            }
+
+            // NUEVO: Crear automáticamente una Tarea asociada a la Actividad registrada
+            try {
+                Tarea tarea = new Tarea();
+                tarea.setTitulo(actividadGuardada.getTitulo());
+                tarea.setDescripcion(actividadGuardada.getDescripcion());
+                // Utilizamos la fecha de entrega de la actividad como fecha de vencimiento de la tarea
+                tarea.setFechaVencimiento(actividadGuardada.getFechaEntrega());
+                // Forzamos estado Pendiente para nuevas tareas
+                tarea.setEstado("Pendiente");
+                tarea.setPrioridad(actividadGuardada.getPrioridad());
+                tarea.setActividad(actividadGuardada);
+
+                TareaRepository tareaRepository = new TareaRepositoryImpl();
+                Tarea tareaGuardada = tareaRepository.save(tarea);
+                System.out.println("✓ Tarea creada automáticamente: " + tareaGuardada);
+            } catch (Exception ex) {
+                System.err.println("✗ Error al crear tarea asociada: " + ex.getMessage());
+            }
 
             // PASO 5: Redirigir con mensaje de éxito
             request.setAttribute("mensaje", "Actividad registrada exitosamente");

@@ -66,9 +66,56 @@
         <div class="tareas-section">
             <c:choose>
                 <c:when test="${empty tareas}">
-                    <div class="empty-state">
-                        <p>📭 ${not empty mensaje ? mensaje : 'No hay tareas para mostrar.'}</p>
-                    </div>
+                    <c:choose>
+                        <c:when test="${not empty actividades}">
+                            <div class="tareas-stats">
+                                <h2>Actividades registradas</h2>
+                                <p>Se encontraron <strong>${actividades.size()}</strong> actividad(es)</p>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Título</th>
+                                        <th>Descripción</th>
+                                        <th>Estado</th>
+                                        <th>Prioridad</th>
+                                        <th>Fecha Entrega</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach var="actividad" items="${actividades}">
+                                        <tr>
+                                            <td>${actividad.id}</td>
+                                            <td><strong>${actividad.titulo}</strong></td>
+                                            <td class="descripcion-cell">${actividad.descripcion}</td>
+                                            <td>
+                                                <span class="badge badge-estado-${actividad.estado.toLowerCase().replace(' ', '-')}">
+                                                        ${actividad.estado}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-${actividad.prioridad.toLowerCase()}">
+                                                        ${actividad.prioridad}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                ${actividad.fechaEntrega}
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="empty-state">
+                                <p>📭 ${not empty mensaje ? mensaje : 'No hay tareas para mostrar.'}</p>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
                 </c:when>
                 <c:otherwise>
                     <div class="tareas-stats">

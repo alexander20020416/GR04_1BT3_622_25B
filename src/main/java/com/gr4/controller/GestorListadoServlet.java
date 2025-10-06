@@ -1,8 +1,11 @@
 package com.gr4.controller;
 
 import com.gr4.model.Tarea;
+import com.gr4.model.Actividad;
 import com.gr4.repository.TareaRepository;
 import com.gr4.repository.TareaRepositoryImpl;
+import com.gr4.repository.ActividadRepository;
+import com.gr4.repository.ActividadRepositoryImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -65,6 +68,17 @@ public class GestorListadoServlet extends HttpServlet {
                         (filtro != null && !filtro.isEmpty() && !filtro.equals("todos")
                                 ? " con estado: " + filtro
                                 : ""));
+
+                // Si no hay tareas, también intentamos mostrar Actividades registradas (UX: una actividad es una tarea conceptual)
+                ActividadRepository actividadRepository = new ActividadRepositoryImpl();
+                try {
+                    java.util.List<Actividad> actividades = actividadRepository.findAll();
+                    if (actividades != null && !actividades.isEmpty()) {
+                        request.setAttribute("actividades", actividades);
+                    }
+                } catch (Exception ex) {
+                    System.err.println("✗ Error al obtener actividades: " + ex.getMessage());
+                }
             }
 
             // PASO 5: Enviar datos a la vista
