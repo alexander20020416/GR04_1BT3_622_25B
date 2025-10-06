@@ -14,7 +14,7 @@ public interface TareaRepository {
     /**
      * Guarda una nueva tarea o actualiza una existente
      * @param tarea Tarea a guardar
-     * @return Tarea guardada
+    * @return Tarea guardada
      */
     Tarea save(Tarea tarea);
 
@@ -58,6 +58,11 @@ public interface TareaRepository {
      * @return true si se eliminó correctamente
      */
     boolean deleteById(Long id);
+
+    /**
+     * Actualiza el campo orden de una tarea
+     */
+    void updateOrden(Long id, Integer orden);
 
     /**
      * Cuenta el total de tareas

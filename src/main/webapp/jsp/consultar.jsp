@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultar Tareas - Gestor de Tareas</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <style>.btn-small{padding:4px 8px;font-size:0.9rem}</style>
 </head>
 <body>
 <div class="container">
@@ -24,42 +25,30 @@
 
             <div class="filter-buttons">
                 <a href="${pageContext.request.contextPath}/consultar"
-                   class="btn ${empty filtroActual || filtroActual == 'todos' ? 'btn-active' : 'btn-outline'}">
-                    📋 Todas
-                </a>
+                   class="btn ${empty filtroActual || filtroActual == 'todos' ? 'btn-active' : 'btn-outline'}">📋 Todas</a>
                 <a href="${pageContext.request.contextPath}/consultar?filtro=Pendiente"
-                   class="btn ${filtroActual == 'Pendiente' ? 'btn-active' : 'btn-outline'}">
-                    ⏳ Pendientes
-                </a>
+                   class="btn ${filtroActual == 'Pendiente' ? 'btn-active' : 'btn-outline'}">⏳ Pendientes</a>
                 <a href="${pageContext.request.contextPath}/consultar?filtro=En Progreso"
-                   class="btn ${filtroActual == 'En Progreso' ? 'btn-active' : 'btn-outline'}">
-                    🔄 En Progreso
-                </a>
+                   class="btn ${filtroActual == 'En Progreso' ? 'btn-active' : 'btn-outline'}">🔄 En Progreso</a>
                 <a href="${pageContext.request.contextPath}/consultar?filtro=Completada"
-                   class="btn ${filtroActual == 'Completada' ? 'btn-active' : 'btn-outline'}">
-                    ✅ Completadas
-                </a>
+                   class="btn ${filtroActual == 'Completada' ? 'btn-active' : 'btn-outline'}">✅ Completadas</a>
             </div>
         </div>
 
-        <!-- Mostrar mensajes -->
-        <c:if test="${not empty mensaje}">
-            <div class="alert alert-warning">
-                    ${mensaje}
+        <!-- Flash message from actions -->
+        <c:if test="${not empty sessionScope.mensajeAccion}">
+            <div class="alert alert-info">
+                ${sessionScope.mensajeAccion}
             </div>
+            <c:remove var="mensajeAccion" scope="session" />
+        </c:if>
+
+        <c:if test="${not empty mensaje}">
+            <div class="alert alert-warning">${mensaje}</div>
         </c:if>
 
         <c:if test="${not empty error}">
-            <div class="alert alert-error">
-                <strong>❌ Error:</strong> ${error}
-            </div>
-        </c:if>
-
-        <!-- Validación de integridad (CP14) -->
-        <c:if test="${not empty integridadValida && !integridadValida}">
-            <div class="alert alert-error">
-                <strong>⚠️ Advertencia:</strong> Se detectaron inconsistencias en la integridad de los datos.
-            </div>
+            <div class="alert alert-error"><strong>❌ Error:</strong> ${error}</div>
         </c:if>
 
         <!-- Lista de tareas -->
@@ -91,19 +80,9 @@
                                             <td>${actividad.id}</td>
                                             <td><strong>${actividad.titulo}</strong></td>
                                             <td class="descripcion-cell">${actividad.descripcion}</td>
-                                            <td>
-                                                <span class="badge badge-estado-${actividad.estado.toLowerCase().replace(' ', '-')}">
-                                                        ${actividad.estado}
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <span class="badge badge-${actividad.prioridad.toLowerCase()}">
-                                                        ${actividad.prioridad}
-                                                </span>
-                                            </td>
-                                            <td>
-                                                ${actividad.fechaEntrega}
-                                            </td>
+                                            <td><span class="badge badge-estado-${actividad.estado.toLowerCase().replace(' ', '-')}">${actividad.estado}</span></td>
+                                            <td><span class="badge badge-${actividad.prioridad.toLowerCase()}">${actividad.prioridad}</span></td>
+                                            <td>${actividad.fechaEntrega}</td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
@@ -111,23 +90,19 @@
                             </div>
                         </c:when>
                         <c:otherwise>
-                            <div class="empty-state">
-                                <p>📭 ${not empty mensaje ? mensaje : 'No hay tareas para mostrar.'}</p>
-                            </div>
+                            <div class="empty-state"><p>📭 ${not empty mensaje ? mensaje : 'No hay tareas para mostrar.'}</p></div>
                         </c:otherwise>
                     </c:choose>
                 </c:when>
                 <c:otherwise>
-                    <div class="tareas-stats">
-                        <h2>Resultados de la Consulta</h2>
-                        <p>Se encontraron <strong>${tareas.size()}</strong> tarea(s)</p>
-                    </div>
+                    <div class="tareas-stats"><h2>Resultados de la Consulta</h2><p>Se encontraron <strong>${tareas.size()}</strong> tarea(s)</p></div>
 
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Acciones</th>
                                 <th>Título</th>
                                 <th>Descripción</th>
                                 <th>Estado</th>
@@ -139,21 +114,25 @@
                             <c:forEach var="tarea" items="${tareas}">
                                 <tr>
                                     <td>${tarea.id}</td>
+                                    <td>
+                                        <a href="${pageContext.request.contextPath}/administracion?action=edit&id=${tarea.id}" class="btn btn-small">✏️</a>
+                                        <form action="${pageContext.request.contextPath}/administracion" method="post" style="display:inline">
+                                            <input type="hidden" name="id" value="${tarea.id}" />
+                                            <input type="hidden" name="action" value="update" />
+                                            <input type="hidden" name="estado" value="Completada" />
+                                            <button type="submit" class="btn btn-small btn-success" title="Marcar como completada">✓</button>
+                                        </form>
+                                        <form action="${pageContext.request.contextPath}/administracion" method="post" style="display:inline; margin-left:6px">
+                                            <input type="hidden" name="id" value="${tarea.id}" />
+                                            <input type="hidden" name="action" value="delete" />
+                                            <button type="submit" class="btn btn-small btn-danger" title="Eliminar tarea" onclick="return confirm('¿Eliminar tarea?')">🗑</button>
+                                        </form>
+                                    </td>
                                     <td><strong>${tarea.titulo}</strong></td>
                                     <td class="descripcion-cell">${tarea.descripcion}</td>
-                                    <td>
-                                                <span class="badge badge-estado-${tarea.estado.toLowerCase().replace(' ', '-')}">
-                                                        ${tarea.estado}
-                                                </span>
-                                    </td>
-                                    <td>
-                                                <span class="badge badge-${tarea.prioridad.toLowerCase()}">
-                                                        ${tarea.prioridad}
-                                                </span>
-                                    </td>
-                                    <td>
-                                            ${not empty tarea.fechaVencimiento ? tarea.fechaVencimiento : 'N/A'}
-                                    </td>
+                                    <td><span class="badge badge-estado-${tarea.estado.toLowerCase().replace(' ', '-')}">${tarea.estado}</span></td>
+                                    <td><span class="badge badge-${tarea.prioridad.toLowerCase()}">${tarea.prioridad}</span></td>
+                                    <td>${not empty tarea.fechaVencimiento ? tarea.fechaVencimiento : 'N/A'}</td>
                                 </tr>
                             </c:forEach>
                             </tbody>

@@ -44,6 +44,14 @@
             </c:if>
         </div>
 
+        <!-- Flash message from actions -->
+        <c:if test="${not empty sessionScope.mensajeAccion}">
+            <div class="alert alert-info">
+                ${sessionScope.mensajeAccion}
+            </div>
+            <c:remove var="mensajeAccion" scope="session" />
+        </c:if>
+
         <!-- Mostrar errores si existen -->
         <c:if test="${not empty error}">
             <div class="alert alert-error">
@@ -81,7 +89,7 @@
                                     <div class="tarea-meta">
                                         <div class="meta-item">
                                             <span class="label">Estado:</span>
-                                            <span class="badge badge-estado-${tarea.estado.toLowerCase()}">${tarea.estado}</span>
+                                            <span class="badge badge-estado-${tarea.estado.toLowerCase().replace(' ', '-')}">${tarea.estado}</span>
                                         </div>
 
                                         <c:if test="${not empty tarea.fechaVencimiento}">
@@ -91,6 +99,33 @@
                                             </div>
                                         </c:if>
                                     </div>
+                                </div>
+
+                                <!-- Botones de acción -->
+                                <div class="tarea-actions" style="display: flex; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid #e0e0e0;">
+                                    <a href="${pageContext.request.contextPath}/administracion?action=edit&id=${tarea.id}" 
+                                       class="btn btn-small" style="flex: 1;" title="Editar tarea">
+                                        ✏️ Editar
+                                    </a>
+                                    
+                                    <form action="${pageContext.request.contextPath}/administracion" method="post" style="flex: 1; margin: 0;">
+                                        <input type="hidden" name="id" value="${tarea.id}" />
+                                        <input type="hidden" name="action" value="update" />
+                                        <input type="hidden" name="estado" value="Completada" />
+                                        <button type="submit" class="btn btn-small btn-success" style="width: 100%;" title="Marcar como completada">
+                                            ✓ Completar
+                                        </button>
+                                    </form>
+                                    
+                                    <form action="${pageContext.request.contextPath}/administracion" method="post" 
+                                          style="flex: 1; margin: 0;" 
+                                          onsubmit="return confirm('¿Está seguro de eliminar esta tarea?');">
+                                        <input type="hidden" name="id" value="${tarea.id}" />
+                                        <input type="hidden" name="action" value="delete" />
+                                        <button type="submit" class="btn btn-small btn-danger" style="width: 100%;" title="Eliminar tarea">
+                                            🗑 Eliminar
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </c:forEach>

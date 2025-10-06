@@ -53,11 +53,35 @@ public class TareaRepositoryImpl implements TareaRepository {
     public List<Tarea> findAll() {
         EntityManager em = JPAUtil.getEntityManager();
         try {
+            // Intentar ordenar por 'orden' si existe, sino por fechaVencimiento
             TypedQuery<Tarea> query = em.createQuery(
-                    "SELECT t FROM Tarea t ORDER BY t.fechaVencimiento ASC",
+                    "SELECT t FROM Tarea t ORDER BY CASE WHEN t.orden IS NULL THEN 1 ELSE 0 END, t.orden ASC, t.fechaVencimiento ASC",
                     Tarea.class
             );
             return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    /**
+     * Actualiza el campo 'orden' de una tarea
+     */
+    public void updateOrden(Long id, Integer orden) {
+        EntityManager em = JPAUtil.getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Tarea tarea = em.find(Tarea.class, id);
+            if (tarea != null) {
+                tarea.setOrden(orden);
+                em.merge(tarea);
+            }
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            throw new RuntimeException("Error al actualizar orden: " + e.getMessage(), e);
         } finally {
             em.close();
         }

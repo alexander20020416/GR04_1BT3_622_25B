@@ -30,6 +30,9 @@ public class Tarea {
     @Column(length = 20)
     private String prioridad; // Alta, Media, Baja
 
+    @Column(name = "orden")
+    private Integer orden; // posición para reordenamiento
+
     // Relación muchos a uno con Actividad
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "actividad_id")
@@ -95,6 +98,14 @@ public class Tarea {
 
     public void setPrioridad(String prioridad) {
         this.prioridad = prioridad;
+    }
+
+    public Integer getOrden() {
+        return orden;
+    }
+
+    public void setOrden(Integer orden) {
+        this.orden = orden;
     }
 
     public Actividad getActividad() {
