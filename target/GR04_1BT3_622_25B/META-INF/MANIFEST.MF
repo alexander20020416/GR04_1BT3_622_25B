@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: ASUS TUF F15
+Build-Jdk: Oracle OpenJDK 24.0.2
+
