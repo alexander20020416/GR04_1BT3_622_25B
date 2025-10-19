@@ -9,72 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/BaseServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAdministracionServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAlertasServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorListadoServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorPlanificacionServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/ListarTareasServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/dto/AlertaDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/dto/TareaDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Alerta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/observer/AlertaListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/observer/AlertaListenerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/AlertaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/AlertaRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorFecha.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorPrioridad.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorTitulo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/JPAUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/ParametroParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/byte-buddy-1.12.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/h2-2.1.214.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-commons-annotations-5.1.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-core-5.6.15.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-java8-5.6.15.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jandex-2.4.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jboss-logging-3.4.3.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/slf4j-api-1.7.36.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/slf4j-simple-1.7.36.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/configurar_alerta.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/consultar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/listar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/listar_alertas.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/organizar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/planificar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/success.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,7 +221,7 @@
       <workItem from="1760302595420" duration="295000" />
       <workItem from="1760308041397" duration="6529000" />
       <workItem from="1760322517429" duration="67000" />
-      <workItem from="1760882535453" duration="5270000" />
+      <workItem from="1760882535453" duration="5881000" />
     </task>
     <servers />
   </component>

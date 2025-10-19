@@ -194,5 +194,41 @@ public class CalendarioServiceTest {
         assertFalse(resultado);
     }
 
+    @Test
+    public void given_TareasPendientesYCompletadas_when_ContarTareasPendientes_then_DebeContarSoloPendientes() {
+        // Given: Tareas con diferentes estados
+        LocalDate fecha = LocalDate.of(2025, 10, 20);
+
+        Tarea tareaPendiente1 = new Tarea();
+        tareaPendiente1.setTitulo("Pendiente 1");
+        tareaPendiente1.setFechaVencimiento(fecha);
+        tareaPendiente1.setEstado(Tarea.ESTADO_PENDIENTE);
+
+        Tarea tareaPendiente2 = new Tarea();
+        tareaPendiente2.setTitulo("Pendiente 2");
+        tareaPendiente2.setFechaVencimiento(fecha);
+        tareaPendiente2.setEstado(Tarea.ESTADO_PENDIENTE);
+
+        Tarea tareaCompletada = new Tarea();
+        tareaCompletada.setTitulo("Completada");
+        tareaCompletada.setFechaVencimiento(fecha);
+        tareaCompletada.setEstado(Tarea.ESTADO_COMPLETADA);
+
+        Tarea tareaEnProgreso = new Tarea();
+        tareaEnProgreso.setTitulo("En Progreso");
+        tareaEnProgreso.setFechaVencimiento(fecha);
+        tareaEnProgreso.setEstado(Tarea.ESTADO_EN_PROGRESO);
+
+        tareas.add(tareaPendiente1);
+        tareas.add(tareaPendiente2);
+        tareas.add(tareaCompletada);
+        tareas.add(tareaEnProgreso);
+
+        // When: Contamos tareas pendientes
+        long resultado = calendarioService.contarTareasPendientes(tareas, fecha);
+
+        // Then: Debe contar solo las 2 pendientes
+        assertEquals(2, resultado);
+    }
 
 }
