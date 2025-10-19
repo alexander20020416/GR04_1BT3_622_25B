@@ -59,7 +59,7 @@
                 <c:when test="${empty tareas}">
                     <div class="empty-state">
                         <p>📭 No hay tareas registradas en el sistema.</p>
-                        <p>Para crear tareas, primero debe <a href="${pageContext.request.contextPath}/planificar">planificar una actividad</a>.</p>
+                        <p>Para crear tareas, debe <a href="${pageContext.request.contextPath}/planificar">planificar una tarea</a>.</p>
                     </div>
                 </c:when>
                 <c:otherwise>

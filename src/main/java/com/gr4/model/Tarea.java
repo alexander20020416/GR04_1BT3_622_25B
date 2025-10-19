@@ -40,11 +40,6 @@ public class Tarea {
     @Column(length = 20)
     private String prioridad; // Alta, Media, Baja
 
-    // Relación muchos a uno con Actividad (OPCIONAL - ahora las tareas son independientes)
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "actividad_id", nullable = true)
-    private Actividad actividad;
-
     // Constructores
     public Tarea() {
         this.estado = ESTADO_PENDIENTE;
@@ -105,14 +100,6 @@ public class Tarea {
 
     public void setPrioridad(String prioridad) {
         this.prioridad = prioridad;
-    }
-
-    public Actividad getActividad() {
-        return actividad;
-    }
-
-    public void setActividad(Actividad actividad) {
-        this.actividad = actividad;
     }
 
     @Override

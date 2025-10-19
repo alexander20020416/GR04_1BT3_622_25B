@@ -22,7 +22,9 @@
         <div class="form-container">
             <h2>Crear Nueva Alerta</h2>
             <p class="form-description">
-                Configure una alerta personalizada para recordarle de sus actividades importantes.
+                <p>
+                Configure una alerta personalizada para recordarle de sus tareas importantes.
+            </p>
                 <strong>Patrón Observer</strong> aplicado para notificaciones.
             </p>
 

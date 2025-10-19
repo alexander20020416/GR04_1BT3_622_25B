@@ -50,36 +50,6 @@
                 </div>
             </c:if>
 
-            <c:if test="${not empty actividad}">
-                <div class="details-card">
-                    <h3>Detalles de la Actividad</h3>
-                    <div class="detail-row">
-                        <span class="label">ID:</span>
-                        <span class="value">${actividad.id}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="label">Título:</span>
-                        <span class="value">${actividad.titulo}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="label">Descripción:</span>
-                        <span class="value">${actividad.descripcion}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="label">Fecha de Entrega:</span>
-                        <span class="value">${actividad.fechaEntrega}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="label">Prioridad:</span>
-                        <span class="badge badge-${actividad.prioridad.toLowerCase()}">${actividad.prioridad}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="label">Estado:</span>
-                        <span class="badge badge-estado-${actividad.estado.toLowerCase()}">${actividad.estado}</span>
-                    </div>
-                </div>
-            </c:if>
-
             <c:if test="${not empty alerta}">
                 <div class="details-card">
                     <h3>Detalles de la Alerta</h3>
@@ -132,9 +102,9 @@
                     </a>
                 </c:if>
 
-                <c:if test="${not empty actividad}">
+                <c:if test="${not empty tarea}">
                     <a href="${pageContext.request.contextPath}/planificar" class="btn btn-secondary">
-                        ➕ Planificar Otra Actividad
+                        ➕ Planificar Otra Tarea
                     </a>
                     <a href="${pageContext.request.contextPath}/organizar" class="btn btn-secondary">
                         📊 Ver Todas las Tareas

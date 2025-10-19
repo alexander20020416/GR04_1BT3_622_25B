@@ -1,7 +1,5 @@
 package com.gr4.controller;
 
-import com.gr4.repository.ActividadRepository;
-import com.gr4.repository.ActividadRepositoryImpl;
 import com.gr4.repository.TareaRepository;
 import com.gr4.repository.TareaRepositoryImpl;
 
@@ -15,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 public abstract class BaseServlet extends HttpServlet {
 
     protected TareaRepository tareaRepository;
-    protected ActividadRepository actividadRepository;
 
     @Override
     public void init() throws ServletException {
@@ -29,7 +26,6 @@ public abstract class BaseServlet extends HttpServlet {
      */
     protected void inicializarRepositorios() {
         this.tareaRepository = new TareaRepositoryImpl();
-        this.actividadRepository = new ActividadRepositoryImpl();
     }
 
     /**

@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planificar Actividades - Gestor de Tareas</title>
+    <title>Planificar Tareas - Gestor de Tareas</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>➕ Planificar Actividades</h1>
+        <h1>➕ Planificar Tareas</h1>
         <nav>
             <a href="${pageContext.request.contextPath}/" class="btn-link">← Volver al inicio</a>
         </nav>
@@ -96,7 +96,7 @@
 
         <div class="info-box">
             <h3>ℹ️ Información</h3>
-            <p>Este formulario implementa el caso de uso <strong>"Planificar Actividades"</strong> creando tareas directamente.</p>
+            <p>Este formulario implementa el caso de uso <strong>"Planificar Tareas"</strong>.</p>
             <ul>
                 <li>Todos los campos marcados con (*) son obligatorios</li>
                 <li>Puedes definir el estado inicial de la tarea</li>

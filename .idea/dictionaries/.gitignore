@@ -1,0 +1,86 @@
+# ==============================
+# GitIgnore para proyecto Java/Maven (Web/Tomcat)
+# IDEs: IntelliJ, Eclipse, VS Code
+# ==============================
+
+# Build outputs
+/target/
+**/target/
+/site/
+
+# Archivos Java compilados
+*.class
+
+# Artefactos empaquetados (comenta estas líneas si QUIERES permitir publicar JAR/WAR)
+*.jar
+*.war
+*.ear
+
+# Registros y dumps
+*.log
+logs/
+**/logs/
+hs_err_pid*
+replay_pid*
+
+# Maven
+.mvn/timing.properties
+!/.mvn/wrapper/maven-wrapper.jar
+!mvnw
+!mvnw.cmd
+
+# Reportes de pruebas y cobertura
+**/surefire-reports/
+**/failsafe-reports/
+**/jacoco.exec
+**/jacoco-report/
+
+# Temp
+*.tmp
+*.temp
+/tmp/
+/temp/
+**/temp/
+**/work/
+
+# Tomcat/Cargo (generados en ejecución/despliegue)
+../../target/cargo/
+**/tomcat/work/
+**/tomcat/temp/
+**/tomcat/logs/
+**/webapps/
+
+# IDE: IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# IDE: Eclipse
+.project
+.classpath
+.settings/
+
+# IDE: NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+build/
+dist/
+nbactions.xml
+nb-configuration.xml
+
+# IDE: VS Code
+.vscode/
+*.code-workspace
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Variables de entorno locales
+.env
+.env.*

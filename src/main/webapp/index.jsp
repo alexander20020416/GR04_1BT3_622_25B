@@ -17,7 +17,7 @@
     <main>
         <div class="welcome-section">
             <h2>¡Bienvenido!</h2>
-            <p>Organiza tus actividades académicas de manera eficiente</p>
+            <p>Organiza tus tareas académicas de manera eficiente</p>
         </div>
 
         <div class="menu-grid">
@@ -27,8 +27,8 @@
 
                 <div class="menu-card">
                     <div class="card-icon">➕</div>
-                    <h4>Planificar Actividades</h4>
-                    <p>Registra nuevas actividades académicas con título, descripción y fecha de entrega.</p>
+                    <h4>Planificar Tareas</h4>
+                    <p>Registra nuevas tareas académicas con título, descripción y fecha de vencimiento.</p>
                     <a href="${pageContext.request.contextPath}/planificar" class="btn btn-primary">
                         Ir a Planificar
                     </a>
@@ -60,7 +60,7 @@
                 <div class="menu-card">
                     <div class="card-icon">⏰</div>
                     <h4>Configurar Alertas</h4>
-                    <p>Visualiza y gestiona tus alertas. Crea alertas personalizadas para recordarte de tus actividades importantes.</p>
+                    <p>Visualiza y gestiona tus alertas. Crea alertas personalizadas para recordarte de tus tareas importantes.</p>
                     <a href="${pageContext.request.contextPath}/alertas" class="btn btn-secondary">
                         Ver Mis Alertas
                     </a>

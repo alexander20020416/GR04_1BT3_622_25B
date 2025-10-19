@@ -14,7 +14,9 @@
 
 ## 📋 Descripción del Proyecto
 
-Sistema web de gestión de tareas universitarias que permite a los estudiantes registrar, organizar y dar seguimiento a sus actividades académicas de manera eficiente y personalizada.
+Sistema web de gestión de tareas universitarias que permite a los estudiantes registrar, organizar y dar seguimiento a sus tareas académicas de manera eficiente y personalizada.
+
+**⚠️ Refactorización Importante:** Se eliminó la redundancia entre `Actividad` y `Tarea`. Ahora el sistema usa únicamente la entidad `Tarea` como modelo principal.
 
 ---
 
@@ -24,7 +26,7 @@ Sistema web de gestión de tareas universitarias que permite a los estudiantes r
 
 1. **Repository Pattern**
     - Separa la lógica de negocio de la capa de persistencia
-    - Interfaces: `ActividadRepository`, `TareaRepository`, `AlertaRepository`
+    - Interfaces: `TareaRepository`, `AlertaRepository`
     - Implementaciones con JPA/Hibernate
 
 2. **Strategy Pattern**
@@ -46,9 +48,10 @@ Sistema web de gestión de tareas universitarias que permite a los estudiantes r
 - **Vista:** JSP (JavaServer Pages) + JSTL
 - **ORM:** Hibernate 5.6.15
 - **Base de Datos:** H2 Database (en memoria/archivo)
+- **Testing:** JUnit 5.12.1 + Mockito 5.14.2
 - **Build Tool:** Maven
 - **Servidor:** Apache Tomcat 9
-- **IDE:** IntelliJ IDEA
+- **IDE:** IntelliJ IDEA / VS Code
 
 ---
 
@@ -60,23 +63,22 @@ GR04_1BT3_622_25B/
 │   ├── main/
 │   │   ├── java/com/gr4/
 │   │   │   ├── controller/          # Servlets (Controladores)
+│   │   │   │   ├── BaseServlet.java
 │   │   │   │   ├── GestorPlanificacionServlet.java
 │   │   │   │   ├── GestorAdministracionServlet.java
 │   │   │   │   ├── GestorListadoServlet.java
-│   │   │   │   └── GestorAlertasServlet.java
+│   │   │   │   ├── GestorAlertasServlet.java
+│   │   │   │   └── ListarTareasServlet.java
 │   │   │   ├── model/               # Entidades JPA
-│   │   │   │   ├── Actividad.java
-│   │   │   │   ├── Tarea.java
+│   │   │   │   ├── Tarea.java      # ✨ ENTIDAD PRINCIPAL
 │   │   │   │   └── Alerta.java
 │   │   │   ├── repository/          # Patrón Repository
-│   │   │   │   ├── ActividadRepository.java (I)
-│   │   │   │   ├── ActividadRepositoryImpl.java
 │   │   │   │   ├── TareaRepository.java (I)
 │   │   │   │   ├── TareaRepositoryImpl.java
 │   │   │   │   ├── AlertaRepository.java (I)
 │   │   │   │   └── AlertaRepositoryImpl.java
 │   │   │   ├── dto/                 # Data Transfer Objects
-│   │   │   │   ├── ActividadDTO.java
+│   │   │   │   ├── TareaDTO.java
 │   │   │   │   └── AlertaDTO.java
 │   │   │   ├── strategy/            # Patrón Strategy
 │   │   │   │   ├── OrdenStrategy.java (I)
@@ -86,10 +88,14 @@ GR04_1BT3_622_25B/
 │   │   │   ├── observer/            # Patrón Observer
 │   │   │   │   ├── AlertaListener.java (I)
 │   │   │   │   └── AlertaListenerImpl.java
+│   │   │   ├── service/             # Servicios de negocio
+│   │   │   │   └── TareaFilterService.java
 │   │   │   └── util/                # Utilidades
-│   │   │       └── JPAUtil.java
+│   │   │       ├── JPAUtil.java
+│   │   │       └── ParametroParser.java
 │   │   ├── resources/
-│   │   │   └── persistence.xml      # Configuración JPA
+│   │   │   └── META-INF/
+│   │   │       └── persistence.xml  # Configuración JPA
 │   │   └── webapp/
 │   │       ├── WEB-INF/
 │   │       │   └── web.xml
@@ -98,12 +104,42 @@ GR04_1BT3_622_25B/
 │   │       │   ├── planificar.jsp
 │   │       │   ├── organizar.jsp
 │   │       │   ├── consultar.jsp
-│   │       │   ├── configurar-alerta.jsp
+│   │       │   ├── listar.jsp
+│   │       │   ├── configurar_alerta.jsp
 │   │       │   └── success.jsp
 │   │       └── css/
 │   │           └── styles.css
+│   └── test/
+│       └── java/                    # Tests unitarios (JUnit + Mockito)
 └── pom.xml                          # Configuración Maven
 ```
+
+---
+
+## 📊 Modelo de Datos Simplificado
+
+### Entidad Principal: `Tarea`
+
+La entidad `Tarea` representa cualquier actividad o tarea académica que el estudiante debe completar.
+
+**Atributos:**
+- `id` (Long) - Identificador único
+- `titulo` (String) - Título de la tarea
+- `descripcion` (String) - Descripción detallada
+- `fechaVencimiento` (LocalDate) - Fecha límite de entrega
+- `estado` (String) - Pendiente | En Progreso | Completada
+- `prioridad` (String) - Alta | Media | Baja
+
+### Entidad Secundaria: `Alerta`
+
+Representa recordatorios asociados a tareas.
+
+**Atributos:**
+- `id` (Long) - Identificador único
+- `mensaje` (String) - Texto del recordatorio
+- `fechaHora` (LocalDateTime) - Fecha y hora de la alerta
+- `tipo` (String) - Recordatorio | Urgente | Informativa
+- `activa` (Boolean) - Estado de la alerta
 
 ---
 
@@ -111,9 +147,8 @@ GR04_1BT3_622_25B/
 
 ### Incremento 1: Planificación y Organización
 
-#### Caso de Uso 1: Planificar Actividades
-- **Descripción:** Registro de nuevas actividades académicas
-- **Diagrama:** Diagrama de secuencia implementado
+#### Caso de Uso 1: Planificar Tareas
+- **Descripción:** Registro de nuevas tareas académicas
 - **Controlador:** `GestorPlanificacionServlet`
 - **Vista:** `planificar.jsp`
 - **Patrón:** Repository
@@ -121,7 +156,6 @@ GR04_1BT3_622_25B/
 
 #### Caso de Uso 2: Organizar Tareas
 - **Descripción:** Visualización y ordenamiento dinámico de tareas
-- **Diagrama:** Diagrama de secuencia implementado
 - **Controlador:** `GestorAdministracionServlet`
 - **Vista:** `organizar.jsp`
 - **Patrón:** Strategy (3 estrategias de ordenamiento)
@@ -131,7 +165,6 @@ GR04_1BT3_622_25B/
 
 #### Caso de Uso 3: Consultar Tareas
 - **Descripción:** Consulta y filtrado de tareas por estado
-- **Diagrama:** Diagrama de secuencia implementado
 - **Controlador:** `GestorListadoServlet`
 - **Vista:** `consultar.jsp`
 - **Patrón:** Repository
@@ -139,9 +172,8 @@ GR04_1BT3_622_25B/
 
 #### Caso de Uso 4: Configurar Alertas
 - **Descripción:** Creación de alertas personalizadas
-- **Diagrama:** Diagrama de secuencia implementado
 - **Controlador:** `GestorAlertasServlet`
-- **Vista:** `configurar-alerta.jsp`
+- **Vista:** `configurar_alerta.jsp`
 - **Patrón:** Observer + Repository
 - **URL:** `/alertas`
 
