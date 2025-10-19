@@ -12,6 +12,7 @@ com\gr4\controller\BaseServlet.class
 com\gr4\controller\GestorPlanificacionServlet.class
 com\gr4\strategy\OrdenStrategy.class
 com\gr4\util\JPAUtil.class
+com\gr4\service\CalendarioService.class
 com\gr4\strategy\OrdenPorTitulo.class
 com\gr4\repository\AlertaRepository.class
 com\gr4\observer\AlertaListener.class
