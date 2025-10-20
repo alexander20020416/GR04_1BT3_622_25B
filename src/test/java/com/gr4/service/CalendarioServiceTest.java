@@ -230,5 +230,4 @@ public class CalendarioServiceTest {
         // Then: Debe contar solo las 2 pendientes
         assertEquals(2, resultado);
     }
-
 }

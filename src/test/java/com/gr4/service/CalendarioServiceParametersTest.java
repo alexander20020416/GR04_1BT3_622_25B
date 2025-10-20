@@ -25,7 +25,6 @@ public class CalendarioServiceParametersTest {
     private int tareasEnProgreso;
     private int tareasCompletadas;
 
-
     //Constructor que recibe los parámetros para cada ejecución del test
     public CalendarioServiceParametersTest(String fechaStr, int tareasPendientesEsperadas,
                                            int tareasEnProgreso, int tareasCompletadas) {
@@ -70,27 +69,15 @@ public class CalendarioServiceParametersTest {
         List<Tarea> tareas = new ArrayList<>();
         // Crear tareas pendientes
         for (int i = 0; i < tareasPendientesEsperadas; i++) {
-            Tarea tarea = new Tarea();
-            tarea.setTitulo("Tarea Pendiente " + i);
-            tarea.setFechaVencimiento(fecha);
-            tarea.setEstado(Tarea.ESTADO_PENDIENTE);
-            tareas.add(tarea);
+            agregarTarea(tareas, "Tarea Pendiente " + i, fecha, Tarea.ESTADO_PENDIENTE, null);
         }
         // Crear tareas en progreso
         for (int i = 0; i < tareasEnProgreso; i++) {
-            Tarea tarea = new Tarea();
-            tarea.setTitulo("Tarea En Progreso " + i);
-            tarea.setFechaVencimiento(fecha);
-            tarea.setEstado(Tarea.ESTADO_EN_PROGRESO);
-            tareas.add(tarea);
+            agregarTarea(tareas, "Tarea En Progreso " + i, fecha, Tarea.ESTADO_EN_PROGRESO, null);
         }
         // Crear tareas completadas
         for (int i = 0; i < tareasCompletadas; i++) {
-            Tarea tarea = new Tarea();
-            tarea.setTitulo("Tarea Completada " + i);
-            tarea.setFechaVencimiento(fecha);
-            tarea.setEstado(Tarea.ESTADO_COMPLETADA);
-            tareas.add(tarea);
+            agregarTarea(tareas, "Tarea Completada " + i, fecha, Tarea.ESTADO_COMPLETADA, null);
         }
 
         // When: Se cuentan las tareas pendientes para esa fecha
@@ -104,5 +91,26 @@ public class CalendarioServiceParametersTest {
         int totalTareas = tareasPendientesEsperadas + tareasEnProgreso + tareasCompletadas;
         assertEquals("El total de tareas creadas debe coincidir", totalTareas, tareas.size());
     }
+
+    /**
+     * Crea una tarea con los parámetros especificados y la agrega a la lista proporcionada.
+     *
+     * @param listaTareas Lista donde se agregará la tarea
+     * @param titulo      Título de la tarea
+     * @param fecha       Fecha de vencimiento
+     * @param estado      Estado de la tarea (pendiente, en progreso, completada)
+     * @param prioridad   Prioridad de la tarea (opcional, puede ser null)
+     */
+    private void agregarTarea(List<Tarea> listaTareas, String titulo, LocalDate fecha, String estado, String prioridad) {
+        Tarea tarea = new Tarea();
+        tarea.setTitulo(titulo);
+        tarea.setFechaVencimiento(fecha);
+        tarea.setEstado(estado);
+        if (prioridad != null) {
+            tarea.setPrioridad(prioridad);
+        }
+        listaTareas.add(tarea);
+    }
+
 
 }

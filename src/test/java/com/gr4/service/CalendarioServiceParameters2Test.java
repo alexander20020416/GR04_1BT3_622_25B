@@ -31,6 +31,10 @@ public class CalendarioServiceParameters2Test {
     private int tareasOtraFecha2;
     private int tamanoEsperado;
 
+    private static final String MENSAJE_TOTAL_TAREAS = "El total de tareas creadas debe coincidir";
+    private static final String MENSAJE_FECHA_TAREAS = "Para fecha %s con %d tareas en esa fecha, %d en otra1 y %d en otra2, se esperaba obtener %d pero se obtuvo %d";
+
+
     /**
      * Constructor que recibe los parámetros para cada ejecución del test
      */
@@ -65,7 +69,6 @@ public class CalendarioServiceParameters2Test {
                 {"2025-10-30", 1, 10, 8, 1}
         });
     }
-
     @Before
     public void setUp() {
         // Given: Se inicializa el servicio antes de cada test
@@ -112,10 +115,8 @@ public class CalendarioServiceParameters2Test {
         // When: Se obtienen las tareas del día específico
         List<Tarea> resultado = calendarioService.obtenerTareasPorDia(tareas, fechaBuscada);
         // Then: El tamaño de la lista debe ser el esperado
-        String mensajeError = String.format(
-                "Para fecha %s con %d tareas en esa fecha, %d en otra1 y %d en otra2, se esperaba obtener %d pero se obtuvo %d",
-                fechaBuscada, tareasEnEsaFecha, tareasOtraFecha1, tareasOtraFecha2, tamanoEsperado, resultado.size());
-        assertEquals(mensajeError, tamanoEsperado, resultado.size());
+        assertEquals(String.format(MENSAJE_FECHA_TAREAS, fechaBuscada, tareasEnEsaFecha, tareasOtraFecha1, tareasOtraFecha2, tamanoEsperado, resultado.size()),
+                tamanoEsperado, resultado.size());
         // Verificación adicional 1: todas las tareas deben ser de la fecha correcta
         for (Tarea tarea : resultado) {
             assertNotNull("La tarea no debe ser nula", tarea);
@@ -124,7 +125,7 @@ public class CalendarioServiceParameters2Test {
         }
         // Verificación adicional 2: el total de tareas creadas
         int totalTareasCreadas = tareasEnEsaFecha + tareasOtraFecha1 + tareasOtraFecha2;
-        assertEquals("El total de tareas creadas debe coincidir", totalTareasCreadas, tareas.size());
+        assertEquals(MENSAJE_TOTAL_TAREAS, totalTareasCreadas, tareas.size());
         // Verificación adicional 3: si no hay tareas para esa fecha, la lista debe estar vacía
         if (tareasEnEsaFecha == 0) {
             assertTrue("Si no hay tareas para la fecha, la lista debe estar vacía", resultado.isEmpty());

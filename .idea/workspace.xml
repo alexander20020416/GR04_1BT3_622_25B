@@ -10,38 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceMockTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/BaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/BaseServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAdministracionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAdministracionServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAlertasServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAlertasServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorListadoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorListadoServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorPlanificacionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorPlanificacionServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/ListarTareasServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/ListarTareasServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/dto/AlertaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/dto/AlertaDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/dto/TareaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/dto/TareaDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/model/Alerta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/model/Alerta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListenerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListenerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/service/CalendarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/service/CalendarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceParameters2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceParameters2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceParametersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceParametersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorFecha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorFecha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorTitulo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorTitulo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/ParametroParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/ParametroParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParameters2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParameters2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParametersTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParametersTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +107,7 @@
       <recent name="com.gr4.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.109">
     <configuration name="CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GR04_1BT3_622_25B" />
       <extension name="coverage">
@@ -297,6 +272,14 @@
         <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas" />
+      <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" />
+      <item itemvalue="JUnit.CalendarioServiceParameters2Test" />
+      <item itemvalue="JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista" />
+      <item itemvalue="JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.109" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" />
