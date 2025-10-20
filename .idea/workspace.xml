@@ -9,7 +9,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="" />
+    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceMockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/BaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/BaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAdministracionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAdministracionServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAlertasServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAlertasServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorListadoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorListadoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorPlanificacionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorPlanificacionServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/ListarTareasServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/ListarTareasServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/dto/AlertaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/dto/AlertaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/dto/TareaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/dto/TareaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/model/Alerta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/model/Alerta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListenerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListenerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorFecha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorFecha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorTitulo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorTitulo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/ParametroParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/ParametroParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParameters2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParameters2Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParametersTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParametersTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +52,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Eliz-CH"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/alexander20020416/GR04_1BT3_622_25B.git",
+    "accountId": "8b48fec8-f801-4adf-aecc-69e4af24c789"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -44,36 +90,96 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.CalendarioServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CalendarioServiceTest.given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 9.0.109.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Incremento-refactorización&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS TUF F15/Downloads/GR04_1BT3_622_25B&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente.executor": "Run",
+    "JUnit.CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas.executor": "Run",
+    "JUnit.CalendarioServiceParameters2Test.executor": "Run",
+    "JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista.executor": "Run",
+    "JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha.executor": "Run",
+    "JUnit.CalendarioServiceTest.executor": "Run",
+    "JUnit.CalendarioServiceTest.given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Tomcat Server.Tomcat 9.0.109.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "Incremento-refactorización",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ASUS TUF F15/Downloads/GR04_1BT3_622_25B",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS TUF F15\Downloads\GR04_1BT3_622_25B\.idea\dictionaries" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.gr4.service" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista">
+  <component name="RunManager" selected="JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente">
+    <configuration name="CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GR04_1BT3_622_25B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gr4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceMockTest" />
+      <option name="METHOD_NAME" value="given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GR04_1BT3_622_25B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gr4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceMockTest" />
+      <option name="METHOD_NAME" value="given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalendarioServiceParameters2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GR04_1BT3_622_25B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gr4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceParameters2Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GR04_1BT3_622_25B" />
       <extension name="coverage">
@@ -101,37 +207,6 @@
       <option name="PACKAGE_NAME" value="com.gr4.service" />
       <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceParametersTest" />
       <option name="METHOD_NAME" value="given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalendarioServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GR04_1BT3_622_25B" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gr4.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalendarioServiceTest.given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GR04_1BT3_622_25B" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gr4.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceTest" />
-      <option name="METHOD_NAME" value="given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,10 +299,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista" />
+        <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" />
+        <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas" />
+        <item itemvalue="JUnit.CalendarioServiceParameters2Test" />
         <item itemvalue="JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha" />
-        <item itemvalue="JUnit.CalendarioServiceTest.given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia" />
-        <item itemvalue="JUnit.CalendarioServiceTest" />
+        <item itemvalue="JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista" />
       </list>
     </recent_temporary>
   </component>
