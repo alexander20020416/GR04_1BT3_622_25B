@@ -22,7 +22,8 @@ public class Tarea {
     public static final String PRIORIDAD_BAJA = "Baja";
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tarea_seq")
+    @SequenceGenerator(name = "tarea_seq", sequenceName = "tarea_seq", allocationSize = 1)
     private Long id;
 
     @Column(nullable = false, length = 200)

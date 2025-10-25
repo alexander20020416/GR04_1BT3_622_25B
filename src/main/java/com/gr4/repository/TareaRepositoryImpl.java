@@ -62,6 +62,20 @@ public class TareaRepositoryImpl implements TareaRepository {
     }
 
     @Override
+    public List<Tarea> findAllOrderById() {
+        EntityManager em = JPAUtil.getEntityManager();
+        try {
+            TypedQuery<Tarea> query = em.createQuery(
+                    "SELECT t FROM Tarea t ORDER BY t.id ASC",
+                    Tarea.class
+            );
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
     public List<Tarea> findByEstado(String estado) {
         EntityManager em = JPAUtil.getEntityManager();
         try {

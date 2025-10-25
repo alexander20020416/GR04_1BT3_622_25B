@@ -33,7 +33,11 @@
                  update: Actualiza el esquema sin borrar datos
                  validate: Solo valida que las tablas existan
                  create-drop: Crea al inicio y borra al cerrar -->
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            
+            <!-- Reiniciar secuencias al iniciar -->
+            <property name="hibernate.id.new_generator_mappings" value="true"/>
+            <property name="hibernate.hbm2ddl.import_files_sql_extractor" value="org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor"/>
 
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>

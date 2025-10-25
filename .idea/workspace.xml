@@ -10,13 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/service/CalendarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/service/CalendarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceParameters2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceParameters2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceParametersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceParametersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/CalendarioServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParameters2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParameters2Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/gestor_tareas.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/gestor_tareas.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/model/Tarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/model/Tarea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/repository/TareaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/repository/TareaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/repository/TareaRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/repository/TareaRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/service/TareaFilterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/service/TareaFilterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/SESSIONS.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/index_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/calendario_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/calendario_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +53,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Eliz-CH"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Eliz-CH&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/alexander20020416/GR04_1BT3_622_25B.git",
-    "accountId": "8b48fec8-f801-4adf-aecc-69e4af24c789"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alexander20020416/GR04_1BT3_622_25B.git&quot;,
+    &quot;accountId&quot;: &quot;8b48fec8-f801-4adf-aecc-69e4af24c789&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -77,13 +96,14 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 9.0.109.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "Incremento-refactorización",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ASUS TUF F15/Downloads/GR04_1BT3_622_25B",
+    "last_opened_file_path": "C:/Users/ASUS TUF F15/Desktop/Epn/6/Construcción de Software/GR04_1BT3_622_25B",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -315,6 +335,7 @@
       <workItem from="1760308041397" duration="6529000" />
       <workItem from="1760322517429" duration="67000" />
       <workItem from="1760882535453" duration="5881000" />
+      <workItem from="1761409736556" duration="946000" />
     </task>
     <servers />
   </component>

@@ -22,7 +22,9 @@ public class TareaFilterService {
      */
     public List<Tarea> obtenerTareasFiltradas(String filtro) {
         if (filtro == null || filtro.isEmpty() || filtro.equals("todos")) {
-            return tareaRepository.findAll();
+            // Mostrar en la interfaz las tareas en el orden de inserción (por id)
+            // para que al registrar nuevas tareas se vea el id en secuencia
+            return tareaRepository.findAllOrderById();
         } else {
             return tareaRepository.findByEstado(filtro);
         }

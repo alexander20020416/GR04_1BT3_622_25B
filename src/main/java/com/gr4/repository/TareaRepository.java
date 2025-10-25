@@ -32,6 +32,12 @@ public interface TareaRepository {
     List<Tarea> findAll();
 
     /**
+     * Obtiene todas las tareas ordenadas por su ID (orden de inserción)
+     * @return Lista de todas las tareas ordenadas por id
+     */
+    List<Tarea> findAllOrderById();
+
+    /**
      * Busca tareas por estado
      * @param estado Estado de las tareas (Pendiente, En Progreso, Completada)
      * @return Lista de tareas con ese estado
