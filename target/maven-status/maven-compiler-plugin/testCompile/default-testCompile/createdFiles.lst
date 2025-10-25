@@ -1,1 +1,4 @@
 com\gr4\service\CalendarioServiceTest.class
+com\gr4\service\CalendarioServiceParametersTest.class
+com\gr4\service\CalendarioServiceParameters2Test.class
+com\gr4\service\CalendarioServiceMockTest.class
