@@ -16,6 +16,7 @@ com\gr4\service\CalendarioService.class
 com\gr4\strategy\OrdenPorTitulo.class
 com\gr4\repository\AlertaRepository.class
 com\gr4\observer\AlertaListener.class
+com\gr4\controller\GestorCalendarioServlet.class
 com\gr4\controller\GestorAlertasServlet.class
 com\gr4\util\JPAUtil$EntityManagerOperation.class
 com\gr4\controller\GestorListadoServlet.class

@@ -65,23 +65,18 @@
                         Ver Mis Alertas
                     </a>
                 </div>
+
+                <div class="menu-card">
+                    <div class="card-icon">📅</div>
+                    <h4>Calendario de Tareas</h4>
+                    <p>Visualiza tus tareas en un calendario semanal, detecta conflictos y administra tu tiempo.</p>
+                    <a href="${pageContext.request.contextPath}/calendario" class="btn btn-secondary">
+                        Ver Calendario
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="info-section">
-            <h3>ℹ️ Patrones de Diseño Implementados</h3>
-            <div class="patterns-list">
-                <div class="pattern-item">
-                    <strong>Repository:</strong> Separación de lógica de negocio y persistencia
-                </div>
-                <div class="pattern-item">
-                    <strong>Strategy:</strong> Diferentes estrategias de ordenamiento de tareas
-                </div>
-                <div class="pattern-item">
-                    <strong>Observer:</strong> Notificación de eventos de alertas
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer>
