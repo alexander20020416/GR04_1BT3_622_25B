@@ -35,10 +35,6 @@ public class LogoutServiceMockTest {
         logoutService = new LogoutService(usuarioRepository);
     }
 
-    /**
-     * CA3: Verifica que al cerrar sesión se elimine completamente
-     * la cookie "rememberMe" del navegador Y su token de la base de datos
-     */
     @Test
     public void given_UsuarioConCookieRememberMe_when_CerrarSesion_then_DebeEliminarCookieYTokenDeBD() {
         // Given: Se prepara el mock del request con una cookie "rememberMe"
