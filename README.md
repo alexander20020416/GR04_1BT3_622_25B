@@ -177,6 +177,22 @@ Representa recordatorios asociados a tareas.
 - **Patrón:** Observer + Repository
 - **URL:** `/alertas`
 
+#### Caso de Uso 5: Vista de Calendario
+- **Descripción:** Visualización de tareas en formato de calendario
+- **Controlador:** `CalendarioService`
+- **Vista:** Integrada en las vistas existentes
+- **Funcionalidad:** Muestra las tareas organizadas por fecha
+- **Características:**
+  - Vista mensual de tareas
+  - Indicadores de prioridad por colores
+  - Navegación entre meses
+  - Vista rápida de detalles
+- **Descripción:** Creación de alertas personalizadas
+- **Controlador:** `GestorAlertasServlet`
+- **Vista:** `configurar_alerta.jsp`
+- **Patrón:** Observer + Repository
+- **URL:** `/alertas`
+
 ---
 
 ## 🔧 Instalación y Configuración
@@ -230,6 +246,14 @@ La aplicación usa H2 Database por defecto. La configuración está en `persiste
 ---
 
 ## 🧪 Casos de Prueba Implementados
+
+### Estado Actual de las Pruebas
+
+El proyecto utiliza JUnit 5 con Mockito para las pruebas unitarias. Actualmente hay algunos problemas de compatibilidad con ByteBuddy/Mockito que estamos trabajando en resolver. Para ejecutar las pruebas exitosamente:
+
+1. Usar Java 11 para las pruebas (compatible con la versión actual de Mockito)
+2. Ejecutar `mvn test -DskipTests=false`
+3. Ver resultados en `target/surefire-reports/`
 
 ### Incremento 1
 
@@ -420,6 +444,15 @@ El sistema imprime información útil en la consola del servidor:
 
 ### Error: "Las tablas no se crean"
 **Solución:** Verificar `hibernate.hbm2ddl.auto` en `persistence.xml` (debe ser `update` o `create`)
+
+### Error: "IDs no secuenciales en tareas"
+**Solución:** 
+- La generación de IDs está configurada como IDENTITY para mayor rendimiento
+- Si se requieren IDs estrictamente secuenciales, modificar `@GeneratedValue` en `Tarea.java` a:
+```java
+@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tarea_seq")
+@SequenceGenerator(name = "tarea_seq", sequenceName = "tarea_seq", allocationSize = 1)
+```
 
 ### Las vistas JSP no encuentran los estilos CSS
 **Solución:** Verificar que la carpeta `css` esté en `webapp/css/` (no en `WEB-INF`)

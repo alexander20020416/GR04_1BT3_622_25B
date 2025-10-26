@@ -10,32 +10,187 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/gestor_tareas.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/gestor_tareas.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/model/Tarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/model/Tarea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/repository/TareaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/repository/TareaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/repository/TareaRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/repository/TareaRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/service/TareaFilterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/service/TareaFilterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/SESSIONS.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/index_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/calendario_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/calendario_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/BaseServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAdministracionServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAlertasServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorCalendarioServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorListadoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorPlanificacionServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/ListarTareasServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/dto/AlertaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/dto/TareaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Alerta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/observer/AlertaListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/observer/AlertaListenerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/AlertaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/AlertaRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/CalendarioService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorFecha.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorPrioridad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorTitulo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/JPAUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/ParametroParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/byte-buddy-1.14.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/h2-2.1.214.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-commons-annotations-5.1.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-core-5.6.15.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-java8-5.6.15.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jandex-2.4.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jboss-logging-3.4.3.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/slf4j-api-1.7.36.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/slf4j-simple-1.7.36.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/calendario.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/configurar_alerta.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/consultar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/listar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/listar_alertas.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/organizar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/planificar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/success.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/.cargo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/conf/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/META-INF/maven/com.gr4/GR04_1BT3_622_25B/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/META-INF/maven/com.gr4/GR04_1BT3_622_25B/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/BaseServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAdministracionServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAlertasServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorCalendarioServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorListadoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorPlanificacionServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/ListarTareasServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/dto/AlertaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/dto/TareaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Alerta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/observer/AlertaListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/observer/AlertaListenerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/AlertaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/AlertaRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/CalendarioService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorFecha.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorPrioridad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenPorTitulo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/strategy/OrdenStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/JPAUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/util/ParametroParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/byte-buddy-1.14.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/h2-2.1.214.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-commons-annotations-5.1.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-core-5.6.15.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/hibernate-java8-5.6.15.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/jandex-2.4.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/jboss-logging-3.4.3.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/slf4j-api-1.7.36.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/slf4j-simple-1.7.36.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/calendario.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/configurar_alerta.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/consultar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/listar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/listar_alertas.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/organizar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/planificar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/GR04_1BT3_622_25B/jsp/success.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/index_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/index_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/consultar_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/consultar_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/listar_005falertas_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/listar_005falertas_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/planificar_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/planificar_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/success_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/GR04_1BT3_622_25B/org/apache/jsp/jsp/success_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/BaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/BaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAdministracionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAdministracionServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAlertasServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAlertasServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorCalendarioServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorCalendarioServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorListadoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorListadoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorPlanificacionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorPlanificacionServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/ListarTareasServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/ListarTareasServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/dto/AlertaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/dto/AlertaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/dto/TareaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/dto/TareaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/model/Alerta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/model/Alerta.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListenerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/observer/AlertaListenerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/AlertaRepositoryImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorFecha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorFecha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorPrioridad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorTitulo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenPorTitulo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/strategy/OrdenStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil$EntityManagerOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/JPAUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/util/ParametroParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/util/ParametroParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceMockTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceMockTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParameters2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParameters2Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParametersTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceParametersTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +248,14 @@
     "JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha.executor": "Run",
     "JUnit.CalendarioServiceTest.executor": "Run",
     "JUnit.CalendarioServiceTest.given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia.executor": "Run",
+    "JUnit.UsuarioTest.given_CorreoConDiferentesFormatos_when_ValidarFormatoCorreo_then_DebeValidarFormatoCorrectamente.executor": "Run",
+    "JUnit.UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente.executor": "Run",
+    "JUnit.UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente.executor": "Run",
+    "JUnit.UsuarioTest.given_DatosDeUsuarioValidos_when_CrearNuevoUsuario_then_DebeCrearseCorrectamente.executor": "Run",
+    "JUnit.UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente.executor": "Run",
+    "JUnit.UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto.executor": "Run",
+    "JUnit.UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos.executor": "Run",
+    "JUnit.UsuarioTest.testCrearUsuarioConDatosValidos.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -127,81 +290,82 @@
       <recent name="com.gr4.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.109">
-    <configuration name="CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente">
+    <configuration name="UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GR04_1BT3_622_25B" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="PATTERN" value="com.gr4.auth.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceMockTest" />
-      <option name="METHOD_NAME" value="given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" />
+      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
+      <option name="METHOD_NAME" value="given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GR04_1BT3_622_25B" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="PATTERN" value="com.gr4.auth.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceMockTest" />
-      <option name="METHOD_NAME" value="given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas" />
+      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
+      <option name="METHOD_NAME" value="given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalendarioServiceParameters2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GR04_1BT3_622_25B" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="PATTERN" value="com.gr4.auth.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceParameters2Test" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GR04_1BT3_622_25B" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gr4.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceParameters2Test" />
-      <option name="METHOD_NAME" value="given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista" />
+      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
+      <option name="METHOD_NAME" value="given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GR04_1BT3_622_25B" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="PATTERN" value="com.gr4.auth.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.service.CalendarioServiceParametersTest" />
-      <option name="METHOD_NAME" value="given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha" />
+      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
+      <option name="METHOD_NAME" value="given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GR04_1BT3_622_25B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gr4.auth.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
+      <option name="METHOD_NAME" value="given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -293,20 +457,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas" />
-      <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" />
-      <item itemvalue="JUnit.CalendarioServiceParameters2Test" />
-      <item itemvalue="JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista" />
-      <item itemvalue="JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha" />
+      <item itemvalue="JUnit.UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" />
+      <item itemvalue="JUnit.UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" />
+      <item itemvalue="JUnit.UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente" />
+      <item itemvalue="JUnit.UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" />
+      <item itemvalue="JUnit.UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.109" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente" />
-        <item itemvalue="JUnit.CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas" />
-        <item itemvalue="JUnit.CalendarioServiceParameters2Test" />
-        <item itemvalue="JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha" />
-        <item itemvalue="JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista" />
+        <item itemvalue="JUnit.UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente" />
+        <item itemvalue="JUnit.UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" />
+        <item itemvalue="JUnit.UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" />
+        <item itemvalue="JUnit.UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" />
+        <item itemvalue="JUnit.UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +499,8 @@
       <workItem from="1760308041397" duration="6529000" />
       <workItem from="1760322517429" duration="67000" />
       <workItem from="1760882535453" duration="5881000" />
-      <workItem from="1761409736556" duration="946000" />
+      <workItem from="1761409736556" duration="4401000" />
+      <workItem from="1761488719075" duration="6599000" />
     </task>
     <servers />
   </component>
