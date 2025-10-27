@@ -1,6 +1,6 @@
 package com.gr4.auth.service;
 
-<<<<<<< HEAD
+
 import com.gr4.auth.model.Usuario;
 import com.gr4.auth.repository.UsuarioRepository;
 import com.gr4.auth.repository.UsuarioRepositoryImpl;
@@ -138,7 +138,5 @@ public class AuthService {
     public void limpiarUsuarios() {
         usuarioRepository.limpiarCorreos();
     }
-=======
-public class AuthService {
->>>>>>> 4b4368912b47b39f8dd82560d9d2b4010b418118
 }
+
