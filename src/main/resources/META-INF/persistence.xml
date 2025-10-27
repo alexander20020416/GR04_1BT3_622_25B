@@ -12,6 +12,7 @@
         <class>com.gr4.model.Actividad</class>
         <class>com.gr4.model.Tarea</class>
         <class>com.gr4.model.Alerta</class>
+        <class>com.gr4.auth.model.UsuarioEntity</class>
 
         <properties>
             <!-- Configuración de H2 Database -->
@@ -29,11 +30,11 @@
             <!-- Configuración de Hibernate -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 
-            <!-- create: Crea las tablas cada vez (borra datos existentes)
-                 update: Actualiza el esquema sin borrar datos
+            <!-- update: Actualiza el esquema sin borrar datos (MANTIENE USUARIOS)
+                 create: Crea las tablas cada vez (borra datos existentes)
                  validate: Solo valida que las tablas existan
                  create-drop: Crea al inicio y borra al cerrar -->
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             
             <!-- Reiniciar secuencias al iniciar -->
             <property name="hibernate.id.new_generator_mappings" value="true"/>

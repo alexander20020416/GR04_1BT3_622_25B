@@ -33,4 +33,19 @@ public interface UsuarioRepository {
      * Limpia todos los correos registrados (útil para testing)
      */
     void limpiarCorreos();
+    
+    /**
+     * Obtiene el número total de usuarios registrados
+     * @return cantidad de usuarios en el repositorio
+     */
+    int obtenerTotalUsuarios();
+    
+    /**
+     * Elimina el token "Remember Me" de la base de datos
+     * Este método se invoca durante el cierre de sesión (CA3)
+     *
+     * @param token Token a eliminar
+     * @return true si se eliminó correctamente, false en caso contrario
+     */
+    boolean eliminarTokenRememberMe(String token);
 }

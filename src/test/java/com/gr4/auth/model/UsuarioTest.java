@@ -2,6 +2,7 @@ package com.gr4.auth.model;
 
 import com.gr4.auth.util.UsuarioValidator;
 import com.gr4.auth.service.AuthService;
+import com.gr4.auth.repository.UsuarioRepositoryImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
@@ -74,7 +75,9 @@ public class UsuarioTest {
     @BeforeEach
     public void setUp() {
         validator = new UsuarioValidator();
-        authService = new AuthService();
+        // Crear AuthService con dependencias inyectadas para tests
+        UsuarioRepositoryImpl repository = new UsuarioRepositoryImpl();
+        authService = new AuthService(repository, validator);
         authService.limpiarUsuarios();
     }
 

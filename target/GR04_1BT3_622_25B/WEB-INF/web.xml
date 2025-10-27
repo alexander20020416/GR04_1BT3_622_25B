@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="false">
+
+  <!--<display-name>Gestor de Tareas Universitarias</display-name>
+  <description>
+    Sistema de gestión de tareas universitarias con soporte para
+    planificación, organización, consulta y alertas.
+  </description>-->
+
+  <!-- Página de inicio -->
+    <welcome-file-list>
+        <welcome-file>jsp/registro.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet para H2 Console -->
+    <servlet>
+        <servlet-name>H2Console</servlet-name>
+        <servlet-class>org.h2.server.web.WebServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>H2Console</servlet-name>
+        <url-pattern>/h2-console/*</url-pattern>
+    </servlet-mapping>
+
+  <!-- Configuración de sesión -->
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+
+  <!-- Manejo de errores -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/jsp/error.jsp</location>
+  </error-page>
+
+  <error-page>
+    <error-code>500</error-code>
+    <location>/jsp/error.jsp</location>
+  </error-page>
+
+</web-app>
