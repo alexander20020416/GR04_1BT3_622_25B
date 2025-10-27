@@ -1,7 +1,9 @@
 com\gr4\auth\controller\RegisterServletTest.class
+com\gr4\service\LogoutServiceParameterTest.class
 com\gr4\auth\model\UsuarioTest.class
 com\gr4\service\CalendarioServiceMockTest.class
 com\gr4\auth\service\ValidadorUsuarioTest.class
 com\gr4\service\CalendarioServiceTest.class
 com\gr4\service\CalendarioServiceParametersTest.class
 com\gr4\service\CalendarioServiceParameters2Test.class
+com\gr4\service\LogoutServiceMockTest.class
