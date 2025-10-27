@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="actualizacion jdk">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="se creo Dockerfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761534510469</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="se creo Dockerfile">
+      <option name="closed" value="true" />
+      <created>1761536701848</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761536701848</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +374,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="corrección de problemas" />
     <MESSAGE value="actualizacion jdk" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion jdk" />
+    <MESSAGE value="se creo Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="se creo Dockerfile" />
   </component>
 </project>

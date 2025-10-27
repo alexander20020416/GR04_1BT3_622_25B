@@ -1,5 +1,7 @@
-# Usamos Tomcat 10 con JDK 21
-FROM tomcat:10.1.15-jdk21-temurin
+# Usamos Tomcat 9 con JDK 21
+FROM tomcat:9.0.109-jdk21
+
+
 
 # Limpiamos aplicaciones por defecto de Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
