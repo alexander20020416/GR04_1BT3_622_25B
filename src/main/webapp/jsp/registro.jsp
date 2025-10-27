@@ -24,8 +24,16 @@
             <label for="password">Contraseña</label>
             <input type="password" id="password" name="password" placeholder="********" required>
         </div>
-        <button type="submit">Registrarse</button>
+        <button type="submit" class="btn-submit">Registrarse</button>
     </form>
+
+    <div class="links-section">
+        <p>¿Tienes Cuenta?</p>
+        <a href="${pageContext.request.contextPath}/jsp/login.jsp" class="login-link">
+            📝 Iniciar Sesión
+        </a>
+    </div>
+
 </div>
 </body>
 </html>
