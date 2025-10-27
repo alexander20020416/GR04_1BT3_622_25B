@@ -1,0 +1,172 @@
+/* Fondo general */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #00c9a7, #00e0c6, #0fd850);
+    background-size: 200% 200%;
+    animation: gradientMove 6s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.register-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 128, 128, 0.3);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Título */
+.register-container h2 {
+    margin-bottom: 1.5rem;
+    color: #e0fff7;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #dffef7;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: #0b3d3d;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #3b7979;
+}
+
+.form-group input:focus {
+    border-color: #00ffd0;
+    box-shadow: 0 0 10px rgba(0, 255, 208, 0.6);
+    background: rgba(255, 255, 255, 0.35);
+    outline: none;
+}
+
+/* Botón de envío */
+.btn-submit {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00ffd0, #00c9a7);
+    color: #00332e;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #0fd850, #00e0c6);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 208, 0.6);
+}
+
+/* Link de login */
+.login-link {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.login-link a {
+    color: #a6fff2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #00ffd0;
+    text-decoration: underline;
+}
+
+/* Botón de envío */
+.btn-submit {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #00e0c6, #00ffb3, #00c9a7);
+    color: #003c34;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 208, 0.3);
+}
+
+/* Efecto de brillo animado */
+.btn-submit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.2)
+    );
+    transform: skewX(-25deg);
+    transition: all 0.7s ease;
+}
+
+/* Animación de brillo al pasar el mouse */
+.btn-submit:hover::before {
+    left: 125%;
+}
+
+/* Hover con aumento de brillo y profundidad */
+.btn-submit:hover {
+    background: linear-gradient(135deg, #00ffd0, #00e0a6);
+    transform: scale(1.06);
+    box-shadow: 0 6px 20px rgba(0, 255, 208, 0.6);
+}
+
+/* Click (efecto de presión) */
+.btn-submit:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 10px rgba(0, 255, 208, 0.3);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}

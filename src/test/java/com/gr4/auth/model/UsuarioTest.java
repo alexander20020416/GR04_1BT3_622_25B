@@ -1,7 +1,6 @@
 package com.gr4.auth.model;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,15 +33,15 @@ public class UsuarioTest {
         Usuario usuarioSinDominio = new Usuario("María", "usuario@", "pass123");
 
         // Act & Assert
-        assertTrue(usuarioValido.validarFormatoCorreo(), 
+        assertTrue(usuarioValido.validarFormatoCorreo(),
             "Correo con formato válido debe ser aceptado");
-        assertFalse(usuarioSinArroba.validarFormatoCorreo(), 
+        assertFalse(usuarioSinArroba.validarFormatoCorreo(),
             "Correo sin @ debe ser rechazado");
-        assertFalse(usuarioCorreoVacio.validarFormatoCorreo(), 
+        assertFalse(usuarioCorreoVacio.validarFormatoCorreo(),
             "Correo vacío debe ser rechazado");
-        assertFalse(usuarioCorreoNull.validarFormatoCorreo(), 
+        assertFalse(usuarioCorreoNull.validarFormatoCorreo(),
             "Correo null debe ser rechazado");
-        assertFalse(usuarioSinDominio.validarFormatoCorreo(), 
+        assertFalse(usuarioSinDominio.validarFormatoCorreo(),
             "Correo sin dominio debe ser rechazado");
     }
 
@@ -126,7 +125,7 @@ public class UsuarioTest {
         Usuario usuarioCredencialesVacias = new Usuario("Ana", "", "");
 
         // Registrar el usuario válido
-        assertTrue(usuarioRegistrado.registrarCorreo(), 
+        assertTrue(usuarioRegistrado.registrarCorreo(),
             "El usuario debería registrarse correctamente");
 
         // Act & Assert
@@ -150,9 +149,9 @@ public class UsuarioTest {
         String nuevaContraseña = "newpass456";
         String nombreInvalido = "Ab"; // Muy corto
         String contraseñaInvalida = "123"; // Muy corta
-        
+
         // Registrar el usuario
-        assertTrue(usuario.registrarCorreo(), 
+        assertTrue(usuario.registrarCorreo(),
             "El usuario debería registrarse correctamente");
 
         // Act & Assert - Actualizar nombre válido
@@ -186,9 +185,9 @@ public class UsuarioTest {
     public void given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente() {
         // Arrange
         Usuario usuario = new Usuario("Juan", "juan@mail.com", "pass123");
-        
+
         // Registrar el usuario
-        assertTrue(usuario.registrarCorreo(), 
+        assertTrue(usuario.registrarCorreo(),
             "El usuario debería registrarse correctamente");
 
         // Act & Assert - Usuario debe estar activo por defecto
