@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="se creo Dockerfile">
+    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="cambios en Dockerfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
@@ -365,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761536701848</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cambios en Dockerfile">
+      <option name="closed" value="true" />
+      <created>1761538622988</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761538622988</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +383,7 @@
     <MESSAGE value="corrección de problemas" />
     <MESSAGE value="actualizacion jdk" />
     <MESSAGE value="se creo Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="se creo Dockerfile" />
+    <MESSAGE value="cambios en Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios en Dockerfile" />
   </component>
 </project>
