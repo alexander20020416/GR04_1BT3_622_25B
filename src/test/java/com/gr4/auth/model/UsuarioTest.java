@@ -37,6 +37,7 @@ public class UsuarioTest {
         String correoSinDominio = "usuario@";
 
         // Act & Assert
+<<<<<<< HEAD
         assertTrue(validator.validarFormatoCorreo(correoValido), 
             "Correo con formato válido debe ser aceptado");
         assertFalse(validator.validarFormatoCorreo(correoSinArroba), 
@@ -46,6 +47,17 @@ public class UsuarioTest {
         assertFalse(validator.validarFormatoCorreo(correoNull), 
             "Correo null debe ser rechazado");
         assertFalse(validator.validarFormatoCorreo(correoSinDominio), 
+=======
+        assertTrue(usuarioValido.validarFormatoCorreo(),
+            "Correo con formato válido debe ser aceptado");
+        assertFalse(usuarioSinArroba.validarFormatoCorreo(),
+            "Correo sin @ debe ser rechazado");
+        assertFalse(usuarioCorreoVacio.validarFormatoCorreo(),
+            "Correo vacío debe ser rechazado");
+        assertFalse(usuarioCorreoNull.validarFormatoCorreo(),
+            "Correo null debe ser rechazado");
+        assertFalse(usuarioSinDominio.validarFormatoCorreo(),
+>>>>>>> 4b4368912b47b39f8dd82560d9d2b4010b418118
             "Correo sin dominio debe ser rechazado");
     }
 
@@ -129,7 +141,11 @@ public class UsuarioTest {
         Usuario usuarioNoRegistrado = new Usuario("Pedro", "pedro@mail.com", "password123");
 
         // Registrar el usuario válido
+<<<<<<< HEAD
         assertTrue(authService.registrarUsuario(usuarioRegistrado), 
+=======
+        assertTrue(usuarioRegistrado.registrarCorreo(),
+>>>>>>> 4b4368912b47b39f8dd82560d9d2b4010b418118
             "El usuario debería registrarse correctamente");
 
         // Act & Assert
@@ -151,9 +167,13 @@ public class UsuarioTest {
         String nuevaContraseña = "newpass456";
         String nombreInvalido = "Ab"; // Muy corto
         String contraseñaInvalida = "123"; // Muy corta
-        
+
         // Registrar el usuario
+<<<<<<< HEAD
         assertTrue(authService.registrarUsuario(usuario), 
+=======
+        assertTrue(usuario.registrarCorreo(),
+>>>>>>> 4b4368912b47b39f8dd82560d9d2b4010b418118
             "El usuario debería registrarse correctamente");
 
         // Act & Assert - Actualizar nombre válido
@@ -186,10 +206,17 @@ public class UsuarioTest {
     @Test
     public void given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente() {
         // Arrange
+<<<<<<< HEAD
         Usuario usuario = new Usuario("Juan", "juan@mail.com", "password123");
         
         // Registrar el usuario
         assertTrue(authService.registrarUsuario(usuario), 
+=======
+        Usuario usuario = new Usuario("Juan", "juan@mail.com", "pass123");
+
+        // Registrar el usuario
+        assertTrue(usuario.registrarCorreo(),
+>>>>>>> 4b4368912b47b39f8dd82560d9d2b4010b418118
             "El usuario debería registrarse correctamente");
 
         // Act & Assert - Usuario debe estar activo por defecto
