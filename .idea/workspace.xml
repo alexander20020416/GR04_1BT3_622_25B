@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="actualizacion jdk">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/gestor_tareas.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/gestor_tareas.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -42,6 +43,10 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceMockTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceParameterTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/auth/model/UsuarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/auth/model/UsuarioTest.class" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 86585e8d4a1eb2e988281986ffd9ebae9932aeec
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +58,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -373,7 +379,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761533666998</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="actualizacion jdk">
+      <option name="closed" value="true" />
+      <created>1761533943755</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761533943755</updated>
+    </task>
+    <task id="LOCAL-00004" summary="actualizacion jdk">
+      <option name="closed" value="true" />
+      <created>1761534510468</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761534510469</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
