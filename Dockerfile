@@ -5,7 +5,7 @@ FROM tomcat:9.0-jdk21
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copiamos el WAR generado por Maven
-COPY target/GR04_1BT3_622_25B.war /usr/local/tomcat/webapps/
+COPY target/GR04_1BT3_622_25B.war /usr/local/tomcat/webapps/GR04_1BT3_622_25B.war
 
 # Exponemos el puerto 8080 para la webapp
 EXPOSE 8080
