@@ -26,10 +26,6 @@
         </div>
         <button type="submit">Registrarse</button>
     </form>
-    <p>¿Ya tienes cuenta? <a href="${pageContext.request.contextPath}/login.jsp">Inicia sesión</a></p>
-    <c:if test="${not empty error}">
-        <p style="color:red">${error}</p>
-    </c:if>
 </div>
 </body>
 </html>

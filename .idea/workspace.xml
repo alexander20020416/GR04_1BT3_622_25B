@@ -9,50 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="actualizacion jdk">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/gestor_tareas.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/gestor_tareas.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/auth/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/auth/controller/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/auth/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/auth/repository/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/auth/repository/UsuarioRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/auth/repository/UsuarioRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/auth/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gr4/auth/model/UsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gr4/auth/model/UsuarioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.controller.RegisterServletTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.model.UsuarioTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.service.ValidadorUsuarioTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceMockTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceParameters2Test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceParametersTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.LogoutServiceMockTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.LogoutServiceParameterTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.controller.RegisterServletTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.model.UsuarioTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.service.ValidadorUsuarioTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceParameters2Test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceParametersTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceParameterTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/auth/model/UsuarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/auth/model/UsuarioTest.class" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> 86585e8d4a1eb2e988281986ffd9ebae9932aeec
-=======
     <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="cambios en Dockerfile">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
->>>>>>> a2f39f39221c5bf5b2b924eb4f12d135bb418a13
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/auth/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/auth/controller/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/auth/controller/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/auth/controller/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/auth/repository/UsuarioRepositoryJPA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/auth/repository/UsuarioRepositoryJPA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/auth/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/auth/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/auth/util/PasswordUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/auth/util/PasswordUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/auth/model/UsuarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/auth/model/UsuarioTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,12 +45,12 @@
     &quot;assignee&quot;: &quot;Eliz-CH&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/alexander20020416/GR04_1BT3_622_25B.git&quot;,
-    &quot;accountId&quot;: &quot;8b48fec8-f801-4adf-aecc-69e4af24c789&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/alexander20020416/GR04_1BT3_622_25B.git",
+    "accountId": "9844f976-09f1-4030-92d3-dd26f9c05b12"
   }
-}</component>
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -102,49 +70,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente.executor": "Run",
-    "JUnit.CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas.executor": "Run",
-    "JUnit.CalendarioServiceParameters2Test.executor": "Run",
-    "JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista.executor": "Run",
-    "JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha.executor": "Run",
-    "JUnit.CalendarioServiceTest.executor": "Run",
-    "JUnit.CalendarioServiceTest.given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia.executor": "Run",
-    "JUnit.UsuarioTest.given_CorreoConDiferentesFormatos_when_ValidarFormatoCorreo_then_DebeValidarFormatoCorrectamente.executor": "Run",
-    "JUnit.UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente.executor": "Run",
-    "JUnit.UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente.executor": "Run",
-    "JUnit.UsuarioTest.given_DatosDeUsuarioValidos_when_CrearNuevoUsuario_then_DebeCrearseCorrectamente.executor": "Run",
-    "JUnit.UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente.executor": "Run",
-    "JUnit.UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto.executor": "Run",
-    "JUnit.UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos.executor": "Run",
-    "JUnit.UsuarioTest.testCrearUsuarioConDatosValidos.executor": "Run",
-    "Maven.GR04_1BT3_622_25B [clean].executor": "Run",
-    "Maven.GR04_1BT3_622_25B [package].executor": "Run",
-    "Maven.GR04_1BT3_622_25B [test].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 9.0.109.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ASUS TUF F15/Desktop/Epn/6/Construcción de Software/GR04_1BT3_622_25B",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.CalendarioServiceMockTest.given_RepositorioConTareasAltaPrioridad_when_DetectarConflictosDesdeRepositorio_then_DebeIdentificarConflictosCorrectamente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalendarioServiceMockTest.given_RepositorioConTareas_when_ObtenerTareasPorDiaDesdeRepositorio_then_DebeRetornarTareasFiltradas.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalendarioServiceParameters2Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalendarioServiceParameters2Test.given_TareasEnMultiplesFechas_when_ObtenerTareasPorDia_then_DebeRetornarTamañoCorrectoDeLista.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalendarioServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalendarioServiceTest.given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsuarioTest.given_CorreoConDiferentesFormatos_when_ValidarFormatoCorreo_then_DebeValidarFormatoCorrectamente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsuarioTest.given_DatosDeUsuarioValidos_when_CrearNuevoUsuario_then_DebeCrearseCorrectamente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsuarioTest.testCrearUsuarioConDatosValidos.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.109.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS TUF F15/Desktop/Epn/6/Construcción de Software/GR04_1BT3_622_25B&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS TUF F15\Downloads\GR04_1BT3_622_25B\.idea\dictionaries" />
@@ -344,8 +309,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>

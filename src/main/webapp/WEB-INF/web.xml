@@ -14,7 +14,7 @@
 
   <!-- Página de inicio -->
     <welcome-file-list>
-        <welcome-file>jsp/registro.jsp</welcome-file>
+        <welcome-file>jsp/login.jsp</welcome-file>
     </welcome-file-list>
 
     <!-- Servlet para H2 Console -->
