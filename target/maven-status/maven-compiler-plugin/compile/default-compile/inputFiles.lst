@@ -18,9 +18,14 @@ C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorPlanificacionServlet.java
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\service\CalendarioService.java
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenPorTitulo.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\util\UsuarioValidator.java
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorCalendarioServlet.java
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\model\Alerta.java
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenStrategy.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\repository\UsuarioRepositoryImpl.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\repository\UsuarioRepository.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\util\PasswordUtil.java
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\util\ParametroParser.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\service\AuthService.java
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorAlertasServlet.java
 C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\BaseServlet.java

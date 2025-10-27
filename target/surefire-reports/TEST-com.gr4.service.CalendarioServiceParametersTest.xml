@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gr4.auth.model.UsuarioTest" time="0.047" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gr4.service.CalendarioServiceParametersTest" time="0.006" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,12 +58,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="given_DatosDeUsuarioValidos_when_CrearNuevoUsuario_then_DebeCrearseCorrectamente" classname="com.gr4.auth.model.UsuarioTest" time="0.02"/>
-  <testcase name="given_ContraseñasConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarLongitudMinima" classname="com.gr4.auth.model.UsuarioTest" time="0.001"/>
-  <testcase name="given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" classname="com.gr4.auth.model.UsuarioTest" time="0.001"/>
-  <testcase name="given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente" classname="com.gr4.auth.model.UsuarioTest" time="0.001"/>
-  <testcase name="given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" classname="com.gr4.auth.model.UsuarioTest" time="0.001"/>
-  <testcase name="given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" classname="com.gr4.auth.model.UsuarioTest" time="0.001"/>
-  <testcase name="given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" classname="com.gr4.auth.model.UsuarioTest" time="0.001"/>
-  <testcase name="given_CorreoConDiferentesFormatos_when_ValidarFormatoCorreo_then_DebeValidarFormatoCorrectamente" classname="com.gr4.auth.model.UsuarioTest" time="0.001"/>
+  <testcase name="given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha[Escenario 0: Fecha=2025-10-20, Pendientes=3, EnProgreso=0, Completadas=0]" classname="com.gr4.service.CalendarioServiceParametersTest" time="0.003"/>
+  <testcase name="given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha[Escenario 1: Fecha=2025-10-21, Pendientes=2, EnProgreso=1, Completadas=1]" classname="com.gr4.service.CalendarioServiceParametersTest" time="0.0"/>
+  <testcase name="given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha[Escenario 2: Fecha=2025-10-22, Pendientes=0, EnProgreso=2, Completadas=3]" classname="com.gr4.service.CalendarioServiceParametersTest" time="0.001"/>
+  <testcase name="given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha[Escenario 3: Fecha=2025-10-23, Pendientes=5, EnProgreso=1, Completadas=0]" classname="com.gr4.service.CalendarioServiceParametersTest" time="0.0"/>
+  <testcase name="given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha[Escenario 4: Fecha=2025-10-24, Pendientes=1, EnProgreso=0, Completadas=0]" classname="com.gr4.service.CalendarioServiceParametersTest" time="0.001"/>
+  <testcase name="given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha[Escenario 5: Fecha=2025-10-25, Pendientes=2, EnProgreso=2, Completadas=2]" classname="com.gr4.service.CalendarioServiceParametersTest" time="0.0"/>
 </testsuite>

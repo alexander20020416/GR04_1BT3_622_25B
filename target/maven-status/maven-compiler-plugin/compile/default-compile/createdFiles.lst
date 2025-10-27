@@ -4,6 +4,7 @@ com\gr4\strategy\OrdenPorPrioridad$1.class
 com\gr4\dto\AlertaDTO.class
 com\gr4\model\Tarea.class
 com\gr4\controller\ListarTareasServlet.class
+com\gr4\auth\repository\UsuarioRepositoryImpl.class
 com\gr4\util\ParametroParser.class
 com\gr4\controller\GestorAdministracionServlet.class
 com\gr4\dto\TareaDTO.class
@@ -17,7 +18,10 @@ com\gr4\service\CalendarioService.class
 com\gr4\strategy\OrdenPorTitulo.class
 com\gr4\repository\AlertaRepository.class
 com\gr4\observer\AlertaListener.class
+com\gr4\auth\repository\UsuarioRepository.class
 com\gr4\controller\GestorCalendarioServlet.class
+com\gr4\auth\util\PasswordUtil.class
+com\gr4\auth\service\AuthService.class
 com\gr4\controller\GestorAlertasServlet.class
 com\gr4\util\JPAUtil$EntityManagerOperation.class
 com\gr4\controller\GestorListadoServlet.class
@@ -26,3 +30,4 @@ com\gr4\observer\AlertaListenerImpl.class
 com\gr4\repository\AlertaRepositoryImpl.class
 com\gr4\strategy\OrdenPorPrioridad.class
 com\gr4\repository\TareaRepository.class
+com\gr4\auth\util\UsuarioValidator.class
