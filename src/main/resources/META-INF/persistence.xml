@@ -20,7 +20,7 @@
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
 
             <!-- Modo FILE: Los datos persisten entre reinicios -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:./data/gestor_tareas"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:C:/Users/ASUS TUF F15/Desktop/Epn/6/Construcción de Software/GR04_1BT3_622_25B/data/gestor_tareas"/>
 
             <!-- Modo MEMORY: Los datos se borran al cerrar (útil para pruebas) -->
             <!-- <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:gestor_tareas;DB_CLOSE_DELAY=-1"/> -->
