@@ -33,10 +33,10 @@ public class GestorProyectoServletTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        //Pasar ambos servicios al constructor
+        // ✅ NUEVO: Pasar ambos servicios al constructor
         gestorProyectoServlet = new GestorProyectoServlet(proyectoService, materiaService);
 
-        //Mock para la lista de materias (devuelve lista vacía por defecto)
+        // ✅ NUEVO: Mock para la lista de materias (devuelve lista vacía por defecto)
         when(materiaService.listarMaterias()).thenReturn(java.util.List.of());
     }
 
