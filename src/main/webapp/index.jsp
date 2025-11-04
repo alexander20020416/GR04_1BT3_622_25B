@@ -52,10 +52,7 @@
         </div>
 
         <div class="menu-grid">
-            <!-- Incremento 1 -->
             <div class="menu-section">
-                <h3>📝 Incremento 1</h3>
-
                 <div class="menu-card">
                     <div class="card-icon">➕</div>
                     <h4>Planificar Tareas</h4>
@@ -75,10 +72,7 @@
                 </div>
             </div>
 
-            <!-- Incremento 2 -->
             <div class="menu-section">
-                <h3>🔔 Incremento 2</h3>
-
                 <div class="menu-card">
                     <div class="card-icon">🔍</div>
                     <h4>Consultar Tareas</h4>
