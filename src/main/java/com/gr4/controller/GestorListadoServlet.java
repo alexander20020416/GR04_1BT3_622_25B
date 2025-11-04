@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import com.gr4.service.TareaFilterService;
 
@@ -38,20 +40,53 @@ public class GestorListadoServlet extends BaseServlet {
             filterService = new TareaFilterService(tareaRepository);
 
             // PASO 3: Obtener tareas según el filtro
-            List<Tarea> tareas = filterService.obtenerTareasFiltradas(filtro);
+            List<Tarea> tareasFiltradas = filterService.obtenerTareasFiltradas(filtro);
 
-            System.out.println("✔ Tareas encontradas: " + tareas.size());
+            // PASO 4: Separar tareas activas de vencidas
+            LocalDate hoy = LocalDate.now();
+            System.out.println("📅 Fecha de hoy (Consultar): " + hoy);
+            
+            List<Tarea> tareasActivas = new ArrayList<>();
+            List<Tarea> tareasVencidas = new ArrayList<>();
+            
+            for (Tarea tarea : tareasFiltradas) {
+                boolean estaVencida = false;
+                
+                if (tarea.getFechaVencimiento() != null) {
+                    System.out.println("🔍 Tarea #" + tarea.getId() + " '" + tarea.getTitulo() + "':");
+                    System.out.println("   - Fecha vencimiento: " + tarea.getFechaVencimiento());
+                    System.out.println("   - Estado: " + tarea.getEstado());
+                    System.out.println("   - isBefore(hoy)? " + tarea.getFechaVencimiento().isBefore(hoy));
+                    
+                    // Solo está vencida si NO está completada y la fecha ya pasó
+                    if (!tarea.getEstado().equals("Completada") && tarea.getFechaVencimiento().isBefore(hoy)) {
+                        estaVencida = true;
+                        System.out.println("   ⚠️ MARCADA COMO VENCIDA");
+                    } else {
+                        System.out.println("   ✓ Marcada como activa");
+                    }
+                }
+                
+                if (estaVencida) {
+                    tareasVencidas.add(tarea);
+                } else {
+                    tareasActivas.add(tarea);
+                }
+            }
 
-            // PASO 4: Validar integridad de datos (casos de prueba CP14)
-            boolean integridadValida = validarIntegridadDatos(tareas);
+            System.out.println("✔ Tareas encontradas - Activas: " + tareasActivas.size() + ", Vencidas: " + tareasVencidas.size());
 
-            // PASO 5: Preparar mensaje si no hay tareas
-            if (tareas.isEmpty()) {
+            // PASO 5: Validar integridad de datos (casos de prueba CP14)
+            boolean integridadValida = validarIntegridadDatos(tareasFiltradas);
+
+            // PASO 6: Preparar mensaje si no hay tareas
+            if (tareasActivas.isEmpty() && tareasVencidas.isEmpty()) {
                 request.setAttribute("mensaje", filterService.obtenerMensajeVacio(filtro));
             }
 
-            // PASO 6: Enviar datos a la vista
-            request.setAttribute("tareas", tareas);
+            // PASO 7: Enviar datos a la vista
+            request.setAttribute("tareas", tareasActivas);
+            request.setAttribute("tareasVencidas", tareasVencidas);
             request.setAttribute("filtroActual", filtro);
             request.setAttribute("integridadValida", integridadValida);
 

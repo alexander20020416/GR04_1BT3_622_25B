@@ -45,6 +45,12 @@ public interface TareaRepository {
     List<Tarea> findByEstado(String estado);
 
     /**
+     * Busca tareas NO completadas (Pendiente o En Progreso)
+     * @return Lista de tareas no completadas
+     */
+    List<Tarea> findByEstadoNoCompletadas();
+
+    /**
      * Busca tareas por prioridad
      * @param prioridad Prioridad de las tareas (Alta, Media, Baja)
      * @return Lista de tareas con esa prioridad

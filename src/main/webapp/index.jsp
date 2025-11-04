@@ -20,6 +20,14 @@
             <!-- Información del usuario autenticado -->
             <c:if test="${not empty sessionScope.usuarioNombre}">
                 <div class="user-info">
+                    <!-- Campana de Notificaciones -->
+                    <div class="notification-bell-container">
+                        <div class="notification-bell" id="notificationBell">
+                            <span class="bell-icon">🔔</span>
+                            <span class="notification-badge" id="notificationBadge" style="display: none;">0</span>
+                        </div>
+                    </div>
+                    
                     <span class="welcome-text">
                         👋 Bienvenido, <strong>${sessionScope.usuarioNombre}</strong>
                     </span>
@@ -60,7 +68,7 @@
                 <div class="menu-card">
                     <div class="card-icon">📊</div>
                     <h4>Organizar Tareas</h4>
-                    <p>Visualiza y organiza tus tareas usando diferentes criterios de ordenamiento.</p>
+                    <p>Visualiza, organiza, edita y elimina tus tareas usando diferentes criterios de ordenamiento.</p>
                     <a href="${pageContext.request.contextPath}/organizar" class="btn btn-primary">
                         Ir a Organizar
                     </a>
@@ -161,6 +169,68 @@
         color: #155724;
     }
     
+    /* ========== Campana de Notificaciones ========== */
+    .notification-bell-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .notification-bell {
+        position: relative;
+        cursor: pointer;
+        padding: 10px 15px;
+        background: rgba(102, 126, 234, 0.15);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .notification-bell:hover {
+        background: rgba(102, 126, 234, 0.25);
+        transform: scale(1.05);
+    }
+
+    .notification-bell.has-notifications {
+        animation: bellRing 2s ease-in-out infinite;
+    }
+
+    @keyframes bellRing {
+        0%, 100% { transform: rotate(0deg); }
+        10%, 30% { transform: rotate(-10deg); }
+        20%, 40% { transform: rotate(10deg); }
+    }
+
+    .bell-icon {
+        font-size: 24px;
+        display: block;
+    }
+
+    .notification-badge {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        min-width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 2px 8px rgba(235, 51, 73, 0.4);
+        animation: pulseBadge 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseBadge {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+    
     @media (max-width: 768px) {
         .header-content {
             flex-direction: column;
@@ -173,5 +243,47 @@
         }
     }
 </style>
+
+<script>
+    // Actualizar badge de notificaciones
+    function actualizarBadgeNotificaciones() {
+        fetch('${pageContext.request.contextPath}/alertas?action=count', {
+            method: 'GET'
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            const badge = document.getElementById('notificationBadge');
+            const bell = document.getElementById('notificationBell');
+            
+            if (data.count > 0) {
+                badge.textContent = data.count;
+                badge.style.display = 'flex';
+                bell.classList.add('has-notifications');
+            } else {
+                badge.style.display = 'none';
+                bell.classList.remove('has-notifications');
+            }
+        })
+        .catch(function(error) {
+            console.error('Error al actualizar badge:', error);
+        });
+    }
+
+    // Ir a alertas al hacer clic
+    document.addEventListener('DOMContentLoaded', function() {
+        const bell = document.getElementById('notificationBell');
+        if (bell) {
+            bell.addEventListener('click', function() {
+                window.location.href = '${pageContext.request.contextPath}/alertas';
+            });
+        }
+        
+        // Actualizar badge al cargar
+        actualizarBadgeNotificaciones();
+        
+        // Actualizar cada 30 segundos
+        setInterval(actualizarBadgeNotificaciones, 30000);
+    });
+</script>
 </body>
 </html>

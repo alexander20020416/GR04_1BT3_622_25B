@@ -17,15 +17,19 @@ public class TareaFilterService {
 
     /**
      * Obtiene tareas según el filtro especificado
+     * Por defecto muestra solo tareas NO completadas (Pendiente + En Progreso)
      * @param filtro tipo de filtro (null, "todos", o un estado específico)
      * @return Lista de tareas filtradas
      */
     public List<Tarea> obtenerTareasFiltradas(String filtro) {
-        if (filtro == null || filtro.isEmpty() || filtro.equals("todos")) {
-            // Mostrar en la interfaz las tareas en el orden de inserción (por id)
-            // para que al registrar nuevas tareas se vea el id en secuencia
+        if (filtro == null || filtro.isEmpty()) {
+            // Sin filtro: mostrar solo NO completadas (Pendiente + En Progreso)
+            return tareaRepository.findByEstadoNoCompletadas();
+        } else if (filtro.equals("todos")) {
+            // Filtro explícito "todos": mostrar todas las tareas
             return tareaRepository.findAllOrderById();
         } else {
+            // Filtro específico: mostrar solo ese estado
             return tareaRepository.findByEstado(filtro);
         }
     }

@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -52,19 +54,55 @@ public class GestorAdministracionServlet extends HttpServlet {
             System.out.println("📊 Criterio de orden seleccionado: " + criterioOrden);
 
             // PASO 2: Obtener todas las tareas del repositorio
-            List<Tarea> tareas = tareaRepository.findAll();
+            List<Tarea> todasLasTareas = tareaRepository.findAll();
 
-            // PASO 3: Seleccionar estrategia de ordenamiento (Patrón Strategy)
+            // PASO 3: Separar tareas activas y vencidas
+            LocalDate hoy = LocalDate.now();
+            System.out.println("📅 Fecha de hoy: " + hoy);
+            
+            List<Tarea> tareasActivas = new ArrayList<>();
+            List<Tarea> tareasVencidas = new ArrayList<>();
+            
+            for (Tarea tarea : todasLasTareas) {
+                // Verificar si la tarea está vencida
+                boolean estaVencida = false;
+                
+                if (tarea.getFechaVencimiento() != null) {
+                    System.out.println("🔍 Tarea #" + tarea.getId() + " '" + tarea.getTitulo() + "':");
+                    System.out.println("   - Fecha vencimiento: " + tarea.getFechaVencimiento());
+                    System.out.println("   - Estado: " + tarea.getEstado());
+                    System.out.println("   - isBefore(hoy)? " + tarea.getFechaVencimiento().isBefore(hoy));
+                    
+                    // Solo está vencida si NO está completada y la fecha ya pasó
+                    if (!tarea.getEstado().equals("Completada") && tarea.getFechaVencimiento().isBefore(hoy)) {
+                        estaVencida = true;
+                        System.out.println("   ⚠️ MARCADA COMO VENCIDA");
+                    } else {
+                        System.out.println("   ✓ Marcada como activa");
+                    }
+                }
+                
+                if (estaVencida) {
+                    tareasVencidas.add(tarea);
+                } else {
+                    tareasActivas.add(tarea);
+                }
+            }
+
+            // PASO 4: Seleccionar estrategia de ordenamiento (Patrón Strategy)
             OrdenStrategy estrategia = seleccionarEstrategia(criterioOrden);
 
-            // PASO 4: Aplicar la estrategia de ordenamiento
-            List<Tarea> tareasOrdenadas = estrategia.ordenar(tareas);
+            // PASO 5: Aplicar la estrategia de ordenamiento a ambas listas
+            List<Tarea> tareasActivasOrdenadas = estrategia.ordenar(tareasActivas);
+            List<Tarea> tareasVencidasOrdenadas = estrategia.ordenar(tareasVencidas);
 
             System.out.println("✓ Tareas ordenadas con: " + estrategia.getNombre());
-            System.out.println("  Total de tareas: " + tareasOrdenadas.size());
+            System.out.println("  Tareas activas: " + tareasActivasOrdenadas.size());
+            System.out.println("  Tareas vencidas: " + tareasVencidasOrdenadas.size());
 
-            // PASO 5: Enviar datos a la vista
-            request.setAttribute("tareas", tareasOrdenadas);
+            // PASO 6: Enviar datos a la vista
+            request.setAttribute("tareas", tareasActivasOrdenadas);
+            request.setAttribute("tareasVencidas", tareasVencidasOrdenadas);
             request.setAttribute("criterioActual", criterioOrden);
             request.setAttribute("nombreEstrategia", estrategia.getNombre());
 

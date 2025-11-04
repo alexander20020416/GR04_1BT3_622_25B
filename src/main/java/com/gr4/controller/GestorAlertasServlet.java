@@ -58,6 +58,35 @@ public class GestorAlertasServlet extends HttpServlet {
                 return;
             }
             
+            // Si action=editar, mostrar formulario de edición
+            if ("editar".equals(action)) {
+                String idStr = request.getParameter("id");
+                if (idStr != null) {
+                    Long id = Long.parseLong(idStr);
+                    Optional<Alerta> alertaOpt = alertaRepository.findById(id);
+                    if (alertaOpt.isPresent()) {
+                        request.setAttribute("alerta", alertaOpt.get());
+                        List<Tarea> tareas = tareaRepository.findAll();
+                        request.setAttribute("tareas", tareas);
+                        request.getRequestDispatcher("/jsp/editar_alerta.jsp").forward(request, response);
+                        return;
+                    }
+                }
+                request.setAttribute("error", "Alerta no encontrada");
+            }
+            
+            // Si action=activas, devolver JSON con alertas activas (para la campana)
+            if ("activas".equals(action)) {
+                handleGetAlertasActivas(request, response);
+                return;
+            }
+            
+            // Si action=count, devolver JSON con el conteo (para el badge)
+            if ("count".equals(action)) {
+                handleGetAlertasCount(request, response);
+                return;
+            }
+            
             // Por defecto, mostrar listado de alertas
             List<Alerta> alertas = alertaRepository.findAll();
             request.setAttribute("alertas", alertas);
@@ -78,13 +107,42 @@ public class GestorAlertasServlet extends HttpServlet {
     }
 
     /**
-     * Maneja peticiones POST - Procesa la creación de alerta
+     * Maneja peticiones POST - Procesa la creación/edición/toggle/eliminación de alertas
      * Implementa el flujo del diagrama de secuencia con Patrón Observer
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String action = request.getParameter("action");
+        
+        // Toggle activar/desactivar alerta (AJAX)
+        if ("toggle".equals(action)) {
+            handleToggleAlerta(request, response);
+            return;
+        }
+        
+        // Eliminar alerta (AJAX)
+        if ("eliminar".equals(action)) {
+            handleEliminarAlerta(request, response);
+            return;
+        }
+        
+        // Actualizar alerta existente
+        if ("actualizar".equals(action)) {
+            handleActualizarAlerta(request, response);
+            return;
+        }
+
+        // Crear nueva alerta (lógica original)
+        handleCrearAlerta(request, response);
+    }
+
+    /**
+     * Maneja la creación de una nueva alerta
+     */
+    private void handleCrearAlerta(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         try {
             // PASO 1: Recibir AlertaDTO desde el formulario
             AlertaDTO dto = new AlertaDTO();
@@ -163,6 +221,182 @@ public class GestorAlertasServlet extends HttpServlet {
             request.setAttribute("tareas", tareas);
             request.getRequestDispatcher("/jsp/configurar_alerta.jsp").forward(request, response);
         }
+    }
+
+    /**
+     * Maneja la actualización de una alerta existente
+     */
+    private void handleActualizarAlerta(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        try {
+            Long alertaId = Long.parseLong(request.getParameter("alertaId"));
+            Optional<Alerta> alertaOpt = alertaRepository.findById(alertaId);
+            
+            if (!alertaOpt.isPresent()) {
+                request.setAttribute("error", "Alerta no encontrada");
+                response.sendRedirect(request.getContextPath() + "/alertas");
+                return;
+            }
+            
+            Alerta alerta = alertaOpt.get();
+            
+            // Actualizar campos
+            alerta.setMensaje(request.getParameter("mensaje"));
+            alerta.setFechaAlerta(java.time.LocalDateTime.parse(request.getParameter("fechaAlerta")));
+            alerta.setTipo(request.getParameter("tipo"));
+            
+            String tareaIdStr = request.getParameter("tareaId");
+            if (tareaIdStr != null && !tareaIdStr.isEmpty()) {
+                Optional<Tarea> tareaOpt = tareaRepository.findById(Long.parseLong(tareaIdStr));
+                if (tareaOpt.isPresent()) {
+                    alerta.setTarea(tareaOpt.get());
+                }
+            }
+            
+            alertaRepository.save(alerta);
+            
+            System.out.println("✓ Alerta actualizada: " + alerta.getId());
+            
+            request.getSession().setAttribute("mensaje", "Alerta actualizada exitosamente");
+            response.sendRedirect(request.getContextPath() + "/alertas");
+            
+        } catch (Exception e) {
+            System.err.println("✗ Error al actualizar alerta: " + e.getMessage());
+            e.printStackTrace();
+            request.setAttribute("error", "Error al actualizar alerta");
+            response.sendRedirect(request.getContextPath() + "/alertas");
+        }
+    }
+
+    /**
+     * Maneja el toggle de activación/desactivación de alertas (AJAX)
+     */
+    private void handleToggleAlerta(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        
+        try {
+            Long alertaId = Long.parseLong(request.getParameter("alertaId"));
+            boolean activa = Boolean.parseBoolean(request.getParameter("activa"));
+            
+            Optional<Alerta> alertaOpt = alertaRepository.findById(alertaId);
+            
+            if (alertaOpt.isPresent()) {
+                Alerta alerta = alertaOpt.get();
+                alerta.setActiva(activa);
+                alertaRepository.save(alerta);
+                
+                // Notificar al observer
+                if (activa) {
+                    alertaListener.onAlertaActivada(alerta);
+                } else {
+                    alertaListener.onAlertaDesactivada(alerta);
+                }
+                
+                System.out.println("✓ Alerta " + (activa ? "activada" : "desactivada") + ": " + alertaId);
+                
+                response.getWriter().write("{\"success\": true}");
+            } else {
+                response.getWriter().write("{\"success\": false, \"error\": \"Alerta no encontrada\"}");
+            }
+            
+        } catch (Exception e) {
+            System.err.println("✗ Error al toggle alerta: " + e.getMessage());
+            response.getWriter().write("{\"success\": false, \"error\": \"" + e.getMessage() + "\"}");
+        }
+    }
+
+    /**
+     * Maneja la eliminación de alertas (AJAX)
+     */
+    private void handleEliminarAlerta(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        
+        try {
+            Long alertaId = Long.parseLong(request.getParameter("id"));
+            
+            boolean eliminada = alertaRepository.deleteById(alertaId);
+            
+            if (eliminada) {
+                System.out.println("✓ Alerta eliminada: " + alertaId);
+                response.getWriter().write("{\"success\": true}");
+            } else {
+                response.getWriter().write("{\"success\": false, \"error\": \"No se pudo eliminar\"}");
+            }
+            
+        } catch (Exception e) {
+            System.err.println("✗ Error al eliminar alerta: " + e.getMessage());
+            response.getWriter().write("{\"success\": false, \"error\": \"" + e.getMessage() + "\"}");
+        }
+    }
+
+    /**
+     * Obtiene alertas activas para el dropdown de notificaciones (AJAX)
+     */
+    private void handleGetAlertasActivas(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        
+        try {
+            List<Alerta> alertas = alertaRepository.findActivas();
+            
+            StringBuilder json = new StringBuilder();
+            json.append("{\"alertas\": [");
+            
+            for (int i = 0; i < alertas.size(); i++) {
+                Alerta a = alertas.get(i);
+                if (i > 0) json.append(",");
+                
+                json.append("{")
+                    .append("\"id\": ").append(a.getId()).append(",")
+                    .append("\"mensaje\": \"").append(escaparJson(a.getMensaje())).append("\",")
+                    .append("\"tipo\": \"").append(a.getTipo()).append("\",")
+                    .append("\"fechaAlerta\": \"").append(a.getFechaAlerta().toString()).append("\"")
+                    .append("}");
+            }
+            
+            json.append("]}");
+            
+            response.getWriter().write(json.toString());
+            
+        } catch (Exception e) {
+            System.err.println("✗ Error al obtener alertas activas: " + e.getMessage());
+            response.getWriter().write("{\"alertas\": []}");
+        }
+    }
+
+    /**
+     * Obtiene el conteo de alertas activas para el badge (AJAX)
+     */
+    private void handleGetAlertasCount(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        
+        try {
+            List<Alerta> alertas = alertaRepository.findActivas();
+            response.getWriter().write("{\"count\": " + alertas.size() + "}");
+            
+        } catch (Exception e) {
+            System.err.println("✗ Error al contar alertas: " + e.getMessage());
+            response.getWriter().write("{\"count\": 0}");
+        }
+    }
+
+    /**
+     * Escapa caracteres especiales para JSON
+     */
+    private String escaparJson(String texto) {
+        if (texto == null) return "";
+        return texto.replace("\\", "\\\\")
+                   .replace("\"", "\\\"")
+                   .replace("\n", "\\n")
+                   .replace("\r", "\\r")
+                   .replace("\t", "\\t");
     }
 
     @Override

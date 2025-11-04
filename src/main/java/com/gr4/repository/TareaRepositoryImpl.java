@@ -91,6 +91,20 @@ public class TareaRepositoryImpl implements TareaRepository {
     }
 
     @Override
+    public List<Tarea> findByEstadoNoCompletadas() {
+        EntityManager em = JPAUtil.getEntityManager();
+        try {
+            TypedQuery<Tarea> query = em.createQuery(
+                    "SELECT t FROM Tarea t WHERE t.estado != 'Completada' ORDER BY t.fechaVencimiento ASC",
+                    Tarea.class
+            );
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
     public List<Tarea> findByPrioridad(String prioridad) {
         EntityManager em = JPAUtil.getEntityManager();
         try {

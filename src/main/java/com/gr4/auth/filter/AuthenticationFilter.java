@@ -19,6 +19,10 @@ public class AuthenticationFilter implements Filter {
 
     // URLs que NO requieren autenticación
     private static final List<String> PUBLIC_PATHS = Arrays.asList(
+        "/",
+        "/home",
+        "/menu",
+        "/index.jsp",
         "/login",
         "/register", 
         "/RegisterServlet",
