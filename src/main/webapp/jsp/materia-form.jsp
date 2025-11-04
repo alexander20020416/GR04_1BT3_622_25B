@@ -13,7 +13,7 @@
     <header>
         <h1>📘 Registrar Materia</h1>
         <nav>
-            <a href="${pageContext.request.contextPath}/home" class="btn-link">← Volver al inicio</a>
+            <a href="${pageContext.request.contextPath}/listarMateria" class="btn-link">← Volver al inicio</a>
         </nav>
     </header>
 

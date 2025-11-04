@@ -39,7 +39,7 @@
             </c:if>
 
             <div class="action-buttons">
-                <a href="${pageContext.request.contextPath}/home" class="btn btn-primary">
+                <a href="${pageContext.request.contextPath}/listarMateria" class="btn btn-primary">
                     🏠 Volver al Inicio
                 </a>
 

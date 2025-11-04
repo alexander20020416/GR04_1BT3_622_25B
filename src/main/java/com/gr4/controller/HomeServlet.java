@@ -33,7 +33,7 @@ public class HomeServlet extends HttpServlet {
         if (isAuthenticated) {
             // Usuario autenticado - Mostrar menú principal
             System.out.println("✓ Usuario autenticado - Mostrando menú principal");
-            request.getRequestDispatcher("/index.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/materia-lista.jsp").forward(request, response);
         } else {
             // Usuario no autenticado - Redirigir a login
             System.out.println("⚠️ Usuario no autenticado - Redirigiendo a login");

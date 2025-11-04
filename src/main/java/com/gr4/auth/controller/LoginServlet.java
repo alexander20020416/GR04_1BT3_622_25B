@@ -101,7 +101,7 @@ public class LoginServlet extends HttpServlet {
             System.out.println("✓ Login exitoso para: " + correo);
             
             // PASO 5: Redirigir a la aplicación principal
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            response.sendRedirect(request.getContextPath() + "/jsp/materia-lista.jsp");
             
         } catch (Exception e) {
             System.err.println("✗ Error durante autenticación: " + e.getMessage());
