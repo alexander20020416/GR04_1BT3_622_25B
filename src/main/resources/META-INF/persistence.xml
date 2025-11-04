@@ -13,6 +13,7 @@
         <class>com.gr4.model.Alerta</class>
         <class>com.gr4.auth.model.UsuarioEntity</class>
         <class>com.gr4.model.Proyecto</class>
+        <class>com.gr4.model.Materia</class>
 
         <properties>
             <!-- Configuración de H2 Database -->
