@@ -26,6 +26,11 @@ public class Proyecto {
     @Column(name = "fecha_vencimiento")
     private LocalDate fechaVencimiento;
 
+    // Relación con Materia (CA1 - Historia de Usuario)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "materia_id")
+    private Materia materia;
+
     // Constantes para estados de urgencia
     public static final String URGENCIA_VENCIDO = "VENCIDO";
     public static final String URGENCIA_URGENTE = "URGENTE";
@@ -36,13 +41,26 @@ public class Proyecto {
     private static final int DIAS_URGENTE = 3;
     private static final int DIAS_PROXIMO = 7;
 
-    // Constructor
+    // Constructores
     public Proyecto() {
     }
 
     public Proyecto(String titulo, String descripcion) {
         this.titulo = titulo;
         this.descripcion = descripcion;
+    }
+
+    public Proyecto(String titulo, String descripcion, LocalDate fechaVencimiento) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.fechaVencimiento = fechaVencimiento;
+    }
+
+    public Proyecto(String titulo, String descripcion, LocalDate fechaVencimiento, Materia materia) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.fechaVencimiento = fechaVencimiento;
+        this.materia = materia;
     }
 
     // Getters y Setters
@@ -82,6 +100,14 @@ public class Proyecto {
         this.fechaVencimiento = fechaVencimiento;
     }
 
+    public Materia getMateria() {
+        return materia;
+    }
+
+    public void setMateria(Materia materia) {
+        this.materia = materia;
+    }
+
     public void agregarTarea(Tarea tarea) {
         tareas.add(tarea);
         tarea.setProyecto(this); // Establecer la relación bidireccional
@@ -113,9 +139,9 @@ public class Proyecto {
         if (fechaVencimiento == null) {
             return URGENCIA_SIN_FECHA;
         }
-        
+
         long diasRestantes = calcularDiasRestantes();
-        
+
         if (diasRestantes < 0) {
             return URGENCIA_VENCIDO;
         } else if (diasRestantes <= DIAS_URGENTE) {
@@ -133,7 +159,7 @@ public class Proyecto {
      */
     public String getColorIndicador() {
         String estadoUrgencia = determinarEstadoUrgencia();
-        
+
         switch (estadoUrgencia) {
             case URGENCIA_VENCIDO:
             case URGENCIA_URGENTE:
