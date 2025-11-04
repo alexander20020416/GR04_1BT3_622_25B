@@ -56,7 +56,7 @@ public class GestorProyectoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // ✅ Cargar lista de materias para el formulario (CA1 - Escenario 1)
+        // Cargar lista de materias para el formulario (CA1 - Escenario 1)
         try {
             List<Materia> materias = materiaService.listarMaterias()
                     .stream()
@@ -84,7 +84,7 @@ public class GestorProyectoServlet extends HttpServlet {
         String fechaVencimientoStr = request.getParameter("fechaVencimiento");
         String materiaIdStr = request.getParameter("materiaId");
 
-        // ✅ VALIDACIÓN: Verificar que el título no esté vacío (CA1 - Escenario 2)
+        // Verificar que el título no esté vacío (CA1 - Escenario 2)
         if (titulo != null && titulo.isEmpty()) {
             request.setAttribute("error", "El nombre del proyecto es obligatorio");
             doGet(request, response); // Recargar formulario con materias
@@ -96,7 +96,7 @@ public class GestorProyectoServlet extends HttpServlet {
             LocalDate fechaVencimiento = null;
             Materia materia = null;
 
-            // ✅ Parsear fecha de vencimiento si viene (CA1 - Escenario 1)
+            // Parsear fecha de vencimiento si viene
             if (fechaVencimientoStr != null && !fechaVencimientoStr.isEmpty()) {
                 try {
                     fechaVencimiento = LocalDate.parse(fechaVencimientoStr);
@@ -107,7 +107,7 @@ public class GestorProyectoServlet extends HttpServlet {
                 }
             }
 
-            // ✅ NUEVO: Obtener materia seleccionada (CA1 - HU completa)
+            // Obtener materia seleccionada
             if (materiaIdStr != null && !materiaIdStr.isEmpty()) {
                 try {
                     Long materiaId = Long.parseLong(materiaIdStr);
@@ -180,10 +180,4 @@ public class GestorProyectoServlet extends HttpServlet {
         response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Parámetros insuficientes");
     }
 
-    protected boolean validarParametros(HttpServletRequest request) {
-        String idProyectoStr = request.getParameter("idProyecto");
-        String idTareaStr = request.getParameter("idTarea");
-        return idProyectoStr != null && !idProyectoStr.isEmpty() &&
-                idTareaStr != null && !idTareaStr.isEmpty();
-    }
 }

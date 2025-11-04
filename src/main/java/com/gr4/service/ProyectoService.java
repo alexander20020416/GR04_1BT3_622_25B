@@ -12,12 +12,11 @@ import java.util.Optional;
 public class ProyectoService {
 
     private final ProyectoRepository proyectoRepository;
-    private final TareaRepository tareaRepository; // ✅ AGREGAR esta línea
+    private final TareaRepository tareaRepository;
 
-    // ✅ ACTUALIZAR el constructor para recibir TareaRepository
     public ProyectoService(ProyectoRepository proyectoRepository, TareaRepository tareaRepository) {
         this.proyectoRepository = proyectoRepository;
-        this.tareaRepository = tareaRepository; // ✅ AGREGAR esta línea
+        this.tareaRepository = tareaRepository;
     }
 
     public Proyecto guardarProyecto(Proyecto proyecto) {
@@ -38,7 +37,7 @@ public class ProyectoService {
 
     public void asociarTarea(Long idProyecto, Long idTarea) {
         Optional<Proyecto> proyectoOpt = buscarProyectoPorId(idProyecto);
-        Optional<Tarea> tareaOpt = tareaRepository.findById(idTarea); // Ahora sí funciona
+        Optional<Tarea> tareaOpt = tareaRepository.findById(idTarea);
 
         if (proyectoOpt.isPresent() && tareaOpt.isPresent()) {
             Proyecto proyecto = proyectoOpt.get();
