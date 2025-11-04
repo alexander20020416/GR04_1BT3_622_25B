@@ -15,7 +15,7 @@ public class Tarea {
     public static final String ESTADO_PENDIENTE = "Pendiente";
     public static final String ESTADO_EN_PROGRESO = "En Progreso";
     public static final String ESTADO_COMPLETADA = "Completada";
-    
+
     // Constantes para Prioridades
     public static final String PRIORIDAD_ALTA = "Alta";
     public static final String PRIORIDAD_MEDIA = "Media";
@@ -103,6 +103,23 @@ public class Tarea {
         this.prioridad = prioridad;
     }
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "proyecto_id", nullable = false)
+    private Proyecto proyecto;
+
+    public Proyecto getProyecto() {
+        return proyecto;
+    }
+
+    public void setProyecto(Proyecto proyecto) {
+        this.proyecto = proyecto;
+    }
+
+    // Método para verificar si la tarea está vencida
+    public boolean estaVencida() {
+        return fechaVencimiento.isBefore(LocalDate.now()) || fechaVencimiento.isEqual(LocalDate.now());
+    }
+
     @Override
     public String toString() {
         return "Tarea{" +
@@ -112,18 +129,5 @@ public class Tarea {
                 ", estado='" + estado + '\'' +
                 ", prioridad='" + prioridad + '\'' +
                 '}';
-    }
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "proyecto_id", nullable = false)
-    private Proyecto proyecto;
-
-    // Getters y Setters
-    public Proyecto getProyecto() {
-        return proyecto;
-    }
-
-    public void setProyecto(Proyecto proyecto) {
-        this.proyecto = proyecto;
     }
 }
