@@ -113,4 +113,17 @@ public class Tarea {
                 ", prioridad='" + prioridad + '\'' +
                 '}';
     }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "proyecto_id", nullable = false)
+    private Proyecto proyecto;
+
+    // Getters y Setters
+    public Proyecto getProyecto() {
+        return proyecto;
+    }
+
+    public void setProyecto(Proyecto proyecto) {
+        this.proyecto = proyecto;
+    }
 }
