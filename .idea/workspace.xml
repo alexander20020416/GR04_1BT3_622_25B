@@ -10,8 +10,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gr4/controller/CrearMateriaServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gr4/dto/MateriaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gr4/model/Materia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gr4/repository/MateriaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gr4/repository/MateriaRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gr4/service/MateriaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-exito.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gr4/service/MateriaServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/auth/filter/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/auth/filter/AuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAdministracionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAdministracionServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAlertasServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorAlertasServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorListadoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorListadoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/calendario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/calendario.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/consultar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/consultar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/listar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/listar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/listar_alertas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/listar_alertas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/organizar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/organizar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/planificar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/planificar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/registro.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/success.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/auth/filter/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/auth/filter/AuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAdministracionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAdministracionServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAlertasServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorAlertasServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorListadoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorListadoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/TareaFilterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.controller.RegisterServletTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.controller.RegisterServletTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.model.UsuarioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.model.UsuarioTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.service.ValidadorUsuarioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.service.ValidadorUsuarioTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceMockTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceMockTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceParameters2Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceParameters2Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceParametersTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceParametersTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.LogoutServiceMockTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.LogoutServiceMockTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.LogoutServiceParameterTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.LogoutServiceParameterTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.controller.RegisterServletTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.controller.RegisterServletTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.model.UsuarioTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.model.UsuarioTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.service.ValidadorUsuarioTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.service.ValidadorUsuarioTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceMockTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceMockTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceParameters2Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceParameters2Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceParametersTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceParametersTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceMockTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceMockTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceParameterTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceParameterTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +78,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Dockerfile" />
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -70,6 +129,10 @@
     &quot;JUnit.CalendarioServiceParametersTest.given_TareasConDiferentesEstados_when_ContarTareasPendientes_then_DebeRetornarConteoCorrectoPorFecha.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CalendarioServiceTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CalendarioServiceTest.given_TareasConFechaEspecifica_when_ObtenerTareasPorDia_then_DebeRetornarSoloTareasDeEseDia.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MateriaServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MateriaServiceTest.givenNombreVacio_whenCrearMateria_thenNoDeberiaCrearseMateria.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MateriaServiceTest.givenNombreValido_whenCrearMateria_thenMateriaSeCreaCorrectamente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MateriaServiceTest.testCrearMateriaConNombreCodigoYDescripcion.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.RegisterServletTest.dadoFormularioRegistro_cuandoSeCargue_entoncesDebeTenerCamposRequeridos.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.UsuarioTest.given_CorreoConDiferentesFormatos_when_ValidarFormatoCorreo_then_DebeValidarFormatoCorrectamente.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente.executor&quot;: &quot;Run&quot;,
@@ -130,6 +193,69 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.109">
+    <configuration name="MateriaServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GR04_1BT3_622_25B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gr4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.service.MateriaServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MateriaServiceTest.givenNombreVacio_whenCrearMateria_thenNoDeberiaCrearseMateria" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GR04_1BT3_622_25B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gr4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.service.MateriaServiceTest" />
+      <option name="METHOD_NAME" value="givenNombreVacio_whenCrearMateria_thenNoDeberiaCrearseMateria" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MateriaServiceTest.givenNombreValido_whenCrearMateria_thenMateriaSeCreaCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GR04_1BT3_622_25B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gr4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.service.MateriaServiceTest" />
+      <option name="METHOD_NAME" value="givenNombreValido_whenCrearMateria_thenMateriaSeCreaCorrectamente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MateriaServiceTest.testCrearMateriaConNombreCodigoYDescripcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GR04_1BT3_622_25B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gr4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gr4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gr4.service.MateriaServiceTest" />
+      <option name="METHOD_NAME" value="testCrearMateriaConNombreCodigoYDescripcion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegisterServletTest.dadoFormularioRegistro_cuandoSeCargue_entoncesDebeTenerCamposRequeridos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GR04_1BT3_622_25B" />
       <extension name="coverage">
@@ -146,38 +272,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GR04_1BT3_622_25B" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gr4.auth.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
-      <option name="METHOD_NAME" value="given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GR04_1BT3_622_25B" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gr4.auth.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
-      <option name="METHOD_NAME" value="given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="GR04_1BT3_622_25B" />
       <extension name="coverage">
@@ -189,38 +283,6 @@
       <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
       <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
       <option name="METHOD_NAME" value="given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GR04_1BT3_622_25B" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gr4.auth.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
-      <option name="METHOD_NAME" value="given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GR04_1BT3_622_25B" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gr4.auth.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gr4.auth.model" />
-      <option name="MAIN_CLASS_NAME" value="com.gr4.auth.model.UsuarioTest" />
-      <option name="METHOD_NAME" value="given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -315,20 +377,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.UsuarioTest.given_EstadoUsuario_when_ActivarDesactivarUsuario_then_DebeGestionarEstadoCorrectamente" />
+      <item itemvalue="JUnit.MateriaServiceTest" />
+      <item itemvalue="JUnit.MateriaServiceTest.givenNombreVacio_whenCrearMateria_thenNoDeberiaCrearseMateria" />
+      <item itemvalue="JUnit.MateriaServiceTest.givenNombreValido_whenCrearMateria_thenMateriaSeCreaCorrectamente" />
+      <item itemvalue="JUnit.MateriaServiceTest.testCrearMateriaConNombreCodigoYDescripcion" />
       <item itemvalue="JUnit.RegisterServletTest.dadoFormularioRegistro_cuandoSeCargue_entoncesDebeTenerCamposRequeridos" />
-      <item itemvalue="JUnit.UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" />
-      <item itemvalue="JUnit.UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" />
-      <item itemvalue="JUnit.UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" />
-      <item itemvalue="JUnit.UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.109" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MateriaServiceTest" />
+        <item itemvalue="JUnit.MateriaServiceTest.givenNombreVacio_whenCrearMateria_thenNoDeberiaCrearseMateria" />
+        <item itemvalue="JUnit.MateriaServiceTest.givenNombreValido_whenCrearMateria_thenMateriaSeCreaCorrectamente" />
+        <item itemvalue="JUnit.MateriaServiceTest.testCrearMateriaConNombreCodigoYDescripcion" />
         <item itemvalue="JUnit.RegisterServletTest.dadoFormularioRegistro_cuandoSeCargue_entoncesDebeTenerCamposRequeridos" />
-        <item itemvalue="JUnit.UsuarioTest.given_DatosActualizados_when_ActualizarDatosUsuario_then_DebeActualizarCorrectamente" />
-        <item itemvalue="JUnit.UsuarioTest.given_CredencialesDeUsuario_when_Autenticar_then_DebeValidarCredencialesCorrectamente" />
-        <item itemvalue="JUnit.UsuarioTest.given_UsuariosConDiferentesCorreos_when_RegistrarCorreo_then_DebeValidarCorreosUnicos" />
-        <item itemvalue="JUnit.UsuarioTest.given_NombresConDiferentesLongitudes_when_ValidarLongitud_then_DebeValidarRangoCorrecto" />
       </list>
     </recent_temporary>
   </component>
@@ -360,6 +422,7 @@
       <workItem from="1761409736556" duration="4401000" />
       <workItem from="1761488719075" duration="9414000" />
       <workItem from="1761601365829" duration="618000" />
+      <workItem from="1762267939415" duration="15975000" />
     </task>
     <task id="LOCAL-00001" summary="actualizacion jdk">
       <option name="closed" value="true" />

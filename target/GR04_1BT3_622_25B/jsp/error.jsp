@@ -41,7 +41,7 @@
   <h1>¡Ups!</h1>
   <p>Ha ocurrido un error en la aplicación.</p>
   <p>Error: <strong><%= exception != null ? exception.getMessage() : "Página no encontrada" %></strong></p>
-  <p><a href="<%= request.getContextPath() %>/">Volver al inicio</a></p>
+  <p><a href="<%= request.getContextPath() %>/home">Volver al inicio</a></p>
 </div>
 </body>
 </html>

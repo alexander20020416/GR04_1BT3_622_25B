@@ -1,137 +1,260 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %><%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Actividades - Gestor de Tareas</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <style>
+        /* ========== Grid de Actividades ========== */
+        .activities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 24px;
+            padding: 5px;
+        }
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %><%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        /* ========== Tarjeta de Actividad Moderna ========== */
+        .activity-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+        }
 
-<!DOCTYPE html><!DOCTYPE html>
+        .activity-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
 
-<html lang="es"><html lang="es">
+        .activity-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
 
-<head><head>
+        .activity-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            flex: 1;
+        }
 
-    <meta charset="UTF-8">    <meta charset="UTF-8">
+        .activity-body {
+            padding: 20px;
+        }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        .activity-body p {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
 
-    <title>Listado de Tareas - Gestor de Tareas</title>    <title>Listado de Actividades - Gestor de Tareas</title>
+        .activity-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #f9fafb;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+        .activity-meta span {
+            font-size: 13px;
+            color: #374151;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-</head></head>
+        /* ========== Badges para Actividades ========== */
+        .badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
 
-<body><body>
+        .badge-danger {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
 
-<div class="container"><div class="container">
+        .badge-warning {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            color: #92400e;
+            border: 1px solid #fbbf24;
+        }
 
-    <header>    <header>
+        .badge-info {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
 
-        <h1>📋 Listado de Tareas</h1>        <h1>📋 Listado de Actividades</h1>
+        /* ========== Botones de Acción en Actividades ========== */
+        .activity-actions {
+            display: flex;
+            gap: 10px;
+            padding: 0 20px 20px 20px;
+        }
 
-        <nav>        <nav>
+        .btn-sm {
+            flex: 1;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
 
-            <a href="${pageContext.request.contextPath}/" class="btn-link">← Volver al inicio</a>            <a href="${pageContext.request.contextPath}/" class="btn-link">← Volver al inicio</a>
+        .btn-success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
 
-            <a href="${pageContext.request.contextPath}/planificar" class="btn btn-primary">➕ Nueva Tarea</a>            <a href="${pageContext.request.contextPath}/planificar" class="btn btn-primary">➕ Nueva Actividad</a>
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
 
-        </nav>        </nav>
+        .btn-info {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
 
-    </header>    </header>
+        .btn-info:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+        }
 
+        /* ========== Empty State Mejorado ========== */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 20px;
+            border: 3px dashed #d1d5db;
+        }
 
+        .empty-state h3 {
+            color: #374151;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
 
-    <main>    <main>
+        .empty-state p {
+            color: #6b7280;
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
 
-        <c:if test="${not empty error}">        <c:if test="${not empty error}">
+        /* ========== Header Mejorado ========== */
+        header nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
-            <div class="alert alert-error">            <div class="alert alert-error">
+        /* ========== Responsive ========== */
+        @media (max-width: 768px) {
+            .activities-list {
+                grid-template-columns: 1fr;
+            }
 
-                <strong>❌ Error:</strong> ${error}                <strong>❌ Error:</strong> ${error}
+            .activity-header {
+                flex-direction: column;
+                text-align: center;
+            }
 
-            </div>            </div>
+            .activity-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>📋 Listado de Actividades</h1>
+        <nav>
+            <a href="${pageContext.request.contextPath}/home" class="btn-link">← Volver al inicio</a>
+            <a href="${pageContext.request.contextPath}/planificar" class="btn btn-primary">➕ Nueva Actividad</a>
+        </nav>
+    </header>
 
-        </c:if>        </c:if>
+    <main>
+        <c:if test="${not empty error}">
+            <div class="alert alert-error">
+                <strong>❌ Error:</strong> ${error}
+            </div>
+        </c:if>
 
+        <c:if test="${not empty actividades}">
+            <div class="activities-list">
+                <c:forEach var="actividad" items="${actividades}">
+                    <div class="activity-card">
+                        <div class="activity-header">
+                            <h3>${actividad.titulo}</h3>
+                            <span class="badge badge-${actividad.prioridad == 'Alta' ? 'danger' : actividad.prioridad == 'Media' ? 'warning' : 'info'}">
+                                ${actividad.prioridad}
+                            </span>
+                        </div>
+                        
+                        <div class="activity-body">
+                            <p>${actividad.descripcion}</p>
+                            <div class="activity-meta">
+                                <span>📅 <strong>Entrega:</strong> ${actividad.fechaEntrega}</span>
+                                <span>📊 <strong>Estado:</strong> ${actividad.estado}</span>
+                            </div>
+                        </div>
 
-
-        <c:if test="${not empty tareas}">        <c:if test="${not empty actividades}">
-
-            <div class="activities-list">            <div class="activities-list">
-
-                <c:forEach var="tarea" items="${tareas}">                <c:forEach var="actividad" items="${actividades}">
-
-                    <div class="activity-card">                    <div class="activity-card">
-
-                        <div class="activity-header">                        <div class="activity-header">
-
-                            <h3>${tarea.titulo}</h3>                            <h3>${actividad.titulo}</h3>
-
-                            <span class="badge badge-${tarea.prioridad == 'Alta' ? 'danger' : tarea.prioridad == 'Media' ? 'warning' : 'info'}">                            <span class="badge badge-${actividad.prioridad == 'Alta' ? 'danger' : actividad.prioridad == 'Media' ? 'warning' : 'info'}">
-
-                                ${tarea.prioridad}                                ${actividad.prioridad}
-
-                            </span>                            </span>
-
-                        </div>                        </div>
-
-                                                
-
-                        <div class="activity-body">                        <div class="activity-body">
-
-                            <p>${tarea.descripcion}</p>                            <p>${actividad.descripcion}</p>
-
-                            <div class="activity-meta">                            <div class="activity-meta">
-
-                                <span>📅 Vencimiento: ${tarea.fechaVencimiento}</span>                                <span>📅 Entrega: ${actividad.fechaEntrega}</span>
-
-                                <span>📊 Estado: ${tarea.estado}</span>                                <span>📊 Estado: ${actividad.estado}</span>
-
-                            </div>                            </div>
-
-                        </div>                        </div>
-
-                    </div>
-
-                </c:forEach>                        <div class="activity-actions">
-
-            </div>                            <a href="${pageContext.request.contextPath}/agregar-tarea?actividadId=${actividad.id}" 
-
-        </c:if>                               class="btn btn-sm btn-success">
-
+                        <div class="activity-actions">
+                            <a href="${pageContext.request.contextPath}/agregar-tarea?actividadId=${actividad.id}" 
+                               class="btn-sm btn-success">
                                 ➕ Agregar Tarea
+                            </a>
+                            <a href="${pageContext.request.contextPath}/ver-tareas?actividadId=${actividad.id}" 
+                               class="btn-sm btn-info">
+                                👁️ Ver Tareas
+                            </a>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </c:if>
 
-        <c:if test="${empty tareas}">                            </a>
-
-            <div class="empty-state">                            <a href="${pageContext.request.contextPath}/ver-tareas?actividadId=${actividad.id}" 
-
-                <h3>📭 No hay tareas registradas</h3>                               class="btn btn-sm btn-info">
-
-                <p>Comienza creando tu primera tarea académica</p>                                👁️ Ver Tareas
-
-                <a href="${pageContext.request.contextPath}/planificar" class="btn btn-primary">                            </a>
-
-                    ➕ Crear Primera Tarea                        </div>
-
-                </a>                    </div>
-
-            </div>                </c:forEach>
-
-        </c:if>            </div>
-
-    </main>        </c:if>
-
-
-
-    <footer>        <c:if test="${empty actividades}">
-
-        <p>&copy; 2025 Grupo 4 - Gestor de Tareas Universitarias</p>            <div class="empty-state">
-
-    </footer>                <h3>📭 No hay actividades registradas</h3>
-
-</div>                <p>Comienza creando tu primera actividad académica</p>
-
-</body>                <a href="${pageContext.request.contextPath}/planificar" class="btn btn-primary">
-
-</html>                    ➕ Crear Primera Actividad
-
+        <c:if test="${empty actividades}">
+            <div class="empty-state">
+                <h3>📭 No hay actividades registradas</h3>
+                <p>Comienza creando tu primera actividad académica</p>
+                <a href="${pageContext.request.contextPath}/planificar" class="btn btn-primary">
+                    ➕ Crear Primera Actividad
                 </a>
             </div>
         </c:if>

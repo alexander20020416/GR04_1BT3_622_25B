@@ -13,7 +13,7 @@
     <header>
         <h1>➕ Planificar Tareas</h1>
         <nav>
-            <a href="${pageContext.request.contextPath}/" class="btn-link">← Volver al inicio</a>
+            <a href="${pageContext.request.contextPath}/home" class="btn-link">← Volver al inicio</a>
         </nav>
     </header>
 

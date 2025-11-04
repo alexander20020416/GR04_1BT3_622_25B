@@ -86,7 +86,7 @@
     <header>
         <h1>📅 Calendario de Tareas</h1>
         <nav>
-            <a href="${pageContext.request.contextPath}/" class="btn-link">← Volver al inicio</a>
+            <a href="${pageContext.request.contextPath}/home" class="btn-link">← Volver al inicio</a>
         </nav>
     </header>
 

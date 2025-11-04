@@ -106,6 +106,18 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Iteración 2 Gestion Avanzada  -->
+            <div class="menu-section">
+                <div class="menu-card">
+                    <div class="card-icon">📘</div>
+                    <h4>Nueva Materia</h4>
+                    <p>Crear una nueva Materia para agregar de forma eficiente tus tareas.</p>
+                    <a href="${pageContext.request.contextPath}/materias" class="btn btn-secondary">
+                        Ir a Crear Materia
+                    </a>
+                </div>
+            </div>
         </div>
 
     </main>
