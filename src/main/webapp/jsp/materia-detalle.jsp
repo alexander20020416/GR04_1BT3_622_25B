@@ -56,18 +56,18 @@
             z-index: 1;
         }
 
-        /* ========== Botones de Acción Compactos (3 BOTONES) ========== */
+        /* ========== Botones de Acción Compactos ========== */
         .action-buttons-compact {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            display: flex;
             gap: 12px;
             position: relative;
             z-index: 1;
+            flex-wrap: wrap;
         }
 
         .btn-compact {
             text-decoration: none;
-            padding: 12px 20px;
+            padding: 10px 20px;
             border-radius: 10px;
             font-weight: 600;
             font-size: 14px;
@@ -75,12 +75,11 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             background: rgba(255, 255, 255, 0.2);
             color: white;
             border: 2px solid rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
-            text-align: center;
         }
 
         .btn-compact:hover {
@@ -88,10 +87,6 @@
             border-color: rgba(255, 255, 255, 0.5);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-compact span.emoji {
-            font-size: 18px;
         }
 
         /* ========== Botón de Regreso ========== */
@@ -250,7 +245,11 @@
             }
 
             .action-buttons-compact {
-                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+
+            .btn-compact {
+                width: 100%;
             }
 
             .tareas-grid {
@@ -292,22 +291,20 @@
             <h1>📚 ${materia.nombre}</h1>
             <p>${materia.descripcion}</p>
 
-            <!-- ✅ TRES BOTONES: Planificar, Crear Proyecto, Organizar -->
             <div class="action-buttons-compact">
                 <a href="${pageContext.request.contextPath}/planificar?materiaId=${materia.id}" class="btn-compact">
-                    <span class="emoji">📝</span>
-                    <span>Planificar Tarea</span>
+                    📝 Planificar Tarea
                 </a>
 
+                <!-- ✅ BOTÓN AGREGADO: Crear Proyecto -->
                 <a href="${pageContext.request.contextPath}/proyectos?materiaId=${materia.id}" class="btn-compact">
-                    <span class="emoji">📋</span>
-                    <span>Crear Proyecto</span>
+                    📋 Crear Proyecto
                 </a>
 
                 <a href="${pageContext.request.contextPath}/organizar?materiaId=${materia.id}" class="btn-compact">
-                    <span class="emoji">📊</span>
-                    <span>Organizar Tareas</span>
+                    📊 Organizar Tareas
                 </a>
+
                 <a href="${pageContext.request.contextPath}/organizar?materiaId=${materia.id}" class="btn-compact">
                     🔍 Consultar Tareas
                 </a>

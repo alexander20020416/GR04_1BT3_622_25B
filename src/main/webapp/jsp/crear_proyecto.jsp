@@ -8,84 +8,145 @@
     <title>Crear Proyecto - Gestor de Tareas</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     <style>
-        .form-container-proyecto {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .create-project-container {
             max-width: 700px;
             margin: 0 auto;
             background: white;
+            border-radius: 20px;
             padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.5s ease-out;
         }
 
-        .page-title {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 2rem;
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .page-subtitle {
+        .page-header {
             text-align: center;
-            color: #7f8c8d;
             margin-bottom: 30px;
-            font-size: 1rem;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
         }
 
-        .form-group-proyecto {
-            margin-bottom: 24px;
+        .page-header h1 {
+            color: #1f2937;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
         }
 
-        .form-group-proyecto label {
-            display: block;
+        .page-header p {
+            color: #6b7280;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #f3f4f6;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 10px;
             font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 8px;
             font-size: 14px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            border: 2px solid #e5e7eb;
         }
 
-        .required-star {
-            color: #e74c3c;
+        .back-button:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: translateX(-4px);
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #dc2626;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #374151;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .form-group label .required {
+            color: #dc2626;
             margin-left: 4px;
         }
 
-        .form-control-proyecto {
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 12px 16px;
-            border: 2px solid #e0e6ed;
+            border: 2px solid #e5e7eb;
             border-radius: 10px;
-            font-size: 15px;
+            font-size: 14px;
+            font-family: inherit;
             transition: all 0.3s ease;
             box-sizing: border-box;
         }
 
-        .form-control-proyecto:focus {
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: #667eea;
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
-        textarea.form-control-proyecto {
-            min-height: 120px;
+        .form-group textarea {
             resize: vertical;
-            font-family: inherit;
+            min-height: 100px;
         }
 
-        .form-hint {
-            font-size: 13px;
-            color: #95a5a6;
+        .form-group .hint {
+            font-size: 12px;
+            color: #6b7280;
             margin-top: 6px;
             display: block;
         }
 
-        .form-actions {
-            display: flex;
-            gap: 12px;
-            margin-top: 32px;
-        }
-
-        .btn-submit-proyecto {
-            flex: 1;
-            padding: 14px 28px;
+        .btn-submit {
+            width: 100%;
+            padding: 14px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
@@ -94,214 +155,120 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            margin-top: 10px;
         }
 
-        .btn-submit-proyecto:hover {
+        .btn-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
 
-        .btn-cancel {
-            padding: 14px 28px;
-            background: #e0e6ed;
-            color: #2c3e50;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+        .btn-submit:active {
+            transform: translateY(0);
         }
 
-        .btn-cancel:hover {
-            background: #cbd5e0;
-        }
+        @media (max-width: 768px) {
+            .create-project-container {
+                padding: 25px 20px;
+            }
 
-        .alert-error-proyecto {
-            background: #fee;
-            border: 2px solid #e74c3c;
-            color: #c0392b;
-            padding: 16px 20px;
-            border-radius: 10px;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 500;
-        }
-
-        .icon-proyecto {
-            font-size: 20px;
-        }
-
-        .materia-preview {
-            background: #f8f9fa;
-            padding: 12px 16px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            margin-top: 8px;
-        }
-
-        .materia-preview strong {
-            color: #667eea;
+            .page-header h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <header>
-        <h1>📚 Gestor de Tareas Universitarias</h1>
-        <nav>
-            <a href="${pageContext.request.contextPath}/jsp/materia-lista.jsp" class="btn-link">← Volver a Materias</a>
-        </nav>
-    </header>
+<div class="create-project-container">
+    <a href="${pageContext.request.contextPath}/listarMateria" class="back-button">
+        ← Volver a Materias
+    </a>
 
-    <main>
-        <div class="form-container-proyecto">
-            <h2 class="page-title">📋 Crear Nuevo Proyecto</h2>
-            <p class="page-subtitle">Organiza tu trabajo en proyectos con seguimiento completo</p>
+    <div class="page-header">
+        <h1>📋 Crear Nuevo Proyecto</h1>
+        <p>Crea un proyecto especial para dar seguimiento a trabajos importantes</p>
+    </div>
 
-            <!-- Mostrar errores -->
-            <c:if test="${not empty error}">
-                <div class="alert-error-proyecto">
-                    <span class="icon-proyecto">⚠️</span>
-                    <span>${error}</span>
-                </div>
-            </c:if>
+    <!-- Mensaje de error -->
+    <c:if test="${not empty error}">
+        <div class="error-message">
+            <span>❌</span>
+            <span>${error}</span>
+        </div>
+    </c:if>
 
-            <form action="${pageContext.request.contextPath}/proyectos" method="post">
-                <!-- Título del Proyecto -->
-                <div class="form-group-proyecto">
-                    <label for="titulo">
-                        <span class="icon-proyecto">📝</span>
-                        Nombre del Proyecto
-                        <span class="required-star">*</span>
-                    </label>
-                    <input type="text"
-                           id="titulo"
-                           name="titulo"
-                           class="form-control-proyecto"
-                           placeholder="Ej: Proyecto Final de Física"
-                           required
-                           maxlength="200">
-                    <span class="form-hint">Nombre descriptivo de tu proyecto</span>
-                </div>
+    <!-- Formulario de creación -->
+    <form action="${pageContext.request.contextPath}/gestionarProyecto" method="post">
 
-                <!-- Descripción -->
-                <div class="form-group-proyecto">
-                    <label for="descripcion">
-                        <span class="icon-proyecto">📄</span>
-                        Descripción del Proyecto
-                    </label>
-                    <textarea id="descripcion"
-                              name="descripcion"
-                              class="form-control-proyecto"
-                              placeholder="Describe los objetivos y alcance del proyecto..."></textarea>
-                    <span class="form-hint">Detalla qué incluye este proyecto (opcional)</span>
-                </div>
-
-                <!-- Materia -->
-                <div class="form-group-proyecto">
-                    <label for="materiaId">
-                        <span class="icon-proyecto">📚</span>
-                        Materia
-                        <span class="required-star">*</span>
-                    </label>
-                    <select id="materiaId" name="materiaId" class="form-control-proyecto" required>
-                        <option value="">-- Selecciona una materia --</option>
-                        <c:forEach var="materia" items="${materias}">
-                            <option value="${materia.id}"
-                                ${materiaIdPreseleccionada == materia.id ? 'selected' : ''}>
-                                    ${materia.nombre}
-                            </option>
-                        </c:forEach>
-                    </select>
-                    <span class="form-hint">Asocia este proyecto a una materia</span>
-
-                    <!-- Preview de materia seleccionada -->
-                    <c:if test="${not empty param.materiaId}">
-                        <div class="materia-preview">
-                            <strong>Materia seleccionada:</strong>
-                            <c:forEach var="materia" items="${materias}">
-                                <c:if test="${materia.id == param.materiaId}">
-                                    ${materia.nombre}
-                                </c:if>
-                            </c:forEach>
-                        </div>
-                    </c:if>
-                </div>
-
-                <!-- Fecha de Vencimiento -->
-                <div class="form-group-proyecto">
-                    <label for="fechaVencimiento">
-                        <span class="icon-proyecto">📅</span>
-                        Fecha de Entrega Final
-                        <span class="required-star">*</span>
-                    </label>
-                    <input type="date"
-                           id="fechaVencimiento"
-                           name="fechaVencimiento"
-                           class="form-control-proyecto"
-                           required
-                           min="${java.time.LocalDate.now()}">
-                    <span class="form-hint">Fecha límite para completar el proyecto</span>
-                </div>
-
-                <!-- Botones de Acción -->
-                <div class="form-actions">
-                    <button type="submit" class="btn-submit-proyecto">
-                        <span>✓</span>
-                        <span>Crear Proyecto</span>
-                    </button>
-                    <a href="${pageContext.request.contextPath}/jsp/materia-lista.jsp"
-                       class="btn-cancel">
-                        <span>✕</span>
-                        <span>Cancelar</span>
-                    </a>
-                </div>
-            </form>
+        <!-- Título del Proyecto -->
+        <div class="form-group">
+            <label for="titulo">
+                Nombre del Proyecto
+                <span class="required">*</span>
+            </label>
+            <input
+                    type="text"
+                    id="titulo"
+                    name="titulo"
+                    placeholder="Ej: Proyecto Final de Física"
+                    required
+                    maxlength="200"
+                    value="${param.titulo}">
+            <span class="hint">Máximo 200 caracteres</span>
         </div>
 
-        <!-- Información adicional -->
-        <div class="info-box" style="max-width: 700px; margin: 30px auto;">
-            <h3>ℹ️ Acerca de los Proyectos</h3>
-            <ul>
-                <li><strong>Proyectos Especiales:</strong> Organiza trabajos grandes con múltiples tareas</li>
-                <li><strong>Seguimiento Visual:</strong> Barra de progreso automática según tareas completadas</li>
-                <li><strong>Indicadores de Urgencia:</strong> Alertas visuales según proximidad de fecha límite</li>
-                <li><strong>Gestión de Tareas:</strong> Asigna y da seguimiento a tareas dentro del proyecto</li>
-            </ul>
+        <!-- Descripción -->
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea
+                    id="descripcion"
+                    name="descripcion"
+                    placeholder="Describe tu proyecto y sus objetivos principales..."
+                    rows="4">${param.descripcion}</textarea>
+            <span class="hint">Opcional - Describe los detalles de tu proyecto</span>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 Grupo 4 - Gestor de Tareas Universitarias</p>
-    </footer>
+        <!-- Materia -->
+        <div class="form-group">
+            <label for="materiaId">
+                Materia
+                <span class="required">*</span>
+            </label>
+            <select id="materiaId" name="materiaId" required>
+                <option value="">-- Selecciona una materia --</option>
+                <c:forEach var="materia" items="${materias}">
+                    <option
+                            value="${materia.id}"
+                        ${materiaIdPreseleccionada == materia.id ? 'selected' : ''}
+                        ${param.materiaId == materia.id ? 'selected' : ''}>
+                            ${materia.nombre}
+                    </option>
+                </c:forEach>
+            </select>
+            <span class="hint">Selecciona la materia a la que pertenece este proyecto</span>
+        </div>
+
+        <!-- Fecha de Vencimiento -->
+        <div class="form-group">
+            <label for="fechaVencimiento">
+                Fecha de Entrega Final
+                <span class="required">*</span>
+            </label>
+            <input
+                    type="date"
+                    id="fechaVencimiento"
+                    name="fechaVencimiento"
+                    required
+                    min="${java.time.LocalDate.now()}"
+                    value="${param.fechaVencimiento}">
+            <span class="hint">Fecha límite para completar todo el proyecto</span>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn-submit">
+            ✓ Crear Proyecto
+        </button>
+    </form>
 </div>
-
-<script>
-    // Auto-configurar fecha mínima como hoy
-    document.addEventListener('DOMContentLoaded', function() {
-        const fechaInput = document.getElementById('fechaVencimiento');
-        const today = new Date().toISOString().split('T')[0];
-        fechaInput.setAttribute('min', today);
-
-        // Si no hay fecha, sugerir una semana adelante
-        if (!fechaInput.value) {
-            const nextWeek = new Date();
-            nextWeek.setDate(nextWeek.getDate() + 7);
-            fechaInput.value = nextWeek.toISOString().split('T')[0];
-        }
-    });
-</script>
 </body>
 </html>
