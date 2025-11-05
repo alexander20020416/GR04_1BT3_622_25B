@@ -104,7 +104,7 @@ public class Tarea {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "proyecto_id", nullable = false)
+    @JoinColumn(name = "proyecto_id", nullable = true)
     private Proyecto proyecto;
 
     public Proyecto getProyecto() {
