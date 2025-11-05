@@ -76,8 +76,8 @@ public class GestorProyectoServletTest {
 
         // Assert
         verify(proyectoService, times(1)).guardarProyecto(any(Proyecto.class));
-        // ✅ CAMBIO: Ahora redirige a /seguimiento
-        verify(response).sendRedirect(contains("/seguimiento"));
+        // ✅ CAMBIO: Ahora redirige a /detalleMateria porque se pasó materiaId=1
+        verify(response).sendRedirect(contains("/detalleMateria"));
     }
 
     @Test

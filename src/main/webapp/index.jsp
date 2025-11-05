@@ -100,7 +100,9 @@
                         Ver Calendario
                     </a>
                 </div>
+            </div>
 
+            <div class="menu-section">
                 <div class="menu-card">
                     <div class="card-icon">📊</div>
                     <h4>Seguimiento de Proyectos</h4>
