@@ -100,7 +100,7 @@
 
         <div class="info-box">
             <h3>ℹ️ Información del Sistema</h3>
-            <p>Este formulario implementa el caso de uso <strong>"Configurar Alertas"</strong> del Incremento 2.</p>
+            <p>Este formulario implementa el caso de uso <strong>"Configurar Alertas"</strong>.</p>
             <ul>
                 <li><strong>Patrón Observer:</strong> Cuando se crea una alerta, se notifica automáticamente a los listeners</li>
                 <li><strong>Validación de fecha:</strong> La fecha debe ser futura (CP08)</li>

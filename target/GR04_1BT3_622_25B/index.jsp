@@ -16,7 +16,7 @@
                 <h1>📚 Gestor de Tareas Universitarias</h1>
                 <p class="subtitle">Sistema de gestión académica - Grupo 4</p>
             </div>
-            
+
             <!-- Información del usuario autenticado -->
             <c:if test="${not empty sessionScope.usuarioNombre}">
                 <div class="user-info">
@@ -27,7 +27,7 @@
                             <span class="notification-badge" id="notificationBadge" style="display: none;">0</span>
                         </div>
                     </div>
-                    
+
                     <span class="welcome-text">
                         👋 Bienvenido, <strong>${sessionScope.usuarioNombre}</strong>
                     </span>
@@ -43,7 +43,7 @@
         <div class="welcome-section">
             <h2>¡Bienvenido!</h2>
             <p>Organiza tus tareas académicas de manera eficiente</p>
-            
+
             <c:if test="${not empty sessionScope.usuarioNombre}">
                 <p class="user-welcome">
                     Hola <strong>${sessionScope.usuarioNombre}</strong>, selecciona una opción del menú para comenzar.
@@ -52,10 +52,7 @@
         </div>
 
         <div class="menu-grid">
-            <!-- Incremento 1 -->
             <div class="menu-section">
-                <h3>📝 Incremento 1</h3>
-
                 <div class="menu-card">
                     <div class="card-icon">➕</div>
                     <h4>Planificar Tareas</h4>
@@ -75,10 +72,7 @@
                 </div>
             </div>
 
-            <!-- Incremento 2 -->
             <div class="menu-section">
-                <h3>🔔 Incremento 2</h3>
-
                 <div class="menu-card">
                     <div class="card-icon">🔍</div>
                     <h4>Consultar Tareas</h4>
@@ -91,7 +85,8 @@
                 <div class="menu-card">
                     <div class="card-icon">⏰</div>
                     <h4>Configurar Alertas</h4>
-                    <p>Visualiza y gestiona tus alertas. Crea alertas personalizadas para recordarte de tus tareas importantes.</p>
+                    <p>Visualiza y gestiona tus alertas. Crea alertas personalizadas para recordarte de tus tareas
+                        importantes.</p>
                     <a href="${pageContext.request.contextPath}/alertas" class="btn btn-secondary">
                         Ver Mis Alertas
                     </a>
@@ -105,19 +100,17 @@
                         Ver Calendario
                     </a>
                 </div>
-            </div>
 
-            <!-- Iteración 2 Gestion Avanzada  -->
-            <div class="menu-section">
                 <div class="menu-card">
-                    <div class="card-icon">📘</div>
-                    <h4>Nueva Materia</h4>
-                    <p>Crear una nueva Materia para agregar de forma eficiente tus tareas.</p>
-                    <a href="${pageContext.request.contextPath}/materias" class="btn btn-secondary">
-                        Ir a Crear Materia
+                    <div class="card-icon">📊</div>
+                    <h4>Seguimiento de Proyectos</h4>
+                    <p>Visualiza el progreso de tus proyectos con barras de avance y alertas visuales de urgencia.</p>
+                    <a href="${pageContext.request.contextPath}/seguimiento" class="btn btn-secondary">
+                        Ver Seguimiento
                     </a>
                 </div>
             </div>
+
         </div>
 
     </main>
@@ -136,11 +129,11 @@
         flex-wrap: wrap;
         gap: 1rem;
     }
-    
+
     .title-section {
         flex: 1;
     }
-    
+
     .user-info {
         display: flex;
         align-items: center;
@@ -150,12 +143,12 @@
         border-radius: 8px;
         border: 1px solid #e9ecef;
     }
-    
+
     .welcome-text {
         color: #495057;
         font-size: 0.9rem;
     }
-    
+
     .logout-btn {
         background-color: #dc3545;
         color: white;
@@ -165,13 +158,13 @@
         font-size: 0.85rem;
         transition: background-color 0.2s;
     }
-    
+
     .logout-btn:hover {
         background-color: #c82333;
         text-decoration: none;
         color: white;
     }
-    
+
     .user-welcome {
         background-color: #e8f5e8;
         padding: 1rem;
@@ -180,7 +173,7 @@
         margin-top: 1rem;
         color: #155724;
     }
-    
+
     /* ========== Campana de Notificaciones ========== */
     .notification-bell-container {
         position: relative;
@@ -209,9 +202,15 @@
     }
 
     @keyframes bellRing {
-        0%, 100% { transform: rotate(0deg); }
-        10%, 30% { transform: rotate(-10deg); }
-        20%, 40% { transform: rotate(10deg); }
+        0%, 100% {
+            transform: rotate(0deg);
+        }
+        10%, 30% {
+            transform: rotate(-10deg);
+        }
+        20%, 40% {
+            transform: rotate(10deg);
+        }
     }
 
     .bell-icon {
@@ -239,16 +238,20 @@
     }
 
     @keyframes pulseBadge {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.1); }
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
     }
-    
+
     @media (max-width: 768px) {
         .header-content {
             flex-direction: column;
             text-align: center;
         }
-        
+
         .user-info {
             width: 100%;
             justify-content: center;
@@ -262,37 +265,39 @@
         fetch('${pageContext.request.contextPath}/alertas?action=count', {
             method: 'GET'
         })
-        .then(function(response) { return response.json(); })
-        .then(function(data) {
-            const badge = document.getElementById('notificationBadge');
-            const bell = document.getElementById('notificationBell');
-            
-            if (data.count > 0) {
-                badge.textContent = data.count;
-                badge.style.display = 'flex';
-                bell.classList.add('has-notifications');
-            } else {
-                badge.style.display = 'none';
-                bell.classList.remove('has-notifications');
-            }
-        })
-        .catch(function(error) {
-            console.error('Error al actualizar badge:', error);
-        });
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                const badge = document.getElementById('notificationBadge');
+                const bell = document.getElementById('notificationBell');
+
+                if (data.count > 0) {
+                    badge.textContent = data.count;
+                    badge.style.display = 'flex';
+                    bell.classList.add('has-notifications');
+                } else {
+                    badge.style.display = 'none';
+                    bell.classList.remove('has-notifications');
+                }
+            })
+            .catch(function (error) {
+                console.error('Error al actualizar badge:', error);
+            });
     }
 
     // Ir a alertas al hacer clic
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const bell = document.getElementById('notificationBell');
         if (bell) {
-            bell.addEventListener('click', function() {
+            bell.addEventListener('click', function () {
                 window.location.href = '${pageContext.request.contextPath}/alertas';
             });
         }
-        
+
         // Actualizar badge al cargar
         actualizarBadgeNotificaciones();
-        
+
         // Actualizar cada 30 segundos
         setInterval(actualizarBadgeNotificaciones, 30000);
     });

@@ -1,51 +1,62 @@
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\util\JPAUtil.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\repository\UsuarioRepository.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\ListarTareasServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\BaseServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenPorFecha.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\EliminarTareaServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\service\CalendarioService.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\TareaRepository.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\TareaRepositoryImpl.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorListadoServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenPorTitulo.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\controller\RegisterServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorPlanificacionServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\EditarTareaServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\service\MateriaService.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\util\PasswordUtil.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorAlertasServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\repository\UsuarioRepositoryJPA.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorCalendarioServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\AlertaRepository.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\service\AuthService.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\controller\LoginServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\model\Usuario.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\observer\AlertaListener.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\HomeServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorAdministracionServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\observer\AlertaListenerImpl.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\model\Alerta.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenStrategy.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\config\ServiceLocator.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\controller\DebugServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\filter\AuthenticationFilter.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\service\LogoutService.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\model\UsuarioEntity.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\repository\UsuarioRepositoryImpl.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\service\ValidadorUsuario.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\dto\TareaDTO.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\util\UsuarioValidator.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\CambiarEstadoTareaServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\model\Tarea.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\CrearMateriaServlet.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\MateriaRepositoryImpl.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\UsuarioRepository.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenPorPrioridad.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\dto\AlertaDTO.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\util\ParametroParser.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\AlertaRepositoryImpl.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\service\TareaFilterService.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\model\Materia.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\MateriaRepository.java
-C:\Users\Javier\IdeaProjects\GR04_1BT3_622_25B\src\main\java\com\gr4\dto\MateriaDTO.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\filter\CharacterEncodingFilter.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenPorFecha.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\ListarTareasServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorProyectoServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\CambiarEstadoTareaServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\EliminarMateriaServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\ListarMateriaServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorListadoServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\model\UsuarioEntity.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\service\LogoutService.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\DetalleMateriaServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\config\ServiceLocator.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\model\Proyecto.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\MateriaRepository.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\dto\AlertaDTO.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\controller\DebugServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\model\Usuario.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\HomeServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\dto\ProyectoDTO.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\TareaRepository.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\EditarMateriaServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\TareaRepositoryImpl.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorPlanificacionServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\controller\RegisterServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\service\CalendarioService.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenPorTitulo.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\util\UsuarioValidator.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorCalendarioServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\CrearMateriaServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenStrategy.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\repository\UsuarioRepository.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\util\PasswordUtil.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\EditarTareaServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorAlertasServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\controller\LoginServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\observer\AlertaListenerImpl.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\repository\UsuarioRepositoryJPA.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\ProyectoRepository.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\model\Tarea.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\service\ProyectoService.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\service\ValidadorUsuario.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\model\Materia.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\AlertaRepository.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\util\JPAUtil.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\UsuarioRepository.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\service\TareaFilterService.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\AlertaRepositoryImpl.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\GestorAdministracionServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\service\MateriaService.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\strategy\OrdenPorPrioridad.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\dto\TareaDTO.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\observer\AlertaListener.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\ProyectoRepositoryImpl.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\model\Alerta.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\repository\UsuarioRepositoryImpl.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\filter\AuthenticationFilter.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\util\ParametroParser.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\auth\service\AuthService.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\BaseServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\controller\EliminarTareaServlet.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\dto\MateriaDTO.java
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software\GR04_1BT3_622_25B\src\main\java\com\gr4\repository\MateriaRepositoryImpl.java

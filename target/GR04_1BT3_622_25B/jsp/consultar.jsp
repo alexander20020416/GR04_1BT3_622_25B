@@ -284,7 +284,6 @@
     <main>
         <div class="controls-section">
             <h2>Filtrar Tareas por Estado</h2>
-            <p class="subtitle">Incremento 2 - Caso de Uso: Consultar Tareas | Por defecto se muestran solo tareas activas (no completadas)</p>
 
             <div class="filter-buttons">
                 <a href="${pageContext.request.contextPath}/consultar"
@@ -447,7 +446,7 @@
 
         <div class="info-box">
             <h3>ℹ️ Información del Sistema</h3>
-            <p>Esta vista implementa el caso de uso <strong>"Consultar Tareas"</strong> del Incremento 2.</p>
+            <p>Esta vista implementa el caso de uso <strong>"Consultar Tareas"</strong>.</p>
             <ul>
                 <li><strong>Filtrado:</strong> Permite consultar tareas por estado</li>
                 <li><strong>Validación de integridad:</strong> Verifica que todas las tareas tengan datos completos (CP14)</li>

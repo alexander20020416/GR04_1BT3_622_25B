@@ -282,6 +282,106 @@
                 text-align: center;
             }
         }
+
+        /* ========== Widget Calendario ========== */
+        .calendario-widget {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calendario-widget::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .calendario-info {
+            z-index: 1;
+            flex: 1;
+        }
+
+        .calendario-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .calendario-info p {
+            margin: 0 0 20px 0;
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .calendario-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-item strong {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .calendario-action {
+            z-index: 1;
+        }
+
+        .btn-calendario {
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-calendario:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #f8f9ff;
+        }
+
+        @media (max-width: 768px) {
+            .calendario-widget {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .calendario-stats {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -311,6 +411,35 @@
     </header>
 
     <main>
+        <!-- Widget del Calendario -->
+        <div class="calendario-widget">
+            <div class="calendario-info">
+                <h2>📅 Tu Calendario de Tareas</h2>
+                <p>Organiza tu semana y visualiza todas tus tareas pendientes en un solo lugar</p>
+                <div class="calendario-stats">
+                    <div class="stat-item">
+                        <span>📋</span>
+                        <div>
+                            <strong>${not empty totalTareas ? totalTareas : '0'}</strong>
+                            <span style="font-size: 12px; opacity: 0.9;">Tareas Totales</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <span>⏰</span>
+                        <div>
+                            <strong>${not empty tareasHoy ? tareasHoy : '0'}</strong>
+                            <span style="font-size: 12px; opacity: 0.9;">Hoy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calendario-action">
+                <a href="${pageContext.request.contextPath}/calendario" class="btn-calendario">
+                    🗓️ Ver Calendario Completo
+                </a>
+            </div>
+        </div>
+
         <c:if test="${not empty error}">
             <div class="alert alert-error">
                 <strong>❌ Error:</strong> ${error}
