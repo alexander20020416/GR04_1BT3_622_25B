@@ -33,10 +33,10 @@ public class GestorProyectoServletTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        // ✅ NUEVO: Pasar ambos servicios al constructor
+        //Pasar ambos servicios al constructor
         gestorProyectoServlet = new GestorProyectoServlet(proyectoService, materiaService);
 
-        // ✅ NUEVO: Mock para la lista de materias (devuelve lista vacía por defecto)
+        // Mock para la lista de materias (devuelve lista vacía por defecto)
         when(materiaService.listarMaterias()).thenReturn(java.util.List.of());
     }
 
@@ -44,16 +44,16 @@ public class GestorProyectoServletTest {
     void given_RequestCuandoHacerGet_then_DeberiaRedirigirALaVista() throws Exception {
         // Arrange
         RequestDispatcher requestDispatcher = mock(RequestDispatcher.class);
-        when(request.getRequestDispatcher("/WEB-INF/views/crear_proyecto.jsp"))
+        when(request.getRequestDispatcher("/jsp/crear_proyecto.jsp"))
                 .thenReturn(requestDispatcher);
 
         // Act
         gestorProyectoServlet.doGet(request, response);
 
         // Assert
-        verify(request).getRequestDispatcher("/WEB-INF/views/crear_proyecto.jsp");
+        verify(request).getRequestDispatcher("/jsp/crear_proyecto.jsp");
         verify(requestDispatcher).forward(request, response);
-        // ✅ NUEVO: Verificar que se cargaron las materias
+        // Verificar que se cargaron las materias
         verify(materiaService).listarMaterias();
     }
 
@@ -64,7 +64,7 @@ public class GestorProyectoServletTest {
         String descripcion = "Descripción del proyecto";
         when(request.getParameter("titulo")).thenReturn(titulo);
         when(request.getParameter("descripcion")).thenReturn(descripcion);
-        // ✅ Opcional: Agregar parámetros de fecha y materia
+        // Agregar parámetros de fecha y materia
         when(request.getParameter("fechaVencimiento")).thenReturn(null);
         when(request.getParameter("materiaId")).thenReturn(null);
         when(request.getContextPath()).thenReturn("");
@@ -85,7 +85,7 @@ public class GestorProyectoServletTest {
         when(materiaService.listarMaterias()).thenReturn(java.util.List.of());
 
         RequestDispatcher requestDispatcher = mock(RequestDispatcher.class);
-        when(request.getRequestDispatcher("/WEB-INF/views/crear_proyecto.jsp"))
+        when(request.getRequestDispatcher("/jsp/crear_proyecto.jsp"))
                 .thenReturn(requestDispatcher);
 
         // Act
