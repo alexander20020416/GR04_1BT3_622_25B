@@ -408,6 +408,9 @@
         <a href="${pageContext.request.contextPath}/planificar" class="btn btn-secondary">
             📝 Crear Tarea
         </a>
+        <a href="${pageContext.request.contextPath}/seguimiento" class="btn btn-secondary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none;">
+            📊 Seguimiento de Proyectos
+        </a>
     </header>
 
     <main>

@@ -316,6 +316,11 @@
                     📋 Crear Proyecto
                 </a>
 
+                <!-- ✅ BOTÓN AGREGADO: Seguimiento de Proyectos -->
+                <a href="${pageContext.request.contextPath}/seguimiento?materiaId=${materia.id}" class="btn-compact" style="background: rgba(16, 185, 129, 0.3);">
+                    📊 Ver Proyectos
+                </a>
+
                 <a href="${pageContext.request.contextPath}/organizar?materiaId=${materia.id}" class="btn-compact">
                     📊 Organizar Tareas
                 </a>

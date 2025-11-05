@@ -451,10 +451,18 @@
                                class="btn-small">
                                 👁️ Ver Detalles
                             </a>
+                            <a href="${pageContext.request.contextPath}/editarProyecto?id=${proyecto.id}"
+                               class="btn-small" style="background: #dbeafe; color: #1e40af;">
+                                ✏️ Editar
+                            </a>
                             <a href="${pageContext.request.contextPath}/agregarTarea?proyectoId=${proyecto.id}"
                                class="btn-small">
                                 ➕ Agregar Tarea
                             </a>
+                            <button onclick="confirmarEliminar(${proyecto.id}, '${proyecto.titulo}', ${proyecto.materia != null ? proyecto.materia.id : 'null'})"
+                                    class="btn-small" style="background: #fee2e2; color: #991b1b; border: none; cursor: pointer;">
+                                🗑️ Eliminar
+                            </button>
                         </div>
                     </div>
                 </c:forEach>
@@ -471,5 +479,32 @@
         </c:otherwise>
     </c:choose>
 </div>
+
+<script>
+    function confirmarEliminar(id, nombre, materiaId) {
+        if (confirm('¿Estás seguro de eliminar el proyecto "' + nombre + '"?\n\nEsta acción no se puede deshacer.')) {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '${pageContext.request.contextPath}/eliminarProyecto';
+
+            const inputId = document.createElement('input');
+            inputId.type = 'hidden';
+            inputId.name = 'id';
+            inputId.value = id;
+            form.appendChild(inputId);
+
+            if (materiaId && materiaId !== 'null') {
+                const inputMateriaId = document.createElement('input');
+                inputMateriaId.type = 'hidden';
+                inputMateriaId.name = 'materiaId';
+                inputMateriaId.value = materiaId;
+                form.appendChild(inputMateriaId);
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+</script>
 </body>
 </html>
