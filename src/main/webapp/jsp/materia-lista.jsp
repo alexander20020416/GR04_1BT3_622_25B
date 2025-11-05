@@ -90,29 +90,36 @@
         .materia-card {
             background: white;
             border-radius: 16px;
-            overflow: hidden;
+            overflow: visible;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
+            border-left: 6px solid #667eea; /* Color por defecto */
             position: relative;
             text-decoration: none;
             display: block;
-            cursor: pointer;
         }
 
         .materia-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            border-color: #667eea;
         }
 
         .materia-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+        }
+
+        .materia-codigo {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .materia-header h3 {
@@ -120,7 +127,7 @@
             margin: 0;
             font-size: 18px;
             font-weight: 700;
-            flex: 1;
+            padding-right: 40px;
         }
 
         .materia-id {
@@ -130,6 +137,80 @@
             border-radius: 20px;
             font-size: 12px;
             font-weight: 600;
+            align-self: flex-start;
+            margin-top: 4px;
+        }
+
+        /* ========== Menú 3 Puntos ========== */
+        .menu-tres-puntos {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+        }
+
+        .btn-menu-puntos {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 20px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn-menu-puntos:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            min-width: 160px;
+            display: none;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 12px 16px;
+            color: #374151;
+            text-decoration: none;
+            transition: background 0.2s;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background: #f3f4f6;
+        }
+
+        .dropdown-item.danger {
+            color: #ef4444;
+        }
+
+        .dropdown-item.danger:hover {
+            background: #fee2e2;
         }
 
         .materia-body {
@@ -239,15 +320,37 @@
         <c:if test="${not empty materias}">
             <div class="materias-list">
                 <c:forEach var="m" items="${materias}">
-                    <a href="${pageContext.request.contextPath}/detalleMateria?id=${m.id}" class="materia-card" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="materia-header">
-                            <h3>${m.nombre}</h3>
-                            <span class="materia-id">ID: ${m.id}</span>
-                        </div>
-                        <div class="materia-body">
-                            <p>${m.descripcion}</p>
-                        </div>
-                    </a>
+                    <div class="materia-card" style="border-left-color: ${not empty m.color ? m.color : '#667eea'};">
+                        <a href="${pageContext.request.contextPath}/detalleMateria?id=${m.id}" 
+                           style="text-decoration: none; color: inherit; display: block;">
+                            <div class="materia-header">
+                                <!-- Menú 3 puntos -->
+                                <div class="menu-tres-puntos">
+                                    <button class="btn-menu-puntos" onclick="toggleMenu(event, ${m.id})">⋮</button>
+                                    <div id="menu-${m.id}" class="dropdown-menu">
+                                        <a href="${pageContext.request.contextPath}/editar-materia?id=${m.id}" 
+                                           class="dropdown-item" 
+                                           onclick="event.stopPropagation()">
+                                            ✏️ Editar
+                                        </a>
+                                        <button class="dropdown-item danger" 
+                                                onclick="event.stopPropagation(); confirmarEliminacion(${m.id}, '${m.nombre}')">
+                                            🗑️ Eliminar
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <c:if test="${not empty m.codigo}">
+                                    <div class="materia-codigo">${m.codigo}</div>
+                                </c:if>
+                                <h3>${m.nombre}</h3>
+                                <span class="materia-id">ID: ${m.id}</span>
+                            </div>
+                            <div class="materia-body">
+                                <p>${m.descripcion}</p>
+                            </div>
+                        </a>
+                    </div>
                 </c:forEach>
             </div>
         </c:if>
@@ -267,5 +370,52 @@
         <p>&copy; 2025 Grupo 4 - Gestor de Tareas Universitarias</p>
     </footer>
 </div>
+
+<script>
+    // Toggle menú desplegable
+    function toggleMenu(event, id) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        // Cerrar todos los menús abiertos
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            if (menu.id !== 'menu-' + id) {
+                menu.classList.remove('show');
+            }
+        });
+        
+        // Toggle el menú actual
+        const menu = document.getElementById('menu-' + id);
+        menu.classList.toggle('show');
+    }
+
+    // Confirmar eliminación
+    function confirmarEliminacion(id, nombre) {
+        if (confirm('¿Está seguro que desea eliminar la materia "' + nombre + '"?\n\nEsta acción no se puede deshacer.')) {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '${pageContext.request.contextPath}/eliminar-materia';
+            
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'id';
+            input.value = id;
+            
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+
+    // Cerrar menús al hacer clic fuera
+    document.addEventListener('click', function(event) {
+        if (!event.target.matches('.btn-menu-puntos')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+</script>
+
 </body>
 </html>

@@ -10,7 +10,9 @@ import java.time.LocalDate;
 public class MateriaDTO {
     private Long id;
     private String nombre;
+    private String codigo;
     private String descripcion;
+    private String color;
 
     public MateriaDTO(){
     }
@@ -38,11 +40,27 @@ public class MateriaDTO {
         this.nombre = nombre;
     }
 
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
     public String getDescripcion() {
         return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

@@ -24,6 +24,7 @@
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
             position: relative;
             overflow: hidden;
+            border-left: 8px solid #667eea; /* Color personalizado por materia */
         }
 
         .materia-hero::before {
@@ -36,6 +37,17 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             transform: translate(30%, -30%);
+        }
+
+        .materia-codigo {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
         }
 
         .materia-hero h1 {
@@ -287,7 +299,10 @@
             ← Volver a Materias
         </a>
 
-        <div class="materia-hero">
+        <div class="materia-hero" style="border-left-color: ${not empty materia.color ? materia.color : '#667eea'};">
+            <c:if test="${not empty materia.codigo}">
+                <div class="materia-codigo">${materia.codigo}</div>
+            </c:if>
             <h1>📚 ${materia.nombre}</h1>
             <p>${materia.descripcion}</p>
 
@@ -308,8 +323,33 @@
                 <a href="${pageContext.request.contextPath}/organizar?materiaId=${materia.id}" class="btn-compact">
                     🔍 Consultar Tareas
                 </a>
+                <a href="${pageContext.request.contextPath}/editar-materia?id=${materia.id}" class="btn-compact" style="background: rgba(59, 130, 246, 0.3);">
+                    ✏️ Editar Materia
+                </a>
+                <button onclick="confirmarEliminacion(${materia.id}, '${materia.nombre}')" class="btn-compact" style="background: rgba(239, 68, 68, 0.3); border: none; cursor: pointer;">
+                    🗑️ Eliminar
+                </button>
             </div>
         </div>
+
+        <script>
+            function confirmarEliminacion(id, nombre) {
+                if (confirm('¿Está seguro que desea eliminar la materia "' + nombre + '"?\n\nEsta acción no se puede deshacer y eliminará todas las asociaciones de tareas con esta materia.')) {
+                    const form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = '${pageContext.request.contextPath}/eliminar-materia';
+                    
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'id';
+                    input.value = id;
+                    
+                    form.appendChild(input);
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+            }
+        </script>
 
         <!-- Sección de Tareas -->
         <div class="tareas-section">
