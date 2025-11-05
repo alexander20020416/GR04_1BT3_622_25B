@@ -64,17 +64,20 @@ public class GestorProyectoServletTest {
         String descripcion = "Descripción del proyecto";
         when(request.getParameter("titulo")).thenReturn(titulo);
         when(request.getParameter("descripcion")).thenReturn(descripcion);
-        // Agregar parámetros de fecha y materia
-        when(request.getParameter("fechaVencimiento")).thenReturn(null);
-        when(request.getParameter("materiaId")).thenReturn(null);
+        when(request.getParameter("fechaVencimiento")).thenReturn("2025-12-31");
+        when(request.getParameter("materiaId")).thenReturn("1");
         when(request.getContextPath()).thenReturn("");
+
+        // ✅ NUEVO: Mock de materias para que no falle
+        when(materiaService.listarMaterias()).thenReturn(java.util.List.of());
 
         // Act
         gestorProyectoServlet.doPost(request, response);
 
         // Assert
         verify(proyectoService, times(1)).guardarProyecto(any(Proyecto.class));
-        verify(response).sendRedirect("/proyectos");
+        // ✅ CAMBIO: Ahora redirige a /seguimiento
+        verify(response).sendRedirect(contains("/seguimiento"));
     }
 
     @Test
