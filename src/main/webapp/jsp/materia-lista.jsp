@@ -25,6 +25,9 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
             position: relative;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
         }
 
         .materia-card:hover {
@@ -69,6 +72,24 @@
             line-height: 1.6;
             margin: 0;
             min-height: 60px;
+        }
+
+        /* ========== Indicador de Click ========== */
+        .materia-card::after {
+            content: '→';
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 24px;
+            color: #667eea;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .materia-card:hover::after {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         /* ========== Empty State Mejorado ========== */
@@ -116,6 +137,9 @@
 <div class="container">
     <header>
         <h1>📚 Mi Espacio </h1>
+        <a href="${pageContext.request.contextPath}/materias" class="btn btn-primary">
+            ➕ Agregar Nueva Materia
+        </a>
     </header>
 
     <main>
@@ -128,14 +152,19 @@
         <c:if test="${not empty materias}">
             <div class="materias-list">
                 <c:forEach var="m" items="${materias}">
-                    <div class="materia-card">
-                        <div class="materia-header"><h3>${m.nombre}</h3> <span class="materia-id">ID: ${m.id}</span>
+                    <a href="${pageContext.request.contextPath}/detalleMateria?id=${m.id}" class="materia-card" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="materia-header">
+                            <h3>${m.nombre}</h3>
+                            <span class="materia-id">ID: ${m.id}</span>
                         </div>
-                        <div class="materia-body"><p>${m.descripcion}</p></div>
-                    </div>
+                        <div class="materia-body">
+                            <p>${m.descripcion}</p>
+                        </div>
+                    </a>
                 </c:forEach>
             </div>
         </c:if>
+
         <c:if test="${empty materias}">
             <div class="empty-state">
                 <h3>📭 No hay materias registradas</h3>

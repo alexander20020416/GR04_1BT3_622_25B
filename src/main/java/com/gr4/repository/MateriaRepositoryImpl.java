@@ -36,5 +36,15 @@ public class MateriaRepositoryImpl implements MateriaRepository {
             em.close();
         }
     }
+
+    @Override
+    public Materia findById(Long id) {
+        EntityManager em = JPAUtil.getEntityManager();
+        try {
+            return em.find(Materia.class, id);
+        } finally {
+            em.close();
+        }
+    }
 }
 

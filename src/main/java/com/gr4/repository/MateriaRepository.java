@@ -14,4 +14,5 @@ public interface MateriaRepository {
 
     List<Materia> findAll();
 
+    Materia findById(Long id);
 }
