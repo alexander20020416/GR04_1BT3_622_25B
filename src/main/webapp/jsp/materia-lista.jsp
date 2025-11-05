@@ -321,25 +321,25 @@
             <div class="materias-list">
                 <c:forEach var="m" items="${materias}">
                     <div class="materia-card" style="border-left-color: ${not empty m.color ? m.color : '#667eea'};">
+                        <!-- Menú 3 puntos FUERA del enlace -->
+                        <div class="menu-tres-puntos">
+                            <button class="btn-menu-puntos" onclick="toggleMenu(event, ${m.id})">⋮</button>
+                            <div id="menu-${m.id}" class="dropdown-menu">
+                                <a href="${pageContext.request.contextPath}/editar-materia?id=${m.id}" 
+                                   class="dropdown-item">
+                                    ✏️ Editar
+                                </a>
+                                <button class="dropdown-item danger" 
+                                        onclick="confirmarEliminacion(${m.id}, '${m.nombre}')">
+                                    🗑️ Eliminar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Enlace clickeable a detalle -->
                         <a href="${pageContext.request.contextPath}/detalleMateria?id=${m.id}" 
                            style="text-decoration: none; color: inherit; display: block;">
                             <div class="materia-header">
-                                <!-- Menú 3 puntos -->
-                                <div class="menu-tres-puntos">
-                                    <button class="btn-menu-puntos" onclick="toggleMenu(event, ${m.id})">⋮</button>
-                                    <div id="menu-${m.id}" class="dropdown-menu">
-                                        <a href="${pageContext.request.contextPath}/editar-materia?id=${m.id}" 
-                                           class="dropdown-item" 
-                                           onclick="event.stopPropagation()">
-                                            ✏️ Editar
-                                        </a>
-                                        <button class="dropdown-item danger" 
-                                                onclick="event.stopPropagation(); confirmarEliminacion(${m.id}, '${m.nombre}')">
-                                            🗑️ Eliminar
-                                        </button>
-                                    </div>
-                                </div>
-
                                 <c:if test="${not empty m.codigo}">
                                     <div class="materia-codigo">${m.codigo}</div>
                                 </c:if>
