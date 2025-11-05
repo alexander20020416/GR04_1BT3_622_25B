@@ -1,6 +1,8 @@
 package com.gr4.controller;
 
+import com.gr4.model.Materia;
 import com.gr4.model.Tarea;
+import com.gr4.repository.MateriaRepositoryImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,12 +19,26 @@ import com.gr4.util.ParametroParser;
 @WebServlet(name = "GestorPlanificacionServlet", urlPatterns = {"/planificar"})
 public class GestorPlanificacionServlet extends BaseServlet {
 
+    private MateriaRepositoryImpl materiaRepository;
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        materiaRepository = new MateriaRepositoryImpl();
+    }
+
     /**
      * Maneja peticiones GET - Muestra el formulario de planificación
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        // Pasar materiaId al JSP si viene en el parámetro
+        String materiaId = request.getParameter("materiaId");
+        if (materiaId != null && !materiaId.trim().isEmpty()) {
+            request.setAttribute("materiaId", materiaId);
+        }
 
         // Según diagrama de secuencia: MainPlanificacionTareas muestra el formulario
         request.getRequestDispatcher("/jsp/planificar.jsp").forward(request, response);
@@ -43,8 +59,9 @@ public class GestorPlanificacionServlet extends BaseServlet {
             String fechaLimiteStr = request.getParameter("fechaLimite");
             String estado = request.getParameter("estado");
             String prioridad = request.getParameter("prioridad");
+            String materiaIdStr = request.getParameter("materiaId");
 
-            System.out.println("📥 Datos recibidos - Título: " + titulo + ", Estado: " + estado + ", Prioridad: " + prioridad);
+            System.out.println("📥 Datos recibidos - Título: " + titulo + ", Estado: " + estado + ", Prioridad: " + prioridad + ", MateriaId: " + materiaIdStr);
 
             // PASO 2: Validar los datos
             if (titulo == null || titulo.trim().isEmpty() || 
@@ -62,6 +79,20 @@ public class GestorPlanificacionServlet extends BaseServlet {
             tarea.setFechaVencimiento(ParametroParser.parseFecha(fechaLimiteStr));
             tarea.setEstado(estado != null ? estado : Tarea.ESTADO_PENDIENTE);
             tarea.setPrioridad(prioridad != null ? prioridad : Tarea.PRIORIDAD_MEDIA);
+
+            // PASO 3.5: Asignar materia si viene el parámetro
+            if (materiaIdStr != null && !materiaIdStr.trim().isEmpty()) {
+                try {
+                    Long materiaId = Long.parseLong(materiaIdStr);
+                    Materia materia = materiaRepository.findById(materiaId);
+                    if (materia != null) {
+                        tarea.setMateria(materia);
+                        System.out.println("✓ Materia asignada: " + materia.getNombre());
+                    }
+                } catch (NumberFormatException e) {
+                    System.err.println("⚠️ MateriaId inválido: " + materiaIdStr);
+                }
+            }
 
             // PASO 4: Guardar en el repositorio
             Tarea tareaGuardada = tareaRepository.save(tarea);

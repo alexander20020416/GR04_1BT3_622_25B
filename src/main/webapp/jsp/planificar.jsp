@@ -32,6 +32,11 @@
             </c:if>
 
             <form action="${pageContext.request.contextPath}/planificar" method="post" class="form">
+                <!-- Campo oculto para pasar el ID de la materia -->
+                <c:if test="${not empty materiaId}">
+                    <input type="hidden" name="materiaId" value="${materiaId}">
+                </c:if>
+                
                 <div class="form-group">
                     <label for="titulo">Título de la Tarea *</label>
                     <input type="text"

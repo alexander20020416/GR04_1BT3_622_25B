@@ -31,9 +31,9 @@ public class HomeServlet extends HttpServlet {
                                 Boolean.TRUE.equals(session.getAttribute("autenticado"));
 
         if (isAuthenticated) {
-            // Usuario autenticado - Mostrar menú principal
-            System.out.println("✓ Usuario autenticado - Mostrando menú principal");
-            request.getRequestDispatcher("/jsp/materia-lista.jsp").forward(request, response);
+            // Usuario autenticado - Redirigir a listar materias para cargar los datos
+            System.out.println("✓ Usuario autenticado - Redirigiendo a listar materias");
+            response.sendRedirect(request.getContextPath() + "/listarMateria");
         } else {
             // Usuario no autenticado - Redirigir a login
             System.out.println("⚠️ Usuario no autenticado - Redirigiendo a login");
