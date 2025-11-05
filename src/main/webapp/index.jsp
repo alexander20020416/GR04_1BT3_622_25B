@@ -100,6 +100,15 @@
                         Ver Calendario
                     </a>
                 </div>
+
+                <div class="menu-card">
+                    <div class="card-icon">📊</div>
+                    <h4>Seguimiento de Proyectos</h4>
+                    <p>Visualiza el progreso de tus proyectos con barras de avance y alertas visuales de urgencia.</p>
+                    <a href="${pageContext.request.contextPath}/seguimiento" class="btn btn-secondary">
+                        Ver Seguimiento
+                    </a>
+                </div>
             </div>
 
         </div>

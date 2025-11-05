@@ -21,7 +21,7 @@ import java.util.List;
  * Maneja creación de proyectos, asociación de tareas y creación de tareas dentro de proyectos.
  * Cumple con SRP - Solo maneja operaciones relacionadas con proyectos.
  */
-@WebServlet(name = "GestorProyectoServlet", urlPatterns = {"/proyectos", "/gestionarProyecto"})
+@WebServlet(name = "GestorProyectoServlet", urlPatterns = {"/proyectos", "/gestionarProyecto", "/seguimiento"})
 public class GestorProyectoServlet extends HttpServlet {
 
     private final ProyectoService proyectoService;
@@ -50,6 +50,15 @@ public class GestorProyectoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String path = request.getServletPath();
+        
+        // Si es /seguimiento, mostrar vista de seguimiento visual
+        if ("/seguimiento".equals(path)) {
+            mostrarSeguimientoVisual(request, response);
+            return;
+        }
+        
+        // Si es /proyectos, mostrar formulario de creación
         // Cargar lista de materias para el formulario
         try {
             List<Materia> materias = materiaService.listarMaterias()
@@ -68,6 +77,24 @@ public class GestorProyectoServlet extends HttpServlet {
 
         // Mostrar formulario para crear un nuevo proyecto
         request.getRequestDispatcher("/jsp/crear_proyecto.jsp").forward(request, response);
+    }
+    
+    /**
+     * Muestra la ventana de seguimiento visual de proyectos (HU-2)
+     * CA1: Muestra nombre, progreso y barra visual
+     * CA2: Lista de tareas con estados
+     * CA3: Alertas visuales para proyectos próximos a vencer
+     */
+    private void mostrarSeguimientoVisual(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        // Obtener todos los proyectos
+        List<Proyecto> proyectos = proyectoService.obtenerProyectos();
+        
+        // Pasar proyectos a la vista
+        request.setAttribute("proyectos", proyectos);
+        
+        // Redirigir a la vista de seguimiento
+        request.getRequestDispatcher("/jsp/seguimiento_proyectos.jsp").forward(request, response);
     }
 
     @Override
