@@ -107,12 +107,24 @@ public class Tarea {
     @JoinColumn(name = "proyecto_id", nullable = true)
     private Proyecto proyecto;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "materia_id", nullable = true)
+    private Materia materia;
+
     public Proyecto getProyecto() {
         return proyecto;
     }
 
     public void setProyecto(Proyecto proyecto) {
         this.proyecto = proyecto;
+    }
+
+    public Materia getMateria() {
+        return materia;
+    }
+
+    public void setMateria(Materia materia) {
+        this.materia = materia;
     }
 
     // Método para verificar si la tarea está vencida

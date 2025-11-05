@@ -1,6 +1,8 @@
 package com.gr4.controller;
 
 import com.gr4.dto.MateriaDTO;
+import com.gr4.model.Alerta;
+import com.gr4.repository.AlertaRepositoryImpl;
 import com.gr4.service.MateriaService;
 
 import javax.servlet.ServletException;
@@ -14,6 +16,7 @@ import java.util.List;
 public class ListarMateriaServlet extends BaseServlet {
 
     private MateriaService materiaService = new MateriaService();
+    private AlertaRepositoryImpl alertaRepository = new AlertaRepositoryImpl();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -21,8 +24,12 @@ public class ListarMateriaServlet extends BaseServlet {
 
         /* Obtener todas las materias desde el servicio */
         List<MateriaDTO> materias = materiaService.listarMaterias();
-
         request.setAttribute("materias", materias);
+
+        /* Obtener el número de alertas activas */
+        List<Alerta> todasAlertas = alertaRepository.findAll();
+        long alertasActivas = todasAlertas.stream().filter(a -> Boolean.TRUE.equals(a.getActiva())).count();
+        request.setAttribute("numAlertas", alertasActivas);
 
         request.getRequestDispatcher("/jsp/materia-lista.jsp").forward(request, response);
     }

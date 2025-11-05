@@ -135,6 +135,21 @@ public class TareaRepositoryImpl implements TareaRepository {
     }
 
     @Override
+    public List<Tarea> findByMateriaId(Long materiaId) {
+        EntityManager em = JPAUtil.getEntityManager();
+        try {
+            TypedQuery<Tarea> query = em.createQuery(
+                    "SELECT t FROM Tarea t WHERE t.materia.id = :materiaId ORDER BY t.fechaVencimiento ASC",
+                    Tarea.class
+            );
+            query.setParameter("materiaId", materiaId);
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
     public boolean deleteById(Long id) {
         EntityManager em = JPAUtil.getEntityManager();
         try {

@@ -16,6 +16,76 @@
             padding: 5px;
         }
 
+        /* ========== Header con botones ========== */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            color: white;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+
+        .btn-icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-logout {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-logout:hover {
+            background: rgba(239, 68, 68, 0.3);
+        }
+
         /* ========== Tarjeta de Materia Moderna ========== */
         .materia-card {
             background: white;
@@ -135,10 +205,27 @@
 </head>
 <body>
 <div class="container">
-    <header>
-        <h1>📚 Mi Espacio </h1>
+    <div class="page-header">
+        <h1>📚 Mi Espacio</h1>
+        <div class="header-actions">
+            <a href="${pageContext.request.contextPath}/alertas" class="btn-icon" title="Notificaciones">
+                🔔
+                <c:if test="${numAlertas > 0}">
+                    <span class="notification-badge">${numAlertas}</span>
+                </c:if>
+            </a>
+            <a href="${pageContext.request.contextPath}/logout" class="btn-icon btn-logout" title="Cerrar Sesión">
+                🚪 Cerrar Sesión
+            </a>
+        </div>
+    </div>
+
+    <header style="margin-top: 0;">
         <a href="${pageContext.request.contextPath}/materias" class="btn btn-primary">
             ➕ Agregar Nueva Materia
+        </a>
+        <a href="${pageContext.request.contextPath}/planificar" class="btn btn-secondary">
+            📝 Crear Tarea
         </a>
     </header>
 

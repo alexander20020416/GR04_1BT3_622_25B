@@ -13,11 +13,28 @@
     <header>
         <h1>➕ Planificar Tareas</h1>
         <nav>
-            <a href="${pageContext.request.contextPath}/detalleMateria" class="btn-link">← Regresar</a>
+            <a href="${pageContext.request.contextPath}/detalleMateria" class="btn-link">← Mi Materia</a>
         </nav>
     </header>
 
     <main>
+        <!-- Validación: Si NO hay materias, mostrar mensaje -->
+        <c:if test="${empty materias}">
+            <div class="alert alert-warning" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+                <h3 style="color: #856404; margin-top: 0;">⚠️ No hay materias disponibles</h3>
+                <p style="color: #856404; line-height: 1.6;">
+                    Para crear una tarea, primero debe crear al menos una materia.
+                </p>
+                <p style="color: #856404; margin-bottom: 0;">
+                    <a href="${pageContext.request.contextPath}/materias" class="btn btn-primary" style="display: inline-block; margin-top: 10px;">
+                        ➕ Crear Materia
+                    </a>
+                </p>
+            </div>
+        </c:if>
+
+        <!-- Formulario: Solo si HAY materias -->
+        <c:if test="${not empty materias}">
         <div class="form-container">
             <h2>Registrar Nueva Tarea</h2>
             <p class="form-description">
@@ -32,6 +49,26 @@
             </c:if>
 
             <form action="${pageContext.request.contextPath}/planificar" method="post" class="form">
+                <!-- Selector de Materia (si no viene materiaId predefinido) -->
+                <c:choose>
+                    <c:when test="${not empty materiaId}">
+                        <!-- Si viene de una materia específica, campo oculto -->
+                        <input type="hidden" name="materiaId" value="${materiaId}">
+                    </c:when>
+                    <c:otherwise>
+                        <!-- Selector de materia -->
+                        <div class="form-group">
+                            <label for="materiaId">Materia *</label>
+                            <select id="materiaId" name="materiaId" class="form-control" required>
+                                <option value="">-- Seleccione una materia --</option>
+                                <c:forEach var="materia" items="${materias}">
+                                    <option value="${materia.id}">${materia.nombre}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                    </c:otherwise>
+                </c:choose>
+                
                 <div class="form-group">
                     <label for="titulo">Título de la Tarea *</label>
                     <input type="text"
@@ -87,12 +124,14 @@
                     <button type="submit" class="btn btn-primary">
                         ✓ Guardar Tarea
                     </button>
-                    <a href="${pageContext.request.contextPath}/" class="btn btn-secondary">
+                    <a href="${pageContext.request.contextPath}/listarMateria" class="btn btn-secondary">
                         Cancelar
                     </a>
                 </div>
             </form>
         </div>
+        </c:if>
+        <!-- Fin del condicional de materias -->
 
         <div class="info-box">
             <h3>ℹ️ Información</h3>

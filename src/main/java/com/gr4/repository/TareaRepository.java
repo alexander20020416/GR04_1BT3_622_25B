@@ -65,6 +65,13 @@ public interface TareaRepository {
     List<Tarea> findByActividadId(Long actividadId);
 
     /**
+     * Busca tareas por materia
+     * @param materiaId ID de la materia
+     * @return Lista de tareas de esa materia
+     */
+    List<Tarea> findByMateriaId(Long materiaId);
+
+    /**
      * Elimina una tarea por su ID
      * @param id ID de la tarea a eliminar
      * @return true si se eliminó correctamente
