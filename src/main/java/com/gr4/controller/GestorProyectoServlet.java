@@ -42,6 +42,13 @@ public class GestorProyectoServlet extends HttpServlet {
     }
 
     @Override
+    public void init() throws ServletException {
+        super.init();
+        // Instanciación directa para compatibilidad
+        System.out.println("✓ GestorProyectoServlet inicializado");
+    }
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Cargar lista de materias para el formulario
         try {
