@@ -13,7 +13,7 @@
     <header>
         <h1>➕ Planificar Tareas</h1>
         <nav>
-            <a href="${pageContext.request.contextPath}/detalleMateria" class="btn-link">← Regresar</a>
+            <a href="${pageContext.request.contextPath}/detalleMateria" class="btn-link">← Mi Materia</a>
         </nav>
     </header>
 

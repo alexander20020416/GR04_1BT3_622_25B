@@ -298,6 +298,9 @@
                 <a href="${pageContext.request.contextPath}/organizar?materiaId=${materia.id}" class="btn-compact">
                     📊 Organizar Tareas
                 </a>
+                <a href="${pageContext.request.contextPath}/organizar?materiaId=${materia.id}" class="btn-compact">
+                    🔍 Consultar Tareas
+                </a>
             </div>
         </div>
 

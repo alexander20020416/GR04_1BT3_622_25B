@@ -94,15 +94,15 @@
                     <a href="${pageContext.request.contextPath}/planificar" class="btn btn-secondary">
                         ➕ Planificar Otra Tarea
                     </a>
-                    <a href="${pageContext.request.contextPath}/organizar" class="btn btn-secondary">
+                    <!--<a href="${pageContext.request.contextPath}/organizar" class="btn btn-secondary">
                         📊 Organizar Tareas
                     </a>
                     <a href="${pageContext.request.contextPath}/consultar" class="btn btn-secondary">
                         🔍 Consultar Tareas
-                    </a>
+                    </a>-->
                 </c:if>
 
-                <c:if test="${not empty tarea}">
+                <!--<c:if test="${not empty tarea}">
                     <a href="${pageContext.request.contextPath}/planificar" class="btn btn-secondary">
                         ➕ Planificar Otra Tarea
                     </a>
@@ -118,7 +118,7 @@
                     <a href="${pageContext.request.contextPath}/alertas?action=crear" class="btn btn-secondary">
                         ➕ Crear Otra Alerta
                     </a>
-                </c:if>
+                </c:if>-->
             </div>
         </div>
     </main>
