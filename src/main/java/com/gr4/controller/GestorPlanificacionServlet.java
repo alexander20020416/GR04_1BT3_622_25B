@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 import com.gr4.util.ParametroParser;
 
 /**
@@ -33,6 +34,10 @@ public class GestorPlanificacionServlet extends BaseServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        // Cargar todas las materias para el selector
+        List<Materia> materias = materiaRepository.findAll();
+        request.setAttribute("materias", materias);
 
         // Pasar materiaId al JSP si viene en el parámetro
         String materiaId = request.getParameter("materiaId");
@@ -99,10 +104,16 @@ public class GestorPlanificacionServlet extends BaseServlet {
 
             System.out.println("✓ Tarea guardada: " + tareaGuardada);
 
-            // PASO 5: Redirigir con mensaje de éxito
-            request.setAttribute("mensaje", "Tarea registrada exitosamente");
-            request.setAttribute("tarea", tareaGuardada);
-            request.getRequestDispatcher("/jsp/success.jsp").forward(request, response);
+            // PASO 5: Redirigir según el contexto
+            if (materiaIdStr != null && !materiaIdStr.trim().isEmpty()) {
+                // Si viene de una materia, redirigir al detalle de esa materia
+                response.sendRedirect(request.getContextPath() + "/detalleMateria?id=" + materiaIdStr);
+            } else {
+                // Si no viene de una materia, mostrar página de éxito
+                request.setAttribute("mensaje", "Tarea registrada exitosamente");
+                request.setAttribute("tarea", tareaGuardada);
+                request.getRequestDispatcher("/jsp/success.jsp").forward(request, response);
+            }
 
         } catch (Exception e) {
             System.err.println("✗ Error al planificar tarea: " + e.getMessage());
