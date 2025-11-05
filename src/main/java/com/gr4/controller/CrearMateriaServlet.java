@@ -32,10 +32,15 @@ public class CrearMateriaServlet extends BaseServlet {
             throws ServletException, IOException {
 
         String nombre = request.getParameter("nombre");
+        String codigo = request.getParameter("codigo");
         String descripcion = request.getParameter("descripcion");
+        String color = request.getParameter("color");
 
         try {
             MateriaDTO dto = new MateriaDTO(nombre, descripcion);
+            dto.setCodigo(codigo);
+            dto.setColor(color);
+            
             MateriaDTO resultado = materiaService.crearMateria(dto);
 
             request.setAttribute("materia", resultado);

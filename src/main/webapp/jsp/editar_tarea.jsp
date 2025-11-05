@@ -90,6 +90,19 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="materiaId">Materia</label>
+                    <select id="materiaId" name="materiaId" class="form-control">
+                        <option value="">-- Sin materia asignada --</option>
+                        <c:forEach var="m" items="${materias}">
+                            <option value="${m.id}" ${tarea.materia != null && tarea.materia.id == m.id ? 'selected' : ''}>
+                                ${not empty m.codigo ? m.codigo.concat(' - ') : ''}${m.nombre}
+                            </option>
+                        </c:forEach>
+                    </select>
+                    <small class="form-text">Selecciona la materia a la que pertenece esta tarea (opcional)</small>
+                </div>
+
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">
                         ✓ Guardar Cambios

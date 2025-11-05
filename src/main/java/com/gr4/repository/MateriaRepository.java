@@ -15,4 +15,10 @@ public interface MateriaRepository {
     List<Materia> findAll();
 
     Materia findById(Long id);
+
+    /**
+     * Elimina una materia por su ID
+     * @param id ID de la materia a eliminar
+     */
+    void delete(Long id);
 }

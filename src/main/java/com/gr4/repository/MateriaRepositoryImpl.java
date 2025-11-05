@@ -46,5 +46,25 @@ public class MateriaRepositoryImpl implements MateriaRepository {
             em.close();
         }
     }
+
+    @Override
+    public void delete(Long id) {
+        EntityManager em = JPAUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try {
+            tx.begin();
+            Materia materia = em.find(Materia.class, id);
+            if (materia != null) {
+                em.remove(materia);
+            }
+            tx.commit();
+        } catch (Exception e) {
+            if (tx.isActive()) tx.rollback();
+            throw e;
+        } finally {
+            em.close();
+        }
+    }
 }
 

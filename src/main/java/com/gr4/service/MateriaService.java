@@ -28,6 +28,8 @@ public class MateriaService {
             throw new IllegalArgumentException("El nombre de la materia es obligatorio");
         }
         Materia materia = new Materia(dto.getNombre(), dto.getDescripcion());
+        materia.setCodigo(dto.getCodigo());
+        materia.setColor(dto.getColor());
         materia = materiaRepository.save(materia);
         dto.setId(materia.getId());
         return dto;
@@ -38,6 +40,8 @@ public class MateriaService {
                 .map(m -> {
                     MateriaDTO dto = new MateriaDTO(m.getNombre(), m.getDescripcion());
                     dto.setId(m.getId());
+                    dto.setCodigo(m.getCodigo());
+                    dto.setColor(m.getColor());
                     return dto;
                 })
                 .collect(Collectors.toList());

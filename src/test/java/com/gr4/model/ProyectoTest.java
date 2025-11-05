@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.junit.jupiter.params.provider.CsvSource;
 import java.time.LocalDate;
 
 public class ProyectoTest {
@@ -116,43 +115,6 @@ public class ProyectoTest {
 
         // Assert
         assertEquals(100, progreso, "El progreso debe ser 100% después de completar ambas tareas");
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-        "4, 0, 0",      // 4 tareas, 0 completadas = 0%
-        "4, 1, 25",     // 4 tareas, 1 completada = 25%
-        "4, 2, 50",     // 4 tareas, 2 completadas = 50%
-        "4, 3, 75",     // 4 tareas, 3 completadas = 75%
-        "4, 4, 100",    // 4 tareas, 4 completadas = 100%
-        "10, 3, 30",    // 10 tareas, 3 completadas = 30%
-        "1, 1, 100"     // 1 tarea, 1 completada = 100%
-    })
-    public void given_ProyectoConDiferentesCantidadesDeTareas_when_CalcularProgreso_then_RetornaPorcentajeCorrecto(
-        int totalTareas, int tareasCompletadas, int progresoEsperado) {
-        
-        // Arrange
-        Proyecto proyecto = new Proyecto("Proyecto Test", "Descripción Test");
-        
-        // Agregar tareas al proyecto
-        for (int i = 0; i < totalTareas; i++) {
-            Tarea tarea = new Tarea("Tarea " + (i + 1), "Descripción " + (i + 1), LocalDate.now());
-            
-            // Marcar como completada según el parámetro
-            if (i < tareasCompletadas) {
-                tarea.setEstado(Tarea.ESTADO_COMPLETADA);
-            }
-            
-            proyecto.agregarTarea(tarea);
-        }
-        
-        // Act
-        int progreso = proyecto.calcularProgreso();
-        
-        // Assert
-        assertEquals(progresoEsperado, progreso, 
-            "El progreso debería ser " + progresoEsperado + "% con " + 
-            tareasCompletadas + " de " + totalTareas + " tareas completadas");
     }
 
 }

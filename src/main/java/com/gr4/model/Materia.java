@@ -15,8 +15,14 @@ public class Materia implements Serializable {
     @Column(nullable = false, length = 200)
     private String nombre;
 
+    @Column(length = 50)
+    private String codigo;
+
     @Column(nullable = false, length = 200)
     private String descripcion;
+
+    @Column(length = 7)
+    private String color; // Formato hexadecimal: #667eea
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fecha_creacion")
@@ -55,5 +61,21 @@ public class Materia implements Serializable {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }
