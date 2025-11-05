@@ -6,6 +6,7 @@ import com.gr4.service.MateriaService;
 import com.gr4.service.ProyectoService;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,6 +15,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 
+
+/**
+ * Servlet responsable de la gestión de proyectos.
+ * Maneja creación de proyectos, asociación de tareas y creación de tareas dentro de proyectos.
+ * Cumple con SRP - Solo maneja operaciones relacionadas con proyectos.
+ */
+@WebServlet(name = "GestorProyectoServlet", urlPatterns = {"/proyectos", "/gestionarProyecto"})
 public class GestorProyectoServlet extends HttpServlet {
 
     private final ProyectoService proyectoService;
@@ -22,27 +30,6 @@ public class GestorProyectoServlet extends HttpServlet {
     public GestorProyectoServlet(ProyectoService proyectoService, MateriaService materiaService) {
         this.proyectoService = proyectoService;
         this.materiaService = materiaService;
-    }
-
-    // Constructor para compatibilidad (sin MateriaService)
-    public GestorProyectoServlet(ProyectoService proyectoService) {
-        this.proyectoService = proyectoService;
-        this.materiaService = new MateriaService();
-    }
-
-    public boolean validarProyectoDTO(HttpServletRequest request) {
-        String nombre = request.getParameter("nombre");
-        String fechaInicio = request.getParameter("fechaInicio");
-
-        if (nombre == null || nombre.isEmpty()) {
-            return false; // Nombre vacío
-        }
-
-        if (fechaInicio == null || !isValidDate(fechaInicio)) {
-            return false; // Fecha inválida
-        }
-
-        return true; // Datos válidos
     }
 
     private boolean isValidDate(String date) {
@@ -55,8 +42,15 @@ public class GestorProyectoServlet extends HttpServlet {
     }
 
     @Override
+    public void init() throws ServletException {
+        super.init();
+        // Instanciación directa para compatibilidad
+        System.out.println("✓ GestorProyectoServlet inicializado");
+    }
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // ✅ Cargar lista de materias para el formulario (CA1 - Escenario 1)
+        // Cargar lista de materias para el formulario
         try {
             List<Materia> materias = materiaService.listarMaterias()
                     .stream()
@@ -73,7 +67,7 @@ public class GestorProyectoServlet extends HttpServlet {
         }
 
         // Mostrar formulario para crear un nuevo proyecto
-        request.getRequestDispatcher("/WEB-INF/views/crear_proyecto.jsp").forward(request, response);
+        request.getRequestDispatcher("/jsp/crear_proyecto.jsp").forward(request, response);
     }
 
     @Override
@@ -84,7 +78,7 @@ public class GestorProyectoServlet extends HttpServlet {
         String fechaVencimientoStr = request.getParameter("fechaVencimiento");
         String materiaIdStr = request.getParameter("materiaId");
 
-        // ✅ VALIDACIÓN: Verificar que el título no esté vacío (CA1 - Escenario 2)
+        //Verificar que el título no esté vacío (CA1 - Escenario 2)
         if (titulo != null && titulo.isEmpty()) {
             request.setAttribute("error", "El nombre del proyecto es obligatorio");
             doGet(request, response); // Recargar formulario con materias
@@ -96,7 +90,7 @@ public class GestorProyectoServlet extends HttpServlet {
             LocalDate fechaVencimiento = null;
             Materia materia = null;
 
-            // ✅ Parsear fecha de vencimiento si viene (CA1 - Escenario 1)
+            // Parsear fecha de vencimiento si viene
             if (fechaVencimientoStr != null && !fechaVencimientoStr.isEmpty()) {
                 try {
                     fechaVencimiento = LocalDate.parse(fechaVencimientoStr);
@@ -107,7 +101,7 @@ public class GestorProyectoServlet extends HttpServlet {
                 }
             }
 
-            // ✅ NUEVO: Obtener materia seleccionada (CA1 - HU completa)
+            // Obtener materia seleccionada
             if (materiaIdStr != null && !materiaIdStr.isEmpty()) {
                 try {
                     Long materiaId = Long.parseLong(materiaIdStr);
