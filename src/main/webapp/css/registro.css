@@ -131,12 +131,10 @@ body {
     left: -75%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(
-            120deg,
+    background: linear-gradient(120deg,
             rgba(255, 255, 255, 0.2),
             rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.2)
-    );
+            rgba(255, 255, 255, 0.2));
     transform: skewX(-25deg);
     transition: all 0.7s ease;
 }
@@ -161,12 +159,27 @@ body {
 
 /* Animaciones */
 @keyframes fadeIn {
-    0% {opacity: 0; transform: translateY(-20px);}
-    100% {opacity: 1; transform: translateY(0);}
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes gradientMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
