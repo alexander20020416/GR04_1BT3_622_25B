@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguimiento de Proyectos - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="includes/styles.jsp" %>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -355,7 +355,7 @@
 <div class="seguimiento-container">
     <!-- Header -->
     <div class="page-header">
-        <h1>📊 Seguimiento de Proyectos</h1>
+        <h1>Seguimiento de Proyectos</h1>
         <div class="header-actions">
             <a href="${pageContext.request.contextPath}/listarMateria" class="btn-secondary">
                 ← Volver a Materias
@@ -366,7 +366,7 @@
     <!-- Mensaje de éxito -->
     <c:if test="${not empty param.mensaje}">
         <div class="success-message">
-            <span>✅</span>
+            <span>OK</span>
             <span>${param.mensaje}</span>
         </div>
     </c:if>
@@ -386,7 +386,7 @@
                                 <h3>${proyecto.titulo}</h3>
                                 <c:if test="${not empty proyecto.materia}">
                                         <span class="proyecto-materia">
-                                            📚 ${proyecto.materia.nombre}
+                                            ${proyecto.materia.nombre}
                                         </span>
                                 </c:if>
                             </div>
@@ -412,7 +412,7 @@
                         <c:if test="${not empty proyecto.fechaVencimiento}">
                             <div class="proyecto-meta" style="padding-left: 12px; margin-bottom: 12px;">
                                     <span style="font-size: 13px; color: #6b7280;">
-                                        📅 Vence: ${proyecto.fechaVencimiento}
+                                        Vence: ${proyecto.fechaVencimiento}
                                     </span>
                             </div>
                         </c:if>
@@ -420,7 +420,7 @@
                         <!-- Tareas del proyecto -->
                         <div class="tareas-section">
                             <div class="tareas-header">
-                                <h4>📋 Tareas (${proyecto.tareas.size()})</h4>
+                                <h4>Tareas (${proyecto.tareas.size()})</h4>
                             </div>
 
                             <c:choose>
@@ -449,19 +449,19 @@
                         <div class="proyecto-actions">
                             <a href="${pageContext.request.contextPath}/verProyecto?id=${proyecto.id}"
                                class="btn-small">
-                                👁️ Ver Detalles
+                                Ver Detalles
                             </a>
                             <a href="${pageContext.request.contextPath}/editarProyecto?id=${proyecto.id}"
                                class="btn-small" style="background: #dbeafe; color: #1e40af;">
-                                ✏️ Editar
+                                Editar
                             </a>
                             <a href="${pageContext.request.contextPath}/agregarTarea?proyectoId=${proyecto.id}"
                                class="btn-small">
-                                ➕ Agregar Tarea
+                                Agregar Tarea
                             </a>
                             <button onclick="confirmarEliminar(${proyecto.id}, '${proyecto.titulo}', ${proyecto.materia != null ? proyecto.materia.id : 'null'})"
                                     class="btn-small" style="background: #fee2e2; color: #991b1b; border: none; cursor: pointer;">
-                                🗑️ Eliminar
+                                Eliminar
                             </button>
                         </div>
                     </div>
@@ -470,10 +470,10 @@
         </c:when>
         <c:otherwise>
             <div class="empty-state">
-                <h3>📭 No hay proyectos creados</h3>
+                <h3>No hay proyectos creados</h3>
                 <p>Comienza creando tu primer proyecto para dar seguimiento a trabajos importantes</p>
                 <a href="${pageContext.request.contextPath}/listarMateria" class="btn-primary">
-                    ➕ Ir a Materias
+                    Ir a Materias
                 </a>
             </div>
         </c:otherwise>

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles de ${materia.nombre} - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="includes/styles.jsp" %>
     <style>
         /* ========== Container Principal ========== */
         .materia-detail-container {
@@ -303,36 +303,36 @@
             <c:if test="${not empty materia.codigo}">
                 <div class="materia-codigo">${materia.codigo}</div>
             </c:if>
-            <h1>📚 ${materia.nombre}</h1>
+            <h1>${materia.nombre}</h1>
             <p>${materia.descripcion}</p>
 
             <div class="action-buttons-compact">
                 <a href="${pageContext.request.contextPath}/planificar?materiaId=${materia.id}" class="btn-compact">
-                    📝 Planificar Tarea
+                    Planificar Tarea
                 </a>
 
                 <!-- ✅ BOTÓN AGREGADO: Crear Proyecto -->
                 <a href="${pageContext.request.contextPath}/proyectos?materiaId=${materia.id}" class="btn-compact">
-                    📋 Crear Proyecto
+                    Crear Proyecto
                 </a>
 
                 <!-- ✅ BOTÓN AGREGADO: Seguimiento de Proyectos -->
                 <a href="${pageContext.request.contextPath}/seguimiento?materiaId=${materia.id}" class="btn-compact" style="background: rgba(16, 185, 129, 0.3);">
-                    📊 Ver Proyectos
+                    Ver Proyectos
                 </a>
 
                 <a href="${pageContext.request.contextPath}/organizar?materiaId=${materia.id}" class="btn-compact">
-                    📊 Organizar Tareas
+                    Organizar Tareas
                 </a>
 
                 <a href="${pageContext.request.contextPath}/organizar?materiaId=${materia.id}" class="btn-compact">
-                    🔍 Consultar Tareas
+                    Consultar Tareas
                 </a>
                 <a href="${pageContext.request.contextPath}/editar-materia?id=${materia.id}" class="btn-compact" style="background: rgba(59, 130, 246, 0.3);">
-                    ✏️ Editar Materia
+                    Editar Materia
                 </a>
                 <button onclick="confirmarEliminacion(${materia.id}, '${materia.nombre}')" class="btn-compact" style="background: rgba(239, 68, 68, 0.3); border: none; cursor: pointer;">
-                    🗑️ Eliminar
+                    Eliminar
                 </button>
             </div>
         </div>
@@ -359,7 +359,7 @@
         <!-- Sección de Tareas -->
         <div class="tareas-section">
             <h2>
-                📋 Tareas de esta Materia
+                Tareas de esta Materia
                 <c:if test="${not empty tareas}">
                     <span class="tareas-count">${tareas.size()}</span>
                 </c:if>
@@ -378,8 +378,8 @@
                                                 ${tarea.prioridad}
                                         </span>
                                     </span>
-                                    <span>📅 ${tarea.fechaVencimiento}</span>
-                                    <span>📊 ${tarea.estado}</span>
+                                    <span>${tarea.fechaVencimiento}</span>
+                                    <span>${tarea.estado}</span>
                                 </div>
                             </div>
                         </c:forEach>
@@ -387,7 +387,7 @@
                 </c:when>
                 <c:otherwise>
                     <div class="empty-state">
-                        <h3>📭 No hay tareas registradas</h3>
+                        <h3>No hay tareas registradas</h3>
                         <p>Comienza planificando tu primera tarea para esta materia</p>
                     </div>
                 </c:otherwise>

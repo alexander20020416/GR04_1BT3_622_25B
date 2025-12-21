@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Materias - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="includes/styles.jsp" %>
     <style>
         /* ========== Grid de Materias ========== */
         .materias-list {
@@ -387,29 +387,29 @@
 <body>
 <div class="container">
     <div class="page-header">
-        <h1>📚 Mi Espacio</h1>
+        <h1>Mi Espacio</h1>
         <div class="header-actions">
             <a href="${pageContext.request.contextPath}/alertas" class="btn-icon" title="Notificaciones">
-                🔔
+                Notif.
                 <c:if test="${numAlertas > 0}">
                     <span class="notification-badge">${numAlertas}</span>
                 </c:if>
             </a>
             <a href="${pageContext.request.contextPath}/logout" class="btn-icon btn-logout" title="Cerrar Sesión">
-                🚪 Cerrar Sesión
+                Cerrar Sesion
             </a>
         </div>
     </div>
 
     <header style="margin-top: 0;">
         <a href="${pageContext.request.contextPath}/materias" class="btn btn-primary">
-            ➕ Agregar Nueva Materia
+            Agregar Nueva Materia
         </a>
         <a href="${pageContext.request.contextPath}/planificar" class="btn btn-secondary">
-            📝 Crear Tarea
+            Crear Tarea
         </a>
         <a href="${pageContext.request.contextPath}/seguimiento" class="btn btn-secondary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none;">
-            📊 Seguimiento de Proyectos
+            Seguimiento de Proyectos
         </a>
     </header>
 
@@ -417,18 +417,18 @@
         <!-- Widget del Calendario -->
         <div class="calendario-widget">
             <div class="calendario-info">
-                <h2>📅 Tu Calendario de Tareas</h2>
+                <h2>Tu Calendario de Tareas</h2>
                 <p>Organiza tu semana y visualiza todas tus tareas pendientes en un solo lugar</p>
                 <div class="calendario-stats">
                     <div class="stat-item">
-                        <span>📋</span>
+                        <span>Tareas</span>
                         <div>
                             <strong>${not empty totalTareas ? totalTareas : '0'}</strong>
                             <span style="font-size: 12px; opacity: 0.9;">Tareas Totales</span>
                         </div>
                     </div>
                     <div class="stat-item">
-                        <span>⏰</span>
+                        <span>Hoy</span>
                         <div>
                             <strong>${not empty tareasHoy ? tareasHoy : '0'}</strong>
                             <span style="font-size: 12px; opacity: 0.9;">Hoy</span>
@@ -438,14 +438,14 @@
             </div>
             <div class="calendario-action">
                 <a href="${pageContext.request.contextPath}/calendario" class="btn-calendario">
-                    🗓️ Ver Calendario Completo
+                    Ver Calendario Completo
                 </a>
             </div>
         </div>
 
         <c:if test="${not empty error}">
             <div class="alert alert-error">
-                <strong>❌ Error:</strong> ${error}
+                <strong>Error:</strong> ${error}
             </div>
         </c:if>
 
@@ -459,11 +459,11 @@
                             <div id="menu-${m.id}" class="dropdown-menu">
                                 <a href="${pageContext.request.contextPath}/editar-materia?id=${m.id}" 
                                    class="dropdown-item">
-                                    ✏️ Editar
+                                    Editar
                                 </a>
                                 <button class="dropdown-item danger" 
                                         onclick="confirmarEliminacion(${m.id}, '${m.nombre}')">
-                                    🗑️ Eliminar
+                                    Eliminar
                                 </button>
                             </div>
                         </div>
@@ -489,10 +489,10 @@
 
         <c:if test="${empty materias}">
             <div class="empty-state">
-                <h3>📭 No hay materias registradas</h3>
+                <h3>No hay materias registradas</h3>
                 <p>Comienza creando tu primera materia</p>
                 <a href="${pageContext.request.contextPath}/materias" class="btn btn-primary">
-                    ➕ Crear Primera Materia
+                    Crear Primera Materia
                 </a>
             </div>
         </c:if>

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Proyecto - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="includes/styles.jsp" %>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -353,35 +353,35 @@
     <!-- Mensajes -->
     <c:if test="${not empty param.mensaje}">
         <div class="alert alert-success">
-            ✅ ${param.mensaje}
+            ${param.mensaje}
         </div>
     </c:if>
 
     <c:if test="${not empty param.error}">
         <div class="alert alert-error">
-            ❌ ${param.error}
+            ${param.error}
         </div>
     </c:if>
 
     <!-- Hero del Proyecto -->
     <div class="proyecto-hero">
-        <h1>📋 ${proyecto.titulo}</h1>
+        <h1>${proyecto.titulo}</h1>
 
         <div class="proyecto-meta">
             <c:if test="${not empty proyecto.materia}">
                 <div class="meta-item">
-                    📚 <strong>${proyecto.materia.nombre}</strong>
+                    <strong>${proyecto.materia.nombre}</strong>
                 </div>
             </c:if>
 
             <c:if test="${not empty proyecto.fechaVencimiento}">
                 <div class="meta-item">
-                    📅 Vence: <strong>${proyecto.fechaVencimiento}</strong>
+                    Vence: <strong>${proyecto.fechaVencimiento}</strong>
                 </div>
             </c:if>
 
             <div class="meta-item">
-                📊 Estado: <strong style="color: ${proyecto.colorIndicador};">${proyecto.determinarEstadoUrgencia()}</strong>
+                Estado: <strong style="color: ${proyecto.colorIndicador};">${proyecto.determinarEstadoUrgencia()}</strong>
             </div>
         </div>
 
@@ -407,14 +407,14 @@
         <!-- Botones de Acción -->
         <div class="action-buttons">
             <a href="${pageContext.request.contextPath}/agregarTarea?proyectoId=${proyecto.id}" class="btn-action btn-primary">
-                ➕ Agregar Tarea
+                Agregar Tarea
             </a>
             <a href="${pageContext.request.contextPath}/editarProyecto?id=${proyecto.id}" class="btn-action btn-secondary">
-                ✏️ Editar Proyecto
+                Editar Proyecto
             </a>
             <button onclick="confirmarEliminar(${proyecto.id}, '${proyecto.titulo}', ${proyecto.materia != null ? proyecto.materia.id : 'null'})" 
                     class="btn-action btn-danger">
-                🗑️ Eliminar Proyecto
+                Eliminar Proyecto
             </button>
         </div>
     </div>
@@ -422,7 +422,7 @@
     <!-- Sección de Tareas -->
     <div class="tareas-section">
         <h2>
-            📝 Tareas del Proyecto 
+            Tareas del Proyecto 
             <span style="color: #667eea; font-size: 20px;">(${proyecto.tareas.size()})</span>
         </h2>
 
@@ -442,10 +442,10 @@
                         </c:if>
 
                         <div class="tarea-meta">
-                            <span>📅 Vence: <strong>${tarea.fechaVencimiento}</strong></span>
-                            <span>⚡ Prioridad: <strong>${tarea.prioridad}</strong></span>
+                            <span>Vence: <strong>${tarea.fechaVencimiento}</strong></span>
+                            <span>Prioridad: <strong>${tarea.prioridad}</strong></span>
                             <c:if test="${not empty tarea.materia}">
-                                <span>📚 Materia: <strong>${tarea.materia.nombre}</strong></span>
+                                <span>Materia: <strong>${tarea.materia.nombre}</strong></span>
                             </c:if>
                         </div>
 
@@ -456,20 +456,20 @@
                                     <input type="hidden" name="nuevoEstado" value="Completada">
                                     <input type="hidden" name="proyectoId" value="${proyecto.id}">
                                     <button type="submit" class="btn-small btn-completar">
-                                        ✓ Marcar como Completada
+                                        Marcar como Completada
                                     </button>
                                 </form>
                             </c:if>
 
                             <c:if test="${tarea.estado == 'Completada'}">
                                 <button class="btn-small btn-completar" disabled>
-                                    ✓ Completada
+                                    Completada
                                 </button>
                             </c:if>
 
                             <a href="${pageContext.request.contextPath}/editar-tarea?id=${tarea.id}&proyectoId=${proyecto.id}" 
                                class="btn-small btn-editar">
-                                ✏️ Editar
+                                Editar
                             </a>
                         </div>
                     </div>
@@ -477,10 +477,10 @@
             </c:when>
             <c:otherwise>
                 <div class="empty-tareas">
-                    <h3>📭 No hay tareas en este proyecto</h3>
+                    <h3>No hay tareas en este proyecto</h3>
                     <p>Agrega tareas para dar seguimiento a tu proyecto</p>
                     <a href="${pageContext.request.contextPath}/agregarTarea?proyectoId=${proyecto.id}" class="btn-action btn-primary">
-                        ➕ Agregar Primera Tarea
+                        Agregar Primera Tarea
                     </a>
                 </div>
             </c:otherwise>

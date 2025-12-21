@@ -1,21 +1,34 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Gestionar Proyecto</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/proyectos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Proyecto - Gestor de Tareas</title>
+    <%@ include file="includes/styles.jsp" %>
 </head>
 <body>
-<h1>Gestionar Proyecto</h1>
-<form action="${pageContext.request.contextPath}/gestionarProyecto" method="post">
-    <label for="idProyecto">ID Proyecto:</label>
-    <input type="text" id="idProyecto" name="idProyecto"><br>
-    <label for="tituloTarea">Título Tarea:</label>
-    <input type="text" id="tituloTarea" name="tituloTarea"><br>
-    <label for="descripcionTarea">Descripción Tarea:</label>
-    <input type="text" id="descripcionTarea" name="descripcionTarea"><br>
-    <label for="fechaVencimiento">Fecha de Vencimiento:</label>
-    <input type="date" id="fechaVencimiento" name="fechaVencimiento"><br>
-    <button type="submit">Enviar</button>
-</form>
+<div class="container">
+    <h1>Gestionar Proyecto</h1>
+    <form action="${pageContext.request.contextPath}/gestionarProyecto" method="post" class="form-container">
+        <div class="form-group">
+            <label for="idProyecto">ID Proyecto:</label>
+            <input type="text" id="idProyecto" name="idProyecto" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="tituloTarea">Titulo Tarea:</label>
+            <input type="text" id="tituloTarea" name="tituloTarea" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="descripcionTarea">Descripcion Tarea:</label>
+            <input type="text" id="descripcionTarea" name="descripcionTarea" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="fechaVencimiento">Fecha de Vencimiento:</label>
+            <input type="date" id="fechaVencimiento" name="fechaVencimiento" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
 </body>
 </html>

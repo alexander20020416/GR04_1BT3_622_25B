@@ -10,55 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/gestor_tareas.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/gestor_tareas.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/auth/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/auth/controller/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/registro.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/registro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/agregar_tarea_proyecto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/agregar_tarea_proyecto.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/calendario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/calendario.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/configurar_alerta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/configurar_alerta.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/consultar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/consultar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/crear_proyecto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/crear_proyecto.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/editar_alerta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/editar_alerta.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/editar_proyecto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/editar_proyecto.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/editar_tarea.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/editar_tarea.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/gestionar_proyecto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/gestionar_proyecto.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listar_alertas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listar_alertas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/materia-detalle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-detalle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/materia-exito.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-exito.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/materia-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/materia-lista.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-lista.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/auth/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/auth/controller/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorPlanificacionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/controller/GestorPlanificacionServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/model/Tarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/CalendarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/classes/com/gr4/service/CalendarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/configurar_alerta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/configurar_alerta.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/consultar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/consultar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/planificar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/planificar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR04_1BT3_622_25B/jsp/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/auth/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/auth/controller/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorPlanificacionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/controller/GestorPlanificacionServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/model/Tarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/repository/TareaRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gr4/service/CalendarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.controller.RegisterServletTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.model.UsuarioTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.auth.service.ValidadorUsuarioTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceMockTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceParameters2Test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceParametersTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.CalendarioServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.LogoutServiceMockTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.gr4.service.LogoutServiceParameterTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.controller.RegisterServletTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.model.UsuarioTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.auth.service.ValidadorUsuarioTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceParameters2Test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceParametersTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.CalendarioServiceTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.gr4.service.LogoutServiceParameterTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/gr4/service/CalendarioServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/organizar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/organizar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/planificar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/planificar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/proyecto_detalle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/proyecto_detalle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/seguimiento_proyectos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/seguimiento_proyectos.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/success.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +66,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/alexander20020416/GR04_1BT3_622_25B.git&quot;,
-    &quot;accountId&quot;: &quot;9844f976-09f1-4030-92d3-dd26f9c05b12&quot;
+    &quot;accountId&quot;: &quot;9571302e-75fe-47c4-9c30-1f53e1eecc28&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -149,7 +127,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS TUF F15/Desktop/Epn/6/Construcción de Software/GR04_1BT3_622_25B&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS TUF F15/Desktop/Epn/6/Metodologías/GR04_1BT3_622_25B&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -377,8 +355,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
       </set>
     </attachedChunks>
   </component>
@@ -403,6 +381,8 @@
       <workItem from="1761488719075" duration="9414000" />
       <workItem from="1761601365829" duration="618000" />
       <workItem from="1762267939415" duration="15975000" />
+      <workItem from="1762312083194" duration="2180000" />
+      <workItem from="1766277025142" duration="2923000" />
     </task>
     <task id="LOCAL-00001" summary="actualizacion jdk">
       <option name="closed" value="true" />

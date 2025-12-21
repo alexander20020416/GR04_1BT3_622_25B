@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Proyecto - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="includes/styles.jsp" %>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

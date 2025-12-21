@@ -5,18 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operación Exitosa - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <title>Operacion Exitosa - Gestor de Tareas</title>
+    <%@ include file="includes/styles.jsp" %>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>✓ Operación Exitosa</h1>
+        <h1>Operacion Exitosa</h1>
     </header>
 
     <main>
         <div class="success-container">
-            <div class="success-icon">✓</div>
+            <div class="success-icon">[OK]</div>
 
             <h2>${not empty mensaje ? mensaje : 'Operación completada exitosamente'}</h2>
 
@@ -87,38 +87,14 @@
 
             <div class="action-buttons">
                 <a href="${pageContext.request.contextPath}/home" class="btn btn-primary">
-                    🏠 Volver al Inicio
+                    Volver al Inicio
                 </a>
 
                 <c:if test="${not empty tarea}">
                     <a href="${pageContext.request.contextPath}/planificar" class="btn btn-secondary">
-                        ➕ Planificar Otra Tarea
-                    </a>
-                    <!--<a href="${pageContext.request.contextPath}/organizar" class="btn btn-secondary">
-                        📊 Organizar Tareas
-                    </a>
-                    <a href="${pageContext.request.contextPath}/consultar" class="btn btn-secondary">
-                        🔍 Consultar Tareas
-                    </a>-->
-                </c:if>
-
-                <!--<c:if test="${not empty tarea}">
-                    <a href="${pageContext.request.contextPath}/planificar" class="btn btn-secondary">
-                        ➕ Planificar Otra Tarea
-                    </a>
-                    <a href="${pageContext.request.contextPath}/organizar" class="btn btn-secondary">
-                        📊 Ver Todas las Tareas
+                        Planificar Otra Tarea
                     </a>
                 </c:if>
-
-                <c:if test="${not empty alerta}">
-                    <a href="${pageContext.request.contextPath}/alertas" class="btn btn-secondary">
-                        📋 Ver Todas las Alertas
-                    </a>
-                    <a href="${pageContext.request.contextPath}/alertas?action=crear" class="btn btn-secondary">
-                        ➕ Crear Otra Alerta
-                    </a>
-                </c:if>-->
             </div>
         </div>
     </main>

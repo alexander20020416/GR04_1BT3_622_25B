@@ -5,18 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operación Exitosa - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <title>Operacion Exitosa - Gestor de Tareas</title>
+    <%@ include file="includes/styles.jsp" %>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>✓ Operación Exitosa</h1>
+        <h1>Operacion Exitosa</h1>
     </header>
 
     <main>
         <div class="success-container">
-            <div class="success-icon">✓</div>
+            <div class="success-icon">OK</div>
 
             <h2>${not empty mensaje ? mensaje : 'Operación completada exitosamente'}</h2>
 
@@ -40,12 +40,12 @@
 
             <div class="action-buttons">
                 <a href="${pageContext.request.contextPath}/listarMateria" class="btn btn-primary">
-                    🏠 Volver al Inicio
+                    Volver al Inicio
                 </a>
 
                 <c:if test="${not empty materia}">
                     <a href="${pageContext.request.contextPath}/materias" class="btn btn-secondary">
-                        ➕ Crear Otra Materia
+                        Crear Otra Materia
                     </a>
                 </c:if>
             </div>

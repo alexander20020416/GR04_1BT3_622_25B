@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Tareas Universitarias</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="jsp/includes/styles.jsp" %>
 </head>
 <body>
 <div class="container">
     <header>
         <div class="header-content">
             <div class="title-section">
-                <h1>📚 Gestor de Tareas Universitarias</h1>
-                <p class="subtitle">Sistema de gestión académica - Grupo 4</p>
+                <h1>Gestor de Tareas Universitarias</h1>
+                <p class="subtitle">Sistema de gestion academica - Grupo 4</p>
             </div>
 
             <!-- Información del usuario autenticado -->
@@ -23,7 +23,7 @@
                     <!-- Campana de Notificaciones -->
                     <div class="notification-bell-container">
                         <div class="notification-bell" id="notificationBell">
-                            <span class="bell-icon">🔔</span>
+                            <span class="bell-icon">Notificaciones</span>
                             <span class="notification-badge" id="notificationBadge" style="display: none;">0</span>
                         </div>
                     </div>
@@ -54,16 +54,16 @@
         <div class="menu-grid">
             <div class="menu-section">
                 <div class="menu-card">
-                    <div class="card-icon">➕</div>
+                    <div class="card-icon">[+]</div>
                     <h4>Planificar Tareas</h4>
-                    <p>Registra nuevas tareas académicas con título, descripción y fecha de vencimiento.</p>
+                    <p>Registra nuevas tareas academicas con titulo, descripcion y fecha de vencimiento.</p>
                     <a href="${pageContext.request.contextPath}/planificar" class="btn btn-primary">
                         Ir a Planificar
                     </a>
                 </div>
 
                 <div class="menu-card">
-                    <div class="card-icon">📊</div>
+                    <div class="card-icon">[O]</div>
                     <h4>Organizar Tareas</h4>
                     <p>Visualiza, organiza, edita y elimina tus tareas usando diferentes criterios de ordenamiento.</p>
                     <a href="${pageContext.request.contextPath}/organizar" class="btn btn-primary">
@@ -74,7 +74,7 @@
 
             <div class="menu-section">
                 <div class="menu-card">
-                    <div class="card-icon">🔍</div>
+                    <div class="card-icon">[?]</div>
                     <h4>Consultar Tareas</h4>
                     <p>Consulta el listado completo de tareas pendientes con opciones de filtrado.</p>
                     <a href="${pageContext.request.contextPath}/consultar" class="btn btn-secondary">
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="menu-card">
-                    <div class="card-icon">⏰</div>
+                    <div class="card-icon">[!]</div>
                     <h4>Configurar Alertas</h4>
                     <p>Visualiza y gestiona tus alertas. Crea alertas personalizadas para recordarte de tus tareas
                         importantes.</p>
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="menu-card">
-                    <div class="card-icon">📅</div>
+                    <div class="card-icon">[C]</div>
                     <h4>Calendario de Tareas</h4>
                     <p>Visualiza tus tareas en un calendario semanal, detecta conflictos y administra tu tiempo.</p>
                     <a href="${pageContext.request.contextPath}/calendario" class="btn btn-secondary">
@@ -104,7 +104,7 @@
 
             <div class="menu-section">
                 <div class="menu-card">
-                    <div class="card-icon">📊</div>
+                    <div class="card-icon">[S]</div>
                     <h4>Seguimiento de Proyectos</h4>
                     <p>Visualiza el progreso de tus proyectos con barras de avance y alertas visuales de urgencia.</p>
                     <a href="${pageContext.request.contextPath}/seguimiento" class="btn btn-secondary">

@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planificar Tareas - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="includes/styles.jsp" %>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>➕ Planificar Tareas</h1>
+        <h1>Planificar Tareas</h1>
         <nav>
             <a href="${pageContext.request.contextPath}/detalleMateria" class="btn-link">← Mi Materia</a>
         </nav>
@@ -21,13 +21,13 @@
         <!-- Validación: Si NO hay materias, mostrar mensaje -->
         <c:if test="${empty materias}">
             <div class="alert alert-warning" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
-                <h3 style="color: #856404; margin-top: 0;">⚠️ No hay materias disponibles</h3>
+                <h3 style="color: #856404; margin-top: 0;">Atencion: No hay materias disponibles</h3>
                 <p style="color: #856404; line-height: 1.6;">
                     Para crear una tarea, primero debe crear al menos una materia.
                 </p>
                 <p style="color: #856404; margin-bottom: 0;">
                     <a href="${pageContext.request.contextPath}/materias" class="btn btn-primary" style="display: inline-block; margin-top: 10px;">
-                        ➕ Crear Materia
+                        Crear Materia
                     </a>
                 </p>
             </div>
@@ -44,7 +44,7 @@
             <!-- Mostrar errores si existen -->
             <c:if test="${not empty error}">
                 <div class="alert alert-error">
-                    <strong>❌ Error:</strong> ${error}
+                    <strong>Error:</strong> ${error}
                 </div>
             </c:if>
 
@@ -122,7 +122,7 @@
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">
-                        ✓ Guardar Tarea
+                        Guardar Tarea
                     </button>
                     <a href="${pageContext.request.contextPath}/listarMateria" class="btn btn-secondary">
                         Cancelar
@@ -134,7 +134,7 @@
         <!-- Fin del condicional de materias -->
 
         <div class="info-box">
-            <h3>ℹ️ Información</h3>
+            <h3>Informacion</h3>
             <p>Este formulario implementa el caso de uso <strong>"Planificar Tareas"</strong>.</p>
             <ul>
                 <li>Todos los campos marcados con (*) son obligatorios</li>

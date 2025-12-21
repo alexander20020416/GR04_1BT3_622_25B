@@ -59,11 +59,29 @@ public class RegisterServlet extends HttpServlet {
             System.out.println("📝 RegisterServlet: Contraseña recibida = " + (contraseña != null ? "SÍ" : "NO"));
             System.out.println("📝 Intento de registro para: " + correo);
 
-            // PASO 2: Validación básica de campos
+            // PASO 2: Validacion basica de campos
             if (nombre == null || correo == null || contraseña == null ||
                 nombre.trim().isEmpty() || correo.trim().isEmpty() || contraseña.trim().isEmpty()) {
                 
                 manejarErrorRegistro(request, response, "Todos los campos son obligatorios");
+                return;
+            }
+
+            // PASO 2.1: Validar longitud del nombre (minimo 3 caracteres)
+            if (nombre.trim().length() < 3) {
+                manejarErrorRegistro(request, response, "El nombre debe tener al menos 3 caracteres");
+                return;
+            }
+
+            // PASO 2.2: Validar formato del correo
+            if (!correo.contains("@") || correo.indexOf("@") == 0 || correo.indexOf("@") == correo.length() - 1) {
+                manejarErrorRegistro(request, response, "El correo electronico no tiene un formato valido");
+                return;
+            }
+
+            // PASO 2.3: Validar longitud de contrasena (minimo 8 caracteres)
+            if (contraseña.length() < 8) {
+                manejarErrorRegistro(request, response, "La contrasena debe tener al menos 8 caracteres");
                 return;
             }
 

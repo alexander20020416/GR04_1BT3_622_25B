@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organizar Tareas - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="includes/styles.jsp" %>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>📊 Organizar Tareas</h1>
+        <h1>Organizar Tareas</h1>
         <a href="${pageContext.request.contextPath}/home" class="btn-link">← Volver al inicio</a>
     </header>
 
@@ -23,15 +23,15 @@
             <div class="strategy-buttons">
                 <a href="${pageContext.request.contextPath}/organizar?orden=prioridad"
                    class="btn ${criterioActual == 'prioridad' || empty criterioActual ? 'btn-active' : 'btn-outline'}">
-                    🎯 Por Prioridad
+                    Por Prioridad
                 </a>
                 <a href="${pageContext.request.contextPath}/organizar?orden=fecha"
                    class="btn ${criterioActual == 'fecha' ? 'btn-active' : 'btn-outline'}">
-                    📅 Por Fecha
+                    Por Fecha
                 </a>
                 <a href="${pageContext.request.contextPath}/organizar?orden=titulo"
                    class="btn ${criterioActual == 'titulo' ? 'btn-active' : 'btn-outline'}">
-                    🔤 Alfabético
+                    Alfabetico
                 </a>
             </div>
 
@@ -45,30 +45,30 @@
         <!-- Mostrar errores si existen -->
         <c:if test="${not empty param.mensaje}">
             <div class="alert alert-success">
-                ✓ ${param.mensaje}
+                ${param.mensaje}
             </div>
         </c:if>
 
         <c:if test="${not empty error}">
             <div class="alert alert-error">
-                <strong>❌ Error:</strong> ${error}
+                <strong>Error:</strong> ${error}
             </div>
         </c:if>
 
         <c:if test="${not empty param.error}">
             <div class="alert alert-error">
-                <strong>❌ Error:</strong> ${param.error}
+                <strong>Error:</strong> ${param.error}
             </div>
         </c:if>
 
         <!-- Lista de tareas -->
         <div class="tareas-section">
-            <h2>📌 Tareas Activas</h2>
+            <h2>Tareas Activas</h2>
 
             <c:choose>
                 <c:when test="${empty tareas}">
                     <div class="empty-state">
-                        <p>✅ ¡Excelente! No tienes tareas activas pendientes.</p>
+                        <p>Excelente! No tienes tareas activas pendientes.</p>
                         <p>Para crear tareas, debe <a href="${pageContext.request.contextPath}/planificar">planificar una tarea</a>.</p>
                     </div>
                 </c:when>
@@ -82,7 +82,7 @@
                             <div class="tarea-card-modern prioridad-${tarea.prioridad.toLowerCase()}">
                                 <div class="card-ribbon">
                                     <span class="badge-prioridad badge-${tarea.prioridad.toLowerCase()}">
-                                        ${tarea.prioridad == 'Alta' ? '🔴' : tarea.prioridad == 'Media' ? '🟡' : '🟢'} ${tarea.prioridad}
+                                        ${tarea.prioridad}
                                     </span>
                                 </div>
                                 
@@ -96,7 +96,7 @@
 
                                     <div class="tarea-info-grid">
                                         <div class="info-item">
-                                            <span class="info-icon">📊</span>
+                                            <span class="info-icon">Estado</span>
                                             <div class="info-content">
                                                 <span class="info-label">Estado</span>
                                                 <form action="${pageContext.request.contextPath}/cambiar-estado" 
@@ -105,16 +105,16 @@
                                                       onchange="this.submit()">
                                                     <input type="hidden" name="id" value="${tarea.id}">
                                                     <select name="estado" class="estado-select estado-${tarea.estado.toLowerCase().replace(' ', '-')}">
-                                                        <option value="Pendiente" ${tarea.estado == 'Pendiente' ? 'selected' : ''}>⏳ Pendiente</option>
-                                                        <option value="En Progreso" ${tarea.estado == 'En Progreso' ? 'selected' : ''}>🔄 En Progreso</option>
-                                                        <option value="Completada" ${tarea.estado == 'Completada' ? 'selected' : ''}>✅ Completada</option>
+                                                        <option value="Pendiente" ${tarea.estado == 'Pendiente' ? 'selected' : ''}>Pendiente</option>
+                                                        <option value="En Progreso" ${tarea.estado == 'En Progreso' ? 'selected' : ''}>En Progreso</option>
+                                                        <option value="Completada" ${tarea.estado == 'Completada' ? 'selected' : ''}>Completada</option>
                                                     </select>
                                                 </form>
                                             </div>
                                         </div>
 
                                         <div class="info-item">
-                                            <span class="info-icon">📅</span>
+                                            <span class="info-icon">Fecha</span>
                                             <div class="info-content">
                                                 <span class="info-label">Vencimiento</span>
                                                 <span class="info-value">${not empty tarea.fechaVencimiento ? tarea.fechaVencimiento : 'Sin fecha'}</span>
@@ -125,7 +125,7 @@
                                     <div class="card-actions">
                                         <a href="${pageContext.request.contextPath}/editar-tarea?id=${tarea.id}" 
                                            class="btn-modern btn-edit-modern">
-                                            <span class="btn-icon">📝</span>
+                                            <span class="btn-icon">Editar</span>
                                             <span class="btn-text">Editar</span>
                                         </a>
                                         <form action="${pageContext.request.contextPath}/eliminar-tarea" 
@@ -134,7 +134,7 @@
                                               onsubmit="return confirm('¿Está seguro de eliminar la tarea: ${tarea.titulo}?');">
                                             <input type="hidden" name="id" value="${tarea.id}">
                                             <button type="submit" class="btn-modern btn-delete-modern">
-                                                <span class="btn-icon">🗑️</span>
+                                                <span class="btn-icon">Eliminar</span>
                                                 <span class="btn-text">Eliminar</span>
                                             </button>
                                         </form>
@@ -150,7 +150,7 @@
         <!-- Sección de tareas vencidas -->
         <c:if test="${not empty tareasVencidas}">
             <div class="tareas-section tareas-vencidas-section">
-                <h2>⚠️ Tareas Vencidas</h2>
+                <h2>Tareas Vencidas</h2>
                 <p class="vencidas-subtitle">Estas tareas han pasado su fecha de vencimiento y no están completadas</p>
                 
                 <div class="tareas-count vencidas-count">
@@ -160,11 +160,11 @@
                 <div class="tareas-grid-modern">
                     <c:forEach var="tarea" items="${tareasVencidas}">
                         <div class="tarea-card-modern tarea-vencida prioridad-${tarea.prioridad.toLowerCase()}">
-                            <div class="vencida-badge">⚠️ VENCIDA</div>
+                            <div class="vencida-badge">VENCIDA</div>
                             
                             <div class="card-ribbon">
                                 <span class="badge-prioridad badge-${tarea.prioridad.toLowerCase()}">
-                                    ${tarea.prioridad == 'Alta' ? '🔴' : tarea.prioridad == 'Media' ? '🟡' : '🟢'} ${tarea.prioridad}
+                                    ${tarea.prioridad}
                                 </span>
                             </div>
                             
@@ -178,7 +178,7 @@
 
                                 <div class="tarea-info-grid">
                                     <div class="info-item">
-                                        <span class="info-icon">📊</span>
+                                        <span class="info-icon">Estado</span>
                                         <div class="info-content">
                                             <span class="info-label">Estado</span>
                                             <form action="${pageContext.request.contextPath}/cambiar-estado" 
@@ -187,16 +187,16 @@
                                                   onchange="this.submit()">
                                                 <input type="hidden" name="id" value="${tarea.id}">
                                                 <select name="estado" class="estado-select estado-${tarea.estado.toLowerCase().replace(' ', '-')}">
-                                                    <option value="Pendiente" ${tarea.estado == 'Pendiente' ? 'selected' : ''}>⏳ Pendiente</option>
-                                                    <option value="En Progreso" ${tarea.estado == 'En Progreso' ? 'selected' : ''}>🔄 En Progreso</option>
-                                                    <option value="Completada" ${tarea.estado == 'Completada' ? 'selected' : ''}>✅ Completada</option>
+                                                    <option value="Pendiente" ${tarea.estado == 'Pendiente' ? 'selected' : ''}>Pendiente</option>
+                                                    <option value="En Progreso" ${tarea.estado == 'En Progreso' ? 'selected' : ''}>En Progreso</option>
+                                                    <option value="Completada" ${tarea.estado == 'Completada' ? 'selected' : ''}>Completada</option>
                                                 </select>
                                             </form>
                                         </div>
                                     </div>
 
                                     <div class="info-item info-vencida">
-                                        <span class="info-icon">⏰</span>
+                                        <span class="info-icon">Fecha</span>
                                         <div class="info-content">
                                             <span class="info-label">Venció</span>
                                             <span class="info-value fecha-vencida">${tarea.fechaVencimiento}</span>
@@ -207,7 +207,7 @@
                                 <div class="card-actions">
                                     <a href="${pageContext.request.contextPath}/editar-tarea?id=${tarea.id}" 
                                        class="btn-modern btn-edit-modern">
-                                        <span class="btn-icon">📝</span>
+                                        <span class="btn-icon">Editar</span>
                                         <span class="btn-text">Editar</span>
                                     </a>
                                     <form action="${pageContext.request.contextPath}/eliminar-tarea" 
@@ -216,7 +216,7 @@
                                           onsubmit="return confirm('¿Está seguro de eliminar la tarea: ${tarea.titulo}?');">
                                         <input type="hidden" name="id" value="${tarea.id}">
                                         <button type="submit" class="btn-modern btn-delete-modern">
-                                            <span class="btn-icon">🗑️</span>
+                                            <span class="btn-icon">Eliminar</span>
                                             <span class="btn-text">Eliminar</span>
                                         </button>
                                     </form>
@@ -229,7 +229,7 @@
         </c:if>
 
         <div class="info-box">
-            <h3>ℹ️ Información del Sistema</h3>
+            <h3>Informacion del Sistema</h3>
             <p>Esta vista implementa el caso de uso <strong>"Organizar Tareas"</strong> del Incremento 1.</p>
             <ul>
                 <li><strong>Patrón Strategy:</strong> Permite cambiar el criterio de ordenamiento dinámicamente</li>

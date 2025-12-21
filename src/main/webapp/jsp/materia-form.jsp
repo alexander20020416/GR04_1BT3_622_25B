@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Materia - Gestor de Tareas</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <%@ include file="includes/styles.jsp" %>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>📘 ${isEdit ? 'Editar' : 'Registrar'} Materia</h1>
+        <h1>${isEdit ? 'Editar' : 'Registrar'} Materia</h1>
         <nav>
             <a href="${pageContext.request.contextPath}/listarMateria" class="btn-link">← Volver al inicio</a>
         </nav>
@@ -27,7 +27,7 @@
             <!-- Mostrar errores si existen -->
             <c:if test="${not empty error}">
                 <div class="alert alert-error">
-                    <strong>❌ Error:</strong> ${error}
+                    <strong>Error:</strong> ${error}
                 </div>
             </c:if>
 
@@ -84,11 +84,11 @@
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">
-                        ✓ ${isEdit ? 'Actualizar' : 'Guardar'} Materia
+                        ${isEdit ? 'Actualizar' : 'Guardar'} Materia
                     </button>
                     <c:if test="${isEdit}">
                         <a href="${pageContext.request.contextPath}/detalleMateria?id=${materia.id}" class="btn btn-secondary">
-                            ✗ Cancelar
+                            Cancelar
                         </a>
                     </c:if>
                 </div>
@@ -96,7 +96,7 @@
         </div>
 
         <div class="info-box">
-            <h3>ℹ️ Información</h3>
+            <h3>Informacion</h3>
             <p>Este formulario implementa el caso de uso <strong>"Registrar Materia"</strong>.</p>
             <ul>
                 <li>El campo <strong>Nombre</strong> es obligatorio</li>
