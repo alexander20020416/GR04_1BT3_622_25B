@@ -69,6 +69,15 @@ public class JPAUtil {
     }
 
     /**
+     * Alias para closeEntityManagerFactory - cierra todos los recursos JPA
+     * Se usa desde el AppContextListener al apagar la aplicación
+     */
+    public static void shutdown() {
+        closeEntityManagerFactory();
+        emf = null;
+    }
+
+    /**
      * Método de utilidad para ejecutar operaciones con manejo automático de transacciones
      * @param operation Operación a ejecutar
      */

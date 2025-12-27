@@ -9,35 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gr4/auth/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gr4/auth/controller/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/registro.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/registro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/agregar_tarea_proyecto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/agregar_tarea_proyecto.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/calendario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/calendario.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/configurar_alerta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/configurar_alerta.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/consultar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/consultar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/crear_proyecto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/crear_proyecto.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/editar_alerta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/editar_alerta.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/editar_proyecto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/editar_proyecto.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/editar_tarea.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/editar_tarea.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/gestionar_proyecto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/gestionar_proyecto.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listar_alertas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listar_alertas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/materia-detalle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-detalle.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/materia-exito.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-exito.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/materia-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/materia-lista.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/materia-lista.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/organizar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/organizar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/planificar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/planificar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/proyecto_detalle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/proyecto_detalle.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/seguimiento_proyectos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/seguimiento_proyectos.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/success.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="9c38bba3-7524-40aa-a3cf-708f31a751c6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -382,7 +354,7 @@
       <workItem from="1761601365829" duration="618000" />
       <workItem from="1762267939415" duration="15975000" />
       <workItem from="1762312083194" duration="2180000" />
-      <workItem from="1766277025142" duration="2923000" />
+      <workItem from="1766277025142" duration="3720000" />
     </task>
     <task id="LOCAL-00001" summary="actualizacion jdk">
       <option name="closed" value="true" />
